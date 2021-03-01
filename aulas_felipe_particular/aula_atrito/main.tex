@@ -1,0 +1,462 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\setlength{\columnseprule}{1 pt}
+\usepackage[utf8]{inputenc}
+
+\usetikzlibrary{arrows,shapes,positioning,angles}
+\usetikzlibrary{decorations.markings}
+\tikzstyle arrowstyle=[scale=1]
+\tikzstyle directed=[postaction={decorate,decoration={markings,
+    mark=at position 1 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
+    mark=at position 1 with {\arrowreversed[arrowstyle]{stealth};}}}]
+
+\title{Aula 21 - Força de Atrito ($\vec{F}_{at}$)}
+\author{Felipe Salvador}
+\date{Atualizado em \today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+A força de atrito é uma força de contato quando um corpo rugoso tenta deslizar sobre outro objeto rugoso. Essa força é uma força contrária à tendência de movimento ou ao movimento e ela é gerada pela interação eletrostática dos átomos nas camadas mais externas entre os objetos em contato.
+
+Há 2 tipos de atrito:
+\begin{itemize}
+    \item \textbf{Atrito Estático} - é a força de atrito de quando o um corpo está parado em relação ao outro e o atrito é o que mantém os dois corpos parados;
+    \item \textbf{Atrito Dinâmico} - é o atrito de quando um corpo desliza sobre outro corpo.
+\end{itemize}
+
+\section{Atrito Estático}
+O atrito é estático quando o objeto não desliza sobre outro objeto ou chão:
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,0);
+         \coordinate (B) at (5,0);
+         \coordinate (C) at (3,2);
+         
+         \draw[black,ultra thick] (A) -- (B);
+         \draw[black,thick] (O) rectangle (C);
+         \draw[black,ultra thick,->] (3,1) -- ++(2,0);
+         \draw[black,ultra thick,->] (O)+(0,.5) -- ++(-1.5,.5);
+         
+         \path (O) ++ (1.5,2.2) node {$v=0\,m/s$};
+         \path (O) ++ (-0.7,0.9) node {$\vec{F}_{at}$};
+         \path (C) ++ (1,-0.6) node {$\vec{F}$};
+         \path (O) ++(1.5,1) node {$m$};
+    \end{tikzpicture}
+    \caption{Uma força aplicada no bloco e o atrito reagindo a força aplicada.}
+    \label{fig:atrito_estat}
+\end{figure}
+
+Como o bloco está parado e se mantém parado, então a soma de forças aplicada nele tem que ser zero. Logo:
+\begin{equation}
+    F - F_{at} = 0 \implies \boxed{F_{at}=F}
+\end{equation}
+\textbf{Ou seja, no caso do atrito estático (bloco parada), a força de atrito, nesse caso é igual à força aplicada.}
+
+Há um caso, que é o \textbf{atrito estático limite}, que é o atrito máximo gerado no caso estático, ou seja, caso uma força seja levemente maior que esse atrito estático limite, o corpo entra em movimento.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,0);
+         \coordinate (B) at (5,0);
+         \coordinate (C) at (3,2);
+         
+         \draw[black,ultra thick] (A) -- (B);
+         \draw[black,thick] (O) rectangle (C);
+         \draw[black,ultra thick,->] (3,1) -- ++(2,0);
+         \draw[black,ultra thick,->] (O)+(0,.5) -- ++(-1.5,.5);
+         \draw[black, ultra thick, ->] (O)+(1.5,0) --
+         ++(1.5,-1.5);
+         \draw[black, ultra thick, ->] (O)+(1.5,2) -- ++(1.5,3.5);
+         \draw[black,thick] (3.4,3) rectangle (5.5,3.6);
+         
+         \path (O) ++ (4.5,3.2) node {$v=0\,m/s$};
+         \path (O) ++ (1.5,3.9) node {$\vec{N}$};
+         \path (O) ++ (1.5,-1.9) node {$\vec{P}$};
+         \path (O) ++ (-0.9,1.1) node {$\left(\vec{F}_{at}\right)_{max}$};
+         \path (C) ++ (1,-0.6) node {$\vec{F}_{max}$};
+         \path (O) ++(1.5,1) node {$m$};
+    \end{tikzpicture}
+    \caption{Uma força aplicada no bloco e o atrito reagindo a força aplicada. Esse atrito é o atrito limite}
+    \label{fig:atrito_estat_max}
+\end{figure}
+
+Para calcular essa força de atrito limite, usamos a seguinte equação:
+\begin{equation}
+    \left(F_{at}\right)_{max} = \mu_e\,N
+\end{equation}
+\noindent em que $\mu_e$ é o coeficiente de atrito estático (sem unidade) e N é o módulo da força normal $\vec{N}$.
+
+\section{Atrito Cinético}
+
+Quando um objeto desliza sobre um outro objeto/chão e temos um atrito envolvido, então o atrito será cinético: 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,0);
+         \coordinate (B) at (5,0);
+         \coordinate (C) at (3,2);
+         
+         \draw[black,ultra thick] (A) -- (B);
+         \draw[black,thick] (O) rectangle (C);
+         \draw[black,ultra thick,->] (3,1) -- ++(2,0);
+         \draw[black,ultra thick,->] (O)+(0,.5) -- ++(-1.5,.5);
+         \draw[black, ultra thick, ->] (O)+(1.5,0) --
+         ++(1.5,-1.5);
+         \draw[black, ultra thick, ->] (O)+(1.5,2) -- ++(1.5,3.5);
+         \draw[black, ultra thick, ->] (3.6,2.9) -- ++(2,0);
+         
+         \path (O) ++ (4.5,3.2) node {$v=3\,m/s$};
+         \path (O) ++ (1.5,3.9) node {$\vec{N}$};
+         \path (O) ++ (1.5,-1.9) node {$\vec{P}$};
+         \path (O) ++ (-0.9,1.1) node {$\vec{F}_{at}$};
+         \path (C) ++ (1,-0.6) node {$\vec{F}$};
+         \path (O) ++(1.5,1) node {$m$};
+    \end{tikzpicture}
+    \caption{Uma força aplicada no bloco, o bloco se movimentando e  o atrito reagindo a força aplicada.}
+    \label{fig:atrito_cinet}
+\end{figure}
+
+A expressão do atrito cinético é dada por:
+\begin{equation}
+    F_{at} = \mu_c\,N
+\end{equation}
+\noindent em que $\mu_c$ é o coeficiente de atrito cinético e N é o módulo da força normal.
+
+\section{Bloco num plano inclinado com atrito}
+
+Vamos analisar um bloco num plano inclinado em que haja atrito entre o bloco e o plano:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,3);
+         \coordinate (A1) at (-3,0);
+         \coordinate (B) at (2,0);
+         \coordinate (C) at (3,2);
+         
+         \draw[black,ultra thick] (A) -- (B);
+         \draw[black, thick, dash pattern=on 3pt off 3pt] (A1) -- (B);
+         \draw[black, thick, dash pattern=on 3pt off 3pt,->] (1,1) -- ++(60:2.5);
+         \draw[black, thick, dash pattern=on 3pt off 3pt,->] (1,1) -- ++(-30:2.5);
+         \draw[black, thick, dash pattern=on 3pt off 3pt] (A1) -- (B);
+         \draw[black,thick, rotate around = {-32:(1,0,4)}] (-2.7,1.1) rectangle (-1.2,2.1);
+         \draw[black,ultra thick,->] (-.75,2.2)--++(-.6,.4);
+         \draw[black,ultra thick,->] (0.2,2.3) -- ++(.4,.6);
+         \draw[black, ultra thick, ->] (-0.4,1.5) --
+         ++(0,-1);
+         \draw(B) +(180:1.5cm) arc (180:150:1.5cm);
+         
+         
+         \path (O) ++ (.65,3.2) node {$\vec{N}$};
+         \path (O) ++ (-.8,.7) node {$\vec{P}$};
+         \path (O) ++ (-1.2,3.1) node {$\vec{F}_{at}$};
+         \path (0.8,0.35) node {$\theta$};
+         \path (1,1)+(55:2.5) node {$y$};
+         \path (1,1)+(-24:2.5) node {$x$};
+         
+         \path (O) ++(-.2,1.8) node {$m$};
+    \end{tikzpicture}
+    \caption{Diagrama de forças de um bloco num plano inclinado com atrito. Os eixos coordenados foram escolhidos de forma a facilitar o problema}
+    \label{fig:atrito_bloco}
+\end{figure}
+
+Perceba que, na direção  dos eixos coordenados, só a força peso não aponta para uma dessas direções. Por isso, precisaremos decompor a força peso nas 2 direções.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,3);
+         \coordinate (A1) at (-3,0);
+         \coordinate (B) at (2,0);
+         \coordinate (C) at (3,2);
+         
+         
+         \draw[black, thick, dash pattern=on 3pt off 3pt,->] (1,1) -- ++(60:2.5);
+         \draw[black, thick, dash pattern=on 3pt off 3pt,->] (1,1) -- ++(-30:2.5);
+         \draw(1,1) +(-120:0.6cm) arc (-120:-90:.6cm);
+         
+         
+         \draw[black, ultra thick, ->] (1,1) --
+         ++(0,-3);
+         \draw[black, ultra thick, ->] (1,1) --
+         ++(-120:2.5);
+         \draw[black, ultra thick, <-] (1,-1.85) --
+         ++(150:1.4);
+         \draw (1,1)++(-120:2.1) -- ++(-30:.4) --++(-120:.4);
+         \filldraw[fill=black] (1,1)++(-115:2.3) circle(1pt);
+         
+         \path (1.3,-.2) node {$\vec{P}$};
+         \path (-.1,.2) node {$\vec{P}_y$};
+         \path (.2,-1.9) node {$\vec{P}_x$};
+         \path (1,1)+(55:2.5) node {$y$};
+         \path (1,1)+(-24:2.5) node {$x$};
+         \path (1,1)+(-105:1) node {$\theta$};
+         
+    \end{tikzpicture}
+    \caption{Diagrama de forças de um bloco num plano inclinado com atrito. Os eixos coordenados foram escolhidos de forma a facilitar o problema. Esse ângulo $\theta$ é o mesmo ângulo de inclinação do plano inclinado.}
+    \label{fig:atrito_bloco}
+\end{figure}
+
+Perceba que as 3 componentes ($P,\, P_x, \,P_y$) formam um triângulo retângulo, então podemos usar as relações trigonométricas conhecidas em relação ao ângulo $\theta$:
+\begin{equation}
+    \begin{split}
+        sen\,\theta &= \frac{P_x}{P} \implies P_x = P\,sen\,\theta\\
+        \cos\theta &=\frac{P_y}{P} \implies P_y = P\,\cos\theta
+    \end{split}
+\end{equation}
+
+Com isso, o diagramas de força fica da seguinte forma:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,3);
+         \coordinate (A1) at (-3,0);
+         \coordinate (B) at (2,0);
+         \coordinate (C) at (3,2);
+         
+         \draw[black,ultra thick] (A) -- (B);
+         \draw[black, thick, dash pattern=on 3pt off 3pt] (A1) -- (B);
+         \draw[black, thick, dash pattern=on 3pt off 3pt,->] (2,2) -- ++(60:1.5);
+         \draw[black, thick, dash pattern=on 3pt off 3pt,->] (2,2) -- ++(-30:1.5);
+         \draw[black, thick, dash pattern=on 3pt off 3pt] (A1) -- (B);
+         \draw[black,thick, rotate around = {-32:(1,0,4)}] (-2.7,1.1) rectangle (-1.2,2.1);
+         \draw[black,ultra thick,->] (-.75,2.2)--++(-.6,.4);
+         \draw[black,ultra thick,->] (0.2,2.3) -- ++(60:0.8);
+         \draw[black, ultra thick, ->] (-0.4,1.5) --
+         ++(-120:0.8);
+         \draw[black, ultra thick, ->] (0.6,1.5) --
+         ++(-30:0.6);
+         \draw(B) +(180:1.5cm) arc (180:150:1.5cm);
+         
+         
+         \path (O) ++ (.65,3.4) node {$\vec{N}$};
+         \path (O) ++ (-.8,.4) node {$\vec{P}_y$};
+         \path (O) ++ (1.4,1.5) node {$\vec{P}_x$};
+         \path (O) ++ (-1.2,3.1) node {$\vec{F}_{at}$};
+         \path (0.8,0.35) node {$\theta$};
+         \path (2,2)+(50:1.5) node {$y$};
+         \path (2,2)+(-20:1.5) node {$x$};
+         
+         \path (O) ++(-.2,1.8) node {$m$};
+    \end{tikzpicture}
+    \caption{Diagrama de forças de um bloco num plano inclinado com atrito. Os eixos coordenados foram escolhidos de forma a facilitar o problema}
+    \label{fig:atrito_bloco_diagrama}
+\end{figure}
+Com isso, percebemos que ao longo do eixo 'y', o bloco não se move, logo a força resultante tem que ser 0:
+\begin{equation}
+    (F_{res})_y = N - P_y = 0 \implies \boxed{N = P_y = P\cos\,\theta}
+\end{equation}
+
+Na direção x, a força resultante será:
+\begin{equation}
+    \begin{split}
+        (F_{res})_x &= P_x - F_{at} = P\,sen\,\theta - \mu\,N\\
+        &= P\,sen\,\theta - \mu\,P\,\cos\theta = mg(sen\,\theta - \mu\cos\theta)
+    \end{split}
+\end{equation}
+Usando a $2^a$ Lei de Newton, a aceleração (a) é:
+\begin{equation}
+    m\,a_x = mg(sen\,\theta - \mu\cos\theta) \implies \boxed{a_x = g(sen\,\theta - \mu\cos\theta)}
+\end{equation}
+
+\section{Atrito entre blocos}
+
+Um dos casos bem comuns num exercício sobre atrito é quando temos 2 blocos, um em cima do outro, em que existe atrito no contato entre os blocos. Vamos olhar o exemplo de 2 blocos empilhados deslizando em conjunto. A figura abaixo exemplifica:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,0);
+         \coordinate (B) at (5,0);
+         \coordinate (C) at (3,2);
+         
+         \draw[black,ultra thick] (A) -- (B);
+         \draw[black,thick] (O) rectangle (C);
+         \draw[black,thick] (0.5,2) rectangle (2.5,3);
+         \draw[black,ultra thick,->] (3,1) -- ++(2,0);
+         \draw[black,ultra thick,->] (O)+(0,.5) -- ++(-1.5,.5);
+         \draw[black, ultra thick, ->] (O)+(2,0) --
+         ++(2,-1.5);
+         \draw[black, ultra thick, ->] (O)+(1,0) --
+         ++(1,-1);
+         \draw[black, ultra thick, ->] (O)+(1.5,3) --
+         ++(1.5,4.5);
+         \draw[black, ultra thick, ->] (3.5,4) --
+         ++(1.5,0);
+         
+         
+         
+         \path (1.5,2.5) node {$m_2$};
+         \path (O) ++ (2,-1.9) node {$\vec{P}_1$};
+         \path (O) ++ (1,-1.4) node {$\vec{P}_2$};
+         \path (O) ++ (1.5,4.8) node {$\vec{N}$};
+         \path (O) ++ (-0.9,1.1) node {$\vec{F}_{at}$};
+         \path (C) ++ (1,-0.6) node {$\vec{F}$};
+         \path (O) ++(1.5,1) node {$m_1$};
+         \path (O) ++(4.25,4.3) node {$\vec{v}$};
+    \end{tikzpicture}
+    \caption{Uma força aplicada no bloco debaixo. O conjunto se movimenta e o atrito reagindo a força aplicada.}
+    \label{fig:atrito_2_corpos}
+\end{figure}
+
+Nós iremos determinar a força de atrito limite em que a massa $m_2$ não desliza em relação à massa $m_1$, sabendo que a massa $m_1$ é puxada por uma força $F$. Vamos olhar o diagrama de forças na massa $m_2$:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,0);
+         \coordinate (B) at (5,0);
+         \coordinate (C) at (3,2);
+         
+        
+         \draw[black,thick] (0.5,2) rectangle (2.5,3);
+         \draw[black,ultra thick,->] (2.5,2) -- ++(2,0);
+         \draw[black,ultra thick,->] (1.75,3) -- ++(0,2);
+         \draw[black,ultra thick,->] (1.75,2) -- ++(0,-2);
+         
+         \path (1.5,2.5) node {$m_2$};
+         \path (O) ++ (1.75,-0.3) node {$\vec{P}_2$};
+         \path (O) ++ (1.75,5.3) node {$\vec{N}_2$};
+         \path (O) ++ (5.2,2) node {$\left(\vec{F}_{at}\right)_2$};
+    \end{tikzpicture}
+    \caption{Diagrama de forças na massa 2}
+    \label{fig:atrito_m_2}
+\end{figure}
+Como o atrito entre os corpos é limite:
+\begin{equation}
+    \left(F_{at}\right)_2 = \mu_e\,N_2 \implies \boxed{\left(F_{at}\right)_2 = \mu_e\,m_2\,g}
+\end{equation}
+Usando a $2^a$ Lei de Newton, temos:
+\begin{equation}\label{eq:a_x}
+    m_2\,a_x = \left(F_{at}\right)_2 = \mu_e\,m_2\,g \implies \boxed{a_x = \mu_e\,g}
+\end{equation}
+
+Agora, analisaremos a força de atrito no bloco 1:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,0);
+         \coordinate (B) at (5,0);
+         \coordinate (C) at (3,2);
+         
+        
+         \draw[black,thick] (0.5,2) rectangle (2.5,3);
+         \draw[black,ultra thick,->] (2.5,2.5) -- ++(2,0);
+         \draw[black,ultra thick,->] (1.75,3) -- ++(0,2);
+         \draw[black,ultra thick,->] (1.75,2) -- ++(0,-2);
+         \draw[black,ultra thick,->] (1.3,2) -- ++(0,-1.5);
+         \draw[black,ultra thick,->] (.5,2) -- ++(-1.5,0);
+         \draw[black,ultra thick,->] (0.5,3) -- ++(-1.5,0);
+         
+         \path (1.5,2.5) node {$m_1$};
+         \path (O) ++ (1.75,-0.3) node {$\vec{P}_1$};
+         \path (O) ++ (1.3,0.2) node {$\vec{N}_2$};
+         \path (O) ++ (1.75,5.3) node {$\vec{N}_1$};
+         \path (O) ++ (5.2,2.5) node {$\vec{F}$};
+         \path (O) ++ (-1.3,2) node {$\vec{F}_{at}$};
+         \path (O) ++ (-1.8,3.3) node {$\left(\vec{F}_{at}\right)_2$};
+    \end{tikzpicture}
+    \caption{Diagrama de forças na massa 1}
+    \label{fig:atrito_m_1}
+\end{figure}
+Com isso, na vertical, temos:
+\begin{equation}
+    N_1 = N_2 + P_1 \implies N_1 = m_2\,g + m_1\,g \implies \boxed{N_1= (m_2+m_1)g}
+\end{equation}
+Na horizontal:
+\begin{equation}
+    (F_{res})_x = F - F_{at} - \left(F_{at}\right)_2
+\end{equation}
+Como o conjunto está se movimentando, o atrito dado por $F_{at}$ é cinético. Usando também o resultado obtido para $\left(F_{at}\right)_2$, temos que:
+\begin{equation}
+    \begin{split}
+        (F_{res})_x &= F - \mu_{chao}\,N_1 - \mu\,m_2\,g\\
+        &=F - \mu_{chao}\,(m_2+m_1)g - \mu\,m_2\,g
+    \end{split}
+\end{equation}
+Pela $2^a$ Lei de Newton, temos que:
+\begin{equation}
+    m_1\,a_x = F - \mu_{chao}\,(m_2+m_1)g - \mu\,m_2\,g
+\end{equation}
+Mas, pela equação (\ref{eq:a_x}), a aceleração é $a_x = \mu\,g$, então:
+\begin{equation}
+    \begin{split}
+        m_1\,\mu_e\,g &= F - \mu_{chao}\,(m_2+m_1)g - \mu\,m_2\,g\\
+        F &= (m_1+m_2)\mu_e\,g + \mu_{chao}\,(m_2+m_1)g\\
+    \end{split}
+\end{equation}
+Enfim:
+\begin{equation}
+    \boxed{F = g(m_1+m_2)(\mu_e+\mu_{chao})}
+\end{equation}
+\end{document}
