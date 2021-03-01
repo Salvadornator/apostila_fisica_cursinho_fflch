@@ -1,0 +1,358 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\setlength{\columnseprule}{1 pt}
+\usepackage[utf8]{inputenc}
+
+\usetikzlibrary{arrows,shapes,positioning,angles}
+\usetikzlibrary{decorations.markings,decorations.pathmorphing,patterns}
+
+\title{Pêndulo Simples - Movimento Harmônico Simples (MHS)}
+\author{Felipe Salvador}
+\date{Atualizado em \today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+
+Nessa aula, veremos um dos tipos de movimentos especiais que ocorrem na Natureza e que, hoje, é considerado o principal e o mais comum tipo de movimento: o Movimento Harmônico. O movimento é um tipo de movimento repetitivo, em que após um período de tempo T, a posição do objeto é igual à posição inicial dele e após 2T, 3T, 4T, etc, a posição é igual à posição inicial.
+
+Nós iremos tratar somente o Movimento Harmônico Simples, que é o movimento harmônico que não há atrito ou dissipação involvidos. Vamos ver 2 exemplos espciais e entender como funciona esse movimento.
+
+\section{Pêndulo Simples}
+O pêndulo simples é quando uma massa esférica é presa numa das extremidades de um fio inextensível. A outra ponta do fio é presa ao teto. Com isso, se deixar o totalmente na vertical, a massa não irá se deslocar para nenhum, porém quando tiramos a massa da posição vertical e soltamos ela, a massa irá fazer um movimento como na sequência das figuras abaixo
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.4\linewidth}
+    \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-75:4) ;
+        \coordinate (B) at (-105:4);
+        \coordinate (C) at (-90:4);
+        
+        
+        \draw [black, ultra thick] (-4,0) --(4,0);
+        \draw[black, ultra thick] (O) -- (A);
+        \draw[black!75!,dash pattern=on 5pt off 3pt, thick] (O) -- (C);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick] (C) arc (-90:-45:4);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick, <->] (C) arc (-90:-135:4);
+        \draw (-90:1.2) arc (-90:-75:1.2);
+        \filldraw [fill=red] (A) circle (3pt);
+        \draw [black,ultra thick,->] (4.5,1) -- (4.5,-1);
+        
+        
+        \path (O)++(-83:1.5) node {$\theta$};
+        \path (4.8,0) node {$\vec{g}$};
+        \path (A)++(1,-.5) node {$\vec{v} = 0\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=0s$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\linewidth}
+    \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-75:4) ;
+        \coordinate (B) at (-105:4);
+        \coordinate (C) at (-90:4);
+        
+        
+        \draw [black, ultra thick] (-4,0) --(4,0);
+        \draw[black, ultra thick] (O) -- (C);
+        \draw[black!75!,dash pattern=on 5pt off 3pt, thick] (O) -- (C);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick] (C) arc (-90:-45:4);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick, <->] (C) arc (-90:-135:4);
+        \filldraw [fill=red] (C) circle (3pt);
+        \draw [black,ultra thick,->] (4.5,1) -- (4.5,-1);
+        \draw[black, ultra thick, <-] (C)+(-1,-0.2) -- ++(1,-0.2);
+        
+        \path (4.8,0) node {$\vec{g}$};
+        \path (C)++(0,-.7) node {$\vec{v} = 2\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=1s$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\linewidth}
+    \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-75:4) ;
+        \coordinate (B) at (-105:4);
+        \coordinate (C) at (-90:4);
+        
+        
+        \draw [black, ultra thick] (-4,0) --(4,0);
+        \draw[black, ultra thick] (O) -- (B);
+        \draw[black!75!,dash pattern=on 5pt off 3pt, thick] (O) -- (C);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick] (C) arc (-90:-45:4);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick, <->] (C) arc (-90:-135:4);
+        \draw (-90:1.2) arc (-90:-105:1.2);
+        \filldraw [fill=red] (B) circle (3pt);
+        \draw [black,ultra thick,->] (4.5,1) -- (4.5,-1);
+        
+        
+        \path (O)++(-97:1.5) node {$\theta$};
+        \path (4.8,0) node {$\vec{g}$};
+        \path (B)++(0,-.5) node {$\vec{v} = 0\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=2s$}
+    \end{subfigure}
+    \hfill
+     \begin{subfigure}[b]{0.4\linewidth}
+    \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-75:4) ;
+        \coordinate (B) at (-105:4);
+        \coordinate (C) at (-90:4);
+        
+        
+        \draw [black, ultra thick] (-4,0) --(4,0);
+        \draw[black, ultra thick] (O) -- (C);
+        \draw[black!75!,dash pattern=on 5pt off 3pt, thick] (O) -- (C);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick] (C) arc (-90:-45:4);
+        \draw[red!75!,dash pattern=on 5pt off 3pt, thick, <->] (C) arc (-90:-135:4);
+        \filldraw [fill=red] (C) circle (3pt);
+        \draw [black,ultra thick,->] (4.5,1) -- (4.5,-1);
+        \draw[black, ultra thick, ->] (C)+(-1,-0.2) -- ++(1,-0.2);
+        
+        \path (4.8,0) node {$\vec{g}$};
+        \path (C)++(0,-.7) node {$\vec{v} = 2\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=3s$}
+    \end{subfigure}
+    
+    \caption{Exemplo de um objeto que realiza um Movimento Harmônico Simples - um pêndulo se movimentando}
+    \label{fig:pendulo}
+\end{figure}
+
+Nessas figuras, colocamos o pêndulo numa posição inicial que faz um ângulo $\theta$ com a vertical e soltamos ele, há uma outra possibilidade que é fazer com que o pêndulo comece com uma velocidade inicial $v_0$ determinada, mas não iremos discutir esse tipo condição inicial. Então soltando o pêndulo de uma posição inical, ele faz o movimento dessas imagens. Perceba que após a imagem (d), o pêndulo voltaria para a posição inicial, dada pela figura (a), logo o movimento é repetitivo e periódico. Conseguimos achar o período (T) do pêndulo, que é o tempo que ele leva para voltar à posição inicial, e é dado por:
+\begin{equation}
+    T = 2\pi \sqrt{\frac{L}{g}}
+\end{equation}
+\noindent em que 'L' é o comprimento do pêndulo dado em metros (m) e 'g' é a aceleração da gravidade ($g=\approx 10\,m/s^2$). Perceba que o período do pêndulo independe da massa colocada na ponta desse pêndulo, ou seja, se eu colocar uma massa de 1 kg ou 1t, o pêndulo terá o mesmo período.
+
+A posição (x), a velocidade (v), a aceleração (a) da massa no pêndulo é dada por equações em função do tempo:
+\begin{align}
+    &x(t) = A\,\cos(\omega\,t + \phi) \label{eq:pos}\\
+    &v(t) = -\omega\,A\,sen\,(\omega\, t + \phi)\label{eq:vel}\\\
+    &a(t) = -\omega^2\,A\,\cos(\omega\,t + \phi) = \omega^2\,x(t) \label{eq:acel}\
+\end{align}
+\noindent em que $\omega$ é a frequência angular, a unidade de $\omega = \frac{1}{s}$; 'A' é amplitude do pêndulo (o quão longe ele chega em relação à vertical), a unidade é 'm'; $\phi$ é uma fase inicial do movimento, dada pela posição inicial do pêndulo, $\phi$ é dado em radianos (rad). A frequência angular ($\omega$) é dada:
+\begin{equation}
+    \omega = \frac{2\pi}{T} = \sqrt{\frac{g}{L}}
+\end{equation}
+
+Uma das questões mais importantes sobre o pêndulo são as seguintes:
+\begin{itemize}
+    \item \textbf{Quando o pêndulo está nos extremos do movimento ($x= \pm A$), a velcoidade $v(t)$ é 0 e a aceleração $a(t)$ é máxima ($a(t) = a_{max}$)}
+    \item \textbf{Quando o pêndulo está passando pela posição vertical ($x=0$), a velocidade é máxima $v(t) = v_{max}$ e a aceleração é 0 ($a(t) =0$)};
+\end{itemize}
+\subsection{Exemplo}
+Um corpo de 500 g é amarrado a um pêndulo simples de 2,5 m e é colocado para oscilar em uma região onde a gravidade é igual a $10 m/s^2$. Determine o período de oscilação desse pêndulo em função de $\pi$.
+
+\textit{Resposta:} O período de oscilação (T) é dado por:
+\begin{equation*}
+    T = 2\pi \sqrt{\frac{L}{g}} \implies T = 2\pi\sqrt{\frac{2,5}{10}} = 2\pi \sqrt{\frac{1}{4}} = 2\pi\frac{1}{2} \implies \boxed{T = \pi\,s}
+\end{equation*}
+
+Qual é a posição do pêndulo para $t=10\,s$, em que a posição (x) é dada pela seguinte equação horária:
+\begin{equation*}
+    x(t) = 2\,\cos\left(\frac{\pi}{5}\,t + \pi\right)
+\end{equation*}
+
+\textit{Resposta:} Para $t=10\,s$ temos que:
+\begin{equation*}
+    \cos\left(\frac{\pi}{5}10 + \pi\right) = \cos\left(2\pi +\pi \right) = \cos(3\pi) = \cos(\pi) = -1
+\end{equation*}
+Então:
+\begin{equation*}
+    x(10) = 2\,\cos\left(\frac{\pi}{5}\,10 + \pi\right) = 2\,\cos(\pi) \implies \boxed{x(10) = -2\,m}
+\end{equation*}
+
+\section{Conjunto Massa-Mola}
+O outro exemplo de Movimento Harmônico Simples é uma massa '$m$' acoplada a uma mola com coeficiente de restituição '$k$'. Para o movimento acontecer, temos 2 possibilidades de condições iniciais:
+\begin{enumerate}
+    \item Colocar a massa numa posição que deforme a mola ($\Delta x \neq 0$, $\Delta x$ é o mesmo da Lei de Hooke: $F=-k\Delta x$);
+    \item Dar uma velocidade inicial ($v_0$) à massa
+\end{enumerate}
+Novamente, trataremos da primeira condição inicial nos exercícios. Abaixo, estão os esquemas do movimento de uma massa acoplada a uma mola.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.7\linewidth}
+        \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-6,0) ;
+        \coordinate (B) at (-3,2);
+        \coordinate (C) at (-1,0);
+        
+        
+        \draw [black, ultra thick] (-8,0) --(8,0);
+        \draw [black, ultra thick] (A) -- +(0,2);
+        \draw[decoration={aspect=0.3, segment length=2mm, amplitude=3mm,coil},decorate] (A)++(0,1) -- +(3,0);
+        \draw [black, ultra thick,->] (5,3) -- (5,1);
+        \filldraw[fill=red] (B) rectangle (C);
+        \draw [black, ultra thick,->] (-3,2.5) -- (-1,2.5);
+        
+        \path (-4.5,1.8) node {$k$};
+        \path (5.2, 2) node {$\vec{g}$};
+        \path (-2,2.8) node {$\vec{v} = 2,5\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=0\,s$}
+    \label{fig:t=0}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.7\linewidth}
+        \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-6,0) ;
+        \coordinate (B) at (-1,2);
+        \coordinate (C) at (1,0);
+        
+        
+        \draw [black, ultra thick] (-8,0) --(8,0);
+        \draw [black, ultra thick] (A) -- +(0,2);
+        \draw[decoration={aspect=0.3, segment length=4mm, amplitude=3mm,coil},decorate] (A)++(0,1) -- +(5,0);
+        \draw [black, ultra thick,->] (5,3) -- (5,1);
+        \filldraw[fill=red] (B) rectangle (C);
+        
+        \path (-3.5,1.8) node {$k$};
+        \path (5.2, 2) node {$\vec{g}$};
+        \path (0,2.3) node {$\vec{v} = 0\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=1\,s$}
+    \label{fig:t=1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.7\linewidth}
+        \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-6,0) ;
+        \coordinate (B) at (-3,2);
+        \coordinate (C) at (-1,0);
+        
+        
+        \draw [black, ultra thick] (-8,0) --(8,0);
+        \draw [black, ultra thick] (A) -- +(0,2);
+        \draw[decoration={aspect=0.3, segment length=2mm, amplitude=3mm,coil},decorate] (A)++(0,1) -- +(3,0);
+        \draw [black, ultra thick,->] (5,3) -- (5,1);
+        \filldraw[fill=red] (B) rectangle (C);
+        \draw [black, ultra thick,<-] (-3,2.5) -- (-1,2.5);
+        
+        \path (-4.5,1.8) node {$k$};
+        \path (5.2, 2) node {$\vec{g}$};
+        \path (-2,2.8) node {$\vec{v} = 2,5\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=2\,s$}
+    \label{fig:t=2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.7\linewidth}
+        \begin{tikzpicture}
+        \coordinate (O) at (0,0) ;
+        \coordinate (A) at (-6,0) ;
+        \coordinate (B) at (-5,2);
+        \coordinate (C) at (-3,0);
+        
+        
+        \draw [black, ultra thick] (-8,0) --(8,0);
+        \draw [black, ultra thick] (A) -- +(0,2);
+        \draw[decoration={aspect=0.3, segment length=1mm, amplitude=3mm,coil},decorate] (A)++(0,1) -- +(1,0);
+        \draw [black, ultra thick,->] (5,3.5) -- (5,1.5);
+        \filldraw[fill=red] (B) rectangle (C);
+        
+        \path (-5.6,1.8) node {$k$};
+        \path (5.2, 2.5) node {$\vec{g}$};
+        \path (-4,2.3) node {$\vec{v} = 0\,m/s$};
+    \end{tikzpicture}
+    \caption{$t=3\,s$}
+    \label{fig:t=3}
+    \end{subfigure}
+    
+    \caption{Evolução temporal do movimento de uma massa presa a uma mola. O piso em que a mola se movimenta é um chão liso (sem atrito).}
+\end{figure}
+
+Perceba que, novamente, após a imagem (d), a massa voltaria a posição inicial e velocidade, dadas pela imagem (a), então o movimento é repetitivo e periódico. Conseguimos achar o período (T) do movimento da massa acoplada à mola, por meio da seguinte equação:
+\begin{equation}
+    T = 2\pi \sqrt{\frac{m}{k}}
+\end{equation}
+\noindent em que 'T' é o período do movimento em 's'; 'm' é a massa da objeto em 'kg'; 'k' é a constante de restituição da mola, cuja unidade é 'N/m'. 
+
+Agora, o valor da massa importa para o período do movimento. Quanto maior for a massa, mais lento será o movimento. Porém, se deixarmos a mola mais dura ('k' maior), o tempo do período será menor.
+
+A posição, velocidade e aceleração nesse movimento são as mesmas fórmulas das equações (\ref{eq:pos},\ref{eq:vel},\ref{eq:acel}). Aqui, tomaremos $x=0$ como a posição de equilíbrio da mola. A diferença será na expressão da frequência angular ($\omega$):
+\begin{equation}
+    \omega = \frac{2\pi}{T} = \sqrt{\frac{k}{m}}
+\end{equation}
+
+Questões mais importantes sobre o movimento da massa acomplada à mola são as seguintes:
+\begin{itemize}
+    \item \textbf{Quando a massa está nos extremos do movimento ($x= \pm A$), a velcoidade $v(t)$ é 0 e a aceleração $a(t)$ é máxima ($a(t) = a_{max}$)}
+    \item \textbf{Quando a massa está passando pela posição de relaxamento da mola ($x=0$), a velocidade é máxima $v(t) = v_{max}$ e a aceleração é 0 ($a(t) =0$)};
+\end{itemize}
+
+\subsection{Exemplos}
+Uma esfera de massa igual a 0,2 kg está presa a uma mola, cuja constante elástica $k=0,8\,\pi^2\,N/m$ . Afasta-se a mola 3 cm de onde estava em repouso e ao soltá-la o conjunto massa-mola começa a oscilar, executando um MHS. Desprezando as forças dissipativas, determine o período e a amplitude do movimento.
+
+\textit{Resposta}: Para encontrar o período, vamos usar a sua fórmula:
+\begin{equation*}
+    T = 2\pi\sqrt{\frac{m}{k}} = 2\pi\sqrt{\frac{0,2}{0,8\,\pi^2}} = 2\pi\sqrt{\frac{1}{4\pi^2}}
+\end{equation*}
+Calculando a raiz:
+\begin{equation*}
+    T = 2\pi\frac{1}{2\pi} \implies \boxed{T= 1\,s}
+\end{equation*}
+
+A amplitude do movimento é 3\,cm, porque a distância máxima que a massa irá se afastar dp equilíbrio será a distância da posição inicial até a posição de equilíbrio.
+\end{document}
