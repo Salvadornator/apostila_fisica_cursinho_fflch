@@ -1,0 +1,270 @@
+\documentclass[12pt,letterpaper,fleqn]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{physics}
+\usepackage{float}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\cent}{$^{\circ}$}
+\newcommand{\delfrac}[2][y]{\frac{\partial #1}{\partial #2}}
+
+
+\hypersetup{%
+ colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.3in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{Física - Frente 1}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{netid19823}           % <-- NetID of person #1
+\newcommand\NetIDb{netid12038}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+%\lhead{\NetIDa}
+%\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Física Moderna \hwnumber}}
+\rhead{\course \\ Novembro/2020}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+\begin{enumerate}
+    \item Os raios X são produzidos em tubos de vidro a vácuo, nos quais elétrons sofrem uma brusca desaceleração quando colidem contra um alvo feito de metal. Desta forma podemos dizer que os raios X constituem um feixe de
+    \begin{enumerate}
+        \item elétrons
+        \item prótons
+        \item pósitrons
+        \item fótons
+        \item nêutrons
+    \end{enumerate}
+    
+    \item O efeito fotoelétrico consiste:
+    \begin{enumerate}
+        \item  na existência de elétrons em uma onda eletromagnética que se propaga num meio uniforme e contínuo.
+
+\item na possibilidade de se obter uma foto do campo elétrico quando esse campo interage com a matéria.
+
+\item na emissão de elétrons quando uma onda eletromagnética incide em certas superfícies.
+
+\item no fato de que a corrente elétrica em metais é formada por fótons de determinada energia.
+
+\item na ideia de que a matéria é uma forma de energia, podendo transformar-se em fótons ou em calor.
+    \end{enumerate}
+    
+    \item Entre as inovações da Física que surgiram no início do século XX, uma foi o estabelecimento da teoria $\rule{1cm}{0.15mm}$, que procurou explicar o surpreendente resultado apresentado pela radiação e pela matéria conhecido como dualidade entre $\rule{1cm}{0.15mm}$ e ondas. Assim, quando se faz um feixe de elétrons passar por uma fenda de largura micrométrica, o efeito observado é o comportamento $\rule{1cm}{0.15mm}$ da matéria, e quando fazemos um feixe de luz incidir sobre uma placa metálica, o efeito observado pode ser explicado considerando a luz como um feixe de $\rule{1cm}{0.15mm}$.
+
+Assinale a alternativa que apresenta a sequência correta de palavras para o preenchimento das lacunas nas frases acima.
+
+\begin{enumerate}
+    \item Relativística – partículas – ondulatório – partículas.
+    \item Atomística – radiação – rígido – ondas.
+    \item Quântica – partículas – ondulatório – partículas.
+    \item Relativística – radiação – caótico – ondas.
+    \item Quântica – partículas – ondulatório – ondas.
+\end{enumerate}
+
+\item Em 6 de novembro de 2014, estreava no Brasil o filme de ficção científica Interestelar, que abordou, em sua trama, aspectos de Física Moderna. Um dos fenômenos mostrados no filme foi a dilatação temporal, já prevista na Teoria da Relatividade de Albert Einstein. Além da relatividade, Einstein explicou o Efeito Fotoelétrico, que lhe rendeu o prêmio Nobel de 1921.
+
+Sobre os fenômenos referidos acima, temos as seguintes afirmações:
+\begin{enumerate}[I]
+    \item o Efeito Fotoelétrico foi explicado atribuindo-se à luz o comportamento corpuscular.
+    \item a alteração da potência de uma radiação que provoca o Efeito Fotoelétrico altera a energia cinética dos elétrons arrancados e não o número de elétrons.
+    \item de acordo com a Teoria da Relatividade, as leis da Física são as mesmas para qualquer referencial inercial.
+    \item de acordo com a Teoria da Relatividade, a velocidade da luz no vácuo é uma constante universal, é a mesma em todos os sistemas inerciais de referência e não depende do movimento da fonte de luz.
+\end{enumerate}
+As afirmações corretas em relaçãoao texto são:
+\begin{enumerate}
+    \item I
+    \item I,II,IV
+    \item I,II,III
+    \item II,IV
+    \item I,III,IV
+\end{enumerate}
+\item O físico francês Louis de Broglie (1892-1987), em analogia ao comportamento dual onda-partícula da luz, atribuiu propriedades ondulatórias à matéria.
+
+Sendo a constante de Planck $h = 6,6.\,10^{-34}\,J.s$, o comprimento de onda de Broglie para um elétron (massa $m = 9.\,10{-31}\,kg$) com velocidade de módulo $v = 2,2.\,10^6\,m/s$ é de?
+
+\item As ondas eletromagnéticas, como a luz e as ondas de rádio, têm um “sério problema de identidade”. Em algumas situações apresentam-se como onda, em outras, apresentam-se como partícula, como no efeito fotoelétrico, em que são chamadas de fótons. Isto é o que chamamos de dualidade onda-partícula, uma das peculiaridades que encontramos no universo da Física e que nos leva à seguinte pergunta: “Afinal, a luz é onda ou partícula?”. O mesmo acontece com um feixe de elétrons, que pode se comportar ora como onda, ora como partícula.
+
+Com isso, as seguintes afirmações foram feitas:
+\begin{enumerate}[I]
+    \item Um feixe de elétrons incide sobre um obstáculo que possui duas fendas, atingindo um anteparo e formando a imagem apresentada na figura acima. A imagem indica que um feixe de elétrons possui um comportamento ondulatório, o que leva a concluir que a matéria também possui um caráter dualístico.
+    \item O fenômeno da difração só fica evidente quando o comprimento de onda é da ordem de grandeza da abertura da fenda.
+    \item O físico francês Louis de Broglie apresentou uma teoria ousada, baseada na seguinte hipótese: “se fótons apresentam características de onda e partícula [...], se elétrons são partículas mas também apresentam características ondulatórias, talvez todas as formas de matéria tenham características duais de onda e partícula”.
+    \item Admitindo que a massa do elétron seja $9,1.10^{-31}\, kg$ e que viaja com uma velocidade de $3.10^6\,m/s$, o comprimento de onda de De Broglie para o elétron em questão é $2,4.10^{-12}\, m$.
+    \item Após a onda passar pela fenda dupla, as frentes de ondas geradas em cada fenda sofrem o fenômeno de interferência, que pode ser construtiva ou destrutiva. Desta forma, fica evidente o princípio de dependência de propagação de uma onda.
+    \item Christian Huygens, físico holandês, foi o primeiro a discutir o caráter dualístico da luz e, para tanto, propôs o experimento de fenda dupla.
+\end{enumerate}
+Quais itens estão corretos?
+
+\textit{Obs: Caso necessário, a Constante de Planck é: $h=6,6.\,10^{-34}\,J.s$}
+
+\item No repouso, uma molécula tem o seu tamanho de $6,0\,10^{-8}\,m$ e ela é acelerada a uma velocidade de $c/2$ (metade da velocidade da luz; $c=3.\,10^{8}\,m/s$). Qual é o tamanho da molécula observado por um cientista? (desconsidere efeitos quânticos e suponha que a medição seja exata).
+Quais são as afirmações corretas?
+
+\item Uma espaçonave andando à uma velocidade de $2.10^{8}\,m/s$ possui um relógio dentro dela e um humano na Terra observa a nave por 1 min. Quanto tempo se passou na nave durante a observação do humano? (\textit{Obs: a velocidade da luz é: $c=3.10^8\,m/s$ e, caso necessário, $\sqrt{3}\approx 1,7$})
+
+\item Sabendo que a massa do elétron é de $9,1.\,10^{-31}\,kg$, calcule a energia de repouso do elétron, em elétron-volts, por meio da relação de energia e massa de Einstein.
+
+\textit{Obs: velocidade da luz: $c=3.10^8\,m/s$ e 1 elétron-volt = 1 eV = $1,6.\,10^{-19}\,J$}
+
+\item A tabela abaixo mostra as frequências para três tipos distintos de ondas eletromagnéticas que irão atingir uma placa metálica cuja função trabalho corresponde a 4,5 eV. A partir dos valores das frequências podemos afirmar que:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+         \textbf{Onda} & \textbf{Frequência (Hz)}  \\
+         \hline
+         A & $2,5.10^{17}$\\
+         \hline
+         B & $3,0.10^{18}$\\
+         \hline
+         C & $5,0.10^{16}$\\
+         \hline
+         D & $4,5.10^{15}$\\
+         \hline
+    \end{tabular}
+    \label{tab:my_label}
+\end{table}
+\textit{Dados: Considere a constante de Planck como $h = 4,0.10^{–15}\,eV.s$, e a velocidade da luz no vácuo $c = 3,0.10^8\,m/s$}
+
+\begin{enumerate}
+    \item A onda C possui frequência menor que a frequência de corte.
+    \item A energia cinética do fotoelétron atingido pela onda D é de 13,5 eV.
+    \item O efeito fotoelétrico não ocorrerá com nenhuma das ondas.
+    \item A razão entre a frequência de corte e a frequência da onda A é 0,085.
+    \item O comprimento de onda referente à onda B é $2,0.10 ^{–10}\,m$.
+\end{enumerate}
+
+\item Sobre o efeito fotoelétrico, marque a alternativa correta:
+\begin{enumerate}
+    \item O efeito fotoelétrico depende da intensidade da radiação incidente sobre a placa metálica.
+    \item Não há frequência mínima necessária para a ocorrência desse fenômeno.
+    \item A frequência de corte é fruto da razão entre a função trabalho e a constante de Planck.
+    \item A energia cinética dos fotoelétrons é diretamente proporcional ao comprimento de onda da radiação incidente.
+    \item n.d.a.
+\end{enumerate}
+\end{enumerate}
+\newpage
+\section*{GABARITO}
+\begin{enumerate}
+    \item (d)
+    \item (c)
+    \item (c) 
+    \item (e)
+    \item $\lambda=3,3.\,10^{-10}\,m$
+    \item I, II, III
+    \item Quando a molécula está andando nessa velocidade, pela relatividade restrita, ela sofrerá contração, então:
+    \begin{align*}
+        L'= \frac{L}{\gamma};\quad \gamma = \frac{1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}
+    \end{align*}
+    \nonumber em que 'L' é o comprimento da molécula no repouso. Então:
+    \begin{align*}
+        \gamma = \frac{1}{\sqrt{1-\left(\frac{c/2}{c}\right)^2}} = \frac{1}{\sqrt{1-\left(\frac{1}{2}\right)^2}} = \frac{1}{\sqrt{1-\frac{1}{4}}} = \frac{1}{\sqrt{\frac{3}{4}}} = \sqrt{\frac{4}{3}} = \frac{2}{\sqrt{3}} = 
+    \end{align*}
+    Logo:
+    \begin{align*}
+        &L' \frac{L}{\gamma} \implies L'=\frac{6,0.\,10^{-8}}{\frac{2}{\sqrt{3}}} =\frac{6,0\,.10^{-8}\sqrt{3}}{2}\\
+        &\boxed{L'= 3,0\sqrt{3}\,.10^{-8}\,m \approx 5,1\,.10^{-8}\,m}
+    \end{align*}
+    
+    \item Na nave, a essa velocidade, haverá dilatação do tempo, portanto:
+    \begin{align*}
+        \Delta t'=\gamma\,\Delta\,t;\gamma =\frac{1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}
+    \end{align*}
+    Então o fator de Lorentz será:
+    \begin{align*}
+        \gamma = \frac{1}{\sqrt{1-\left(\frac{2.10^8}{3.10^8}\right)^2}} = \frac{1}{\sqrt{1-\left(\frac{2}{3}\right)^2}} = \frac{1}{\sqrt{1-\frac{4}{6}}} = \frac{1}{\sqrt{\frac{2}{6}}} = \frac{1}{\sqrt{\frac{1}{3}}} = \sqrt{3}
+    \end{align*}
+    Portanto, como 1 minuto equivale a 60s:
+    \begin{align*}
+        &\Delta t'=\gamma\,\Delta\,t \implies \Delta t'= \sqrt{3}\,60 \approx 1,7\,.60\\
+        &\boxed{\Delta t' \approx 102\,s = 1\,min\,42\,s}
+    \end{align*}
+    
+    \item Pela relação de energia-massa de Einstein
+    \begin{align*}
+        &E=mc^2 \implies E =9,1.\,10^{-31}\,(3.10^8)^2 = 9,1.\,10^{-31}\,9.10^{16}\\
+        &\implies E =81,9*10^{-15}\,J
+    \end{align*}
+    Porém sabemos que:
+    \begin{align*}
+        &1\,eV \,\rule{2cm}{0.5mm}\,1,6.10^{-19}\,J\\
+        &x\,eV \,\rule{2cm}{0.5mm}\,81,9.10^{-15}\,J\\
+    \end{align*}
+    Portanto:
+    \begin{equation*}
+        \boxed{E= 511875\,eV = 511,8\, keV = 0,511\,MeV}
+    \end{equation*}
+    em que $M$ é o símbolo de Mega: $1M = 1.000.000 =10^6$. Esse é o valor tabelado da energia de repouso do elétron usado nos cálculos da Física de Partículas e Física Nuclear para as contas de colisão.
+    
+    \item A resposta certa é a letra (b). Mas vamos fazer todas as alternativas para argumentar porque a letra (b) é a correta. A letra (a) fala sobre frequência de corte, então vamos calcular a frequência de corte para esse problema. A relação do efeito fotoelétrico é dada por:
+    \begin{align*}
+        E_c = h\,f-\Phi \implies 0 = h\,f_{corte} - \Phi
+    \end{align*}
+    Colocando os valores:
+    \begin{align*}
+        0 = 4,0.10^{-15}\,f_{corte} - 4,5 \implies f_{corte} = \frac{4,5}{4}10^{15} \implies \boxed{f_{corte}\approx 1,1\,10^{15}\,Hz}
+    \end{align*}
+    Esse valor de frequência de corte não condiz com a letra (a). A letra (c) também está errada, pois para ondas com frequência acima dessa frequência de corte, haverá Efeito Fotoelétrico, e, nesse exercício, todas as ondas gerarão o efeito.
+    
+    Para a letra (d), ele quer a razão entre a frequência de corte e a frequência da letra (a):
+    \begin{align*}
+        R = \frac{f_{corte}}{f_A} = \frac{1,1.10^{15}}{2,5.10^{17}} = 0,44.10^{-2} \implies R = 0,0044
+    \end{align*}
+    O resultado não bate com o dado em (d). Para a letra (e), usaremos a equação de onda:
+    \begin{align*}
+        v=\lambda\,f
+    \end{align*}
+    Como a onda é eletromagnética, a velocidade de propagação da onda é a velocidade da luz ($c=3.10^8\,m/s$), logo:
+    \begin{align*}
+        &3.10^8 = \lambda\,3.10^{18} \implies \lambda \frac{3}{3}10^{-10}\\
+        &\implies \lambda = 1.10^{-10}\,m
+    \end{align*}
+    O que não corresponde. Só sobrou a letra (b), a correta. Pela relação do efeito fotoelétrico:
+    \begin{align*}
+        &E_c = h\,f - \Phi \implies E_c = 4,0.10^{-15}\,.\,4,5.10^{15} - 4,5\\
+        &E_c = 18- 4,5 \implies E_c = 13,5\,eV
+    \end{align*}
+    
+    \item (c), pois a luz com a frequência de corte desprende o elétron do átomo, mas não dá a ele energia cinética ($E_c=0$), então:
+    \begin{align*}
+        E_c=h\,f - \Phi \implies 0 = h\,f_{corte} - \Phi \implies f_{corte} = \frac{\Phi}{h}
+    \end{align*}
+\end{enumerate}
+\end{document}
