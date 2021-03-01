@@ -1,0 +1,339 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\setlength{\columnseprule}{1 pt}
+\usepackage[utf8]{inputenc}
+
+\usetikzlibrary{arrows,shapes,positioning,angles}
+\usetikzlibrary{decorations.markings}
+\tikzstyle arrowstyle=[scale=1]
+\tikzstyle directed=[postaction={decorate,decoration={markings,
+    mark=at position 1 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
+    mark=at position 1 with {\arrowreversed[arrowstyle]{stealth};}}}]
+
+\title{Aula 22 - Trabalho, Energia e Potência}
+\author{Felipe Salvador}
+\date{Atualizado em \today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+Nessa aula, veremos um novo conceito físico que nos ajuda a compreender os problemas e sistemas a serem analisados e que nos ajudam a conseguir descrever mais outros problemas. Esse conceito é o conceito físico mais importante a ser usado e está presente em todas áreas físicas do conhecimento: \textbf{Energia}.
+
+Além dele, vermeos a conexão entre energia e força, por meio de uma quantidade chamada \textbf{trabalho} e, por fim, trataremos de uma quantidade que fala sobre a taxa de variação da energia ao longo do tempo, a que damos o nome de \textbf{potência}.
+
+\section{Energia e Conservação de Energia}
+Na definição física, Energia é a quantidade associada à capacidade de um corpo/sistema realizar ação e/ou se modificar. Ou seja, para que o corpo comece a se mover, eu tenho que transferir energia para esse corpo para que ele consiga se mover. Caso eu queira que um corpo pare, eu tenho que retirar energia para que ele não consiga se mover mais.
+
+Uma das questões mais importantes é que a energia aparece de diferentes formas. Ela não é exclusiva para o movimento de um corpo ou interação de um corpo com outro, mas ela é uma representa uma classe de quantidades. Vamos a alguns exemplos:
+\begin{itemize}
+    \item \textbf{Energia Cinética} - a energia que um corpo tem enquanto ele está em movimento;
+    \item \textbf{Energia Térmica} - a energia que um corpo tem quando está a uma certa temperatura.;
+    \item \textbf{Energia Sonora} - a energia que uma onda de som carrega consigo enquanto é transmitida;
+    \item \textbf{Energia Luminosa} - a energia que a luz carrega consigo na sua propagação; 
+    \item \textbf{Energia Potencial} - a energia que um sistema possui devido a interação do corpo com o sistema;
+    \item \textbf{Energia de Massa de Repouso} - é a energia deduzida pela Teoria da Relatividade de Einstein que relaciona a massa de um corpo com a energia que aquela massa representa: $E=mc^2$
+\end{itemize}
+
+E é com a energia, que temos o principal princípio físico de toda a Física: \textbf{O Princípio da Conservação de Energia} e ele diz o seguinte:
+\begin{quote}
+    Dado um sistema físico, a energia total do sistema (a soma de todas as energias que tiverem lá dentro) é mantida constante durante o tempo, a menos que esse sistema interaja com outro sistema físico.
+\end{quote}
+
+Por meio desse princípio, o resultado mais importante é que \textbf{não há criação/destruição de energia.} Logo, para que apareça mais de um tipo de energia, algum outro(s) tipo(s) de energia diminuiram e compensam esse aumento.
+
+Esse conceito físico é o mais primordial de todos e é o que se baseia toda a física conhecida até hoje. Até mesmo princípios, como o da conservação de massa do Lavoisier, não são mais usados hoje, porque existe uma relação que conecta a massa com a energia. Em termos matemáticos, a conservação de energia é escrita assim:
+\begin{equation}
+    (E_t)_1 = (E_t)_2
+\end{equation}
+\noindent em que $(E_t)_1,\,(E_t)_2$ é a energia total num instante 1 e 2, respectivamente.
+
+\textbf{A unidade da energia é dada em Joule (J)}, em homenagem ao físico inglês James Prescott Joule.
+
+\section{Tipos de energia}
+\subsection{Energia Cinética ($E_c$)}
+A energia cinética é a energia associada ao movimento dos corpos e ela é definida como:
+\begin{equation}
+    E_{c} = \frac{mv^2}{2}
+\end{equation}
+\noindent em que 'm' é a massa do objeto e 'v' é a velocidade que ele está se movendo. Perceba que como a massa é sempre uma quantidade positiva e a velocidade está elevada ao quadrado, logo $v^2$ também é positivo, então \textbf{a energia cinética é sempre positiva. ($E_c\geq 0$)}.
+
+Outro ponto interessante é que, como a velocidade é ao quadrado, \textbf{então se eu duplicar a velocidade, a energia quadruplica e o oposto também é verdade: se eu diminuir pela metade a velocidade, a energia diminuir por um quarto.}
+
+\subsection{Energia Potencial Gravitacional ($E_{pot}$)}
+A energia potencial gravitacional é a energia associada a interação de um objeto com a força da gravidade gerada outro objeto: ex: uma bola perto da superfície da Terra.
+
+Essa energia é definida como:
+\begin{equation}
+    E_{pot} = m\,g\,h
+\end{equation}
+\noindent em que 'm' é a massa do objeto em análise, 'g' é a aceleração da gravidade e 'h' é a altura em relação à Terra ou outro planeta.
+
+\subsection{Energia Potencial Elástica ($E_{el}$)}
+A energia potencial elástica é a energia associada a interação de um objeto com a mola que ele está acoplado. Essa energia aumenta conforme mais deformada a mola está, então por isso, ela é definida como:
+\begin{equation}
+    E_{el} = \frac{kx^2}{2}
+\end{equation}
+\noindent em que 'k' é a constante da mola e 'x' é a deformação da mola em relação ao tamanho de repouso dela.
+
+\section{Trabalho ($\tau$ ou $W$)}
+Trabalho é uma quantidade física que indica quanto uma força mudou a energia de um corpo/sistema. Em termos matemáticos, o trabalho '$W$' para o caso de uma força constante é dado por:
+\begin{equation}
+    W = F\,d\,\cos\theta
+\end{equation}
+\noindent em que 'F' é o módulo da força, 'd' é o deslocamento que um corpo fez e '$\theta$' é o ângulo entre a força e o deslocamento feito:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (-3,0);
+         \coordinate (B) at (5,0);
+         \coordinate (C) at (3,2);
+         \coordinate (m) at (0,.2);
+         
+         \draw[black,ultra thick] (A) -- (B);
+         \filldraw[black,fill=black!25!] (m) circle (5pt);
+         \draw[black, thick, ->] (m)+(0.15,0.12) -- ++(2,2);
+         \draw[black, thick, ->] (m)+(0.15,0.12) -- ++(2,0.12);
+         \draw[black,thick] (m)+(0.75,0.72) arc (45:0:0.9);
+         
+         \path (m) ++(1.9,2.3) node {$\vec{F}$};
+         \path (m) ++(2.3,0.2) node {$\vec{d}$};
+         \path (m) ++(1.2,.5) node {$\theta$};
+    \end{tikzpicture}
+    \caption{Esquema das quantidade do trabalho.}
+    \label{fig:trabalho}
+\end{figure}
+
+A unidade do trabalho '$W$' é a mesma da energia: \textbf{Joule}.
+
+Uma questão importante, caso o ângulo entre a força e o deslocamento for de $90^\circ$, $\cos90^\circ =0$, logo o trabalho é nulo. \textbf{Ou seja, qualquer força que só faça o corpo fazer uma curva, sem lhe dar/tirar velocidade, não realiza trabalho.} É por essa relação que forças magnéticas e forças centrípetas não realizam trabalho, porque elas sempre fazem $90^\circ$ com o vetor deslocamento.
+
+Para o caso em que a força varie conforme o deslocamento, temos que calcular a área debaixo do gráfico entre força e deslocamento (F x d):
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (6,0);
+         \coordinate (B) at (0,4);
+         \coordinate (C) at (3,2);
+         \coordinate (m) at (0,.2);
+         
+         \draw[black,ultra thick,->] (O) -- (A);
+         \draw[black,ultra thick,->] (O) -- (B);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (0,2) -- (C);
+         \filldraw[black,fill=blue!25!] (O) -- (C) -- (4,0);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (3,0) -- (C);
+         
+         \path (A) ++(0,-.4) node {$d(m)$};
+         \path (B) ++(0,.2) node {$F(N)$};
+         \path (4,-.5) node {$d_f$};
+         \path (3,-.5) node {$d_1$};
+         \path (-.6,2) node {$F_{max}$};
+         \path (2.3,.6) node {$\mathbf{A}$};
+    \end{tikzpicture}
+    \caption{O cálculo do trabalho quando temos uma força que varia conforme o deslocamento é dado pela área abaixo do gráfico entre força e deslocamento}
+    \label{fig:trabalho}
+\end{figure}
+
+\textit{Exemplo:} Trabalho da Força Peso ($\vec{P}$):
+
+Sabemos que a força peso é dada por $P=mg$ e que ela é constante enquanto a massa for constante. Com isso, se queremos calcular o trabalho que a força peso realiza enquanto um objeto cai em queda livre, podemos usar a fórmula para o trabalho:
+\begin{equation}
+    W = P\,d\,\cos\theta
+\end{equation}
+Vamos supor que o objeto só se mova na vertical, de forma que o deslocamento e a força peso apontem para a mesma direção. Logo: $\cos\theta = \cos0 = 1$. Se eu olhar para o gráfico da força em relação ao deslocamento (altura):
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (6,0);
+         \coordinate (B) at (0,4);
+         \coordinate (C) at (3,2);
+         \coordinate (m) at (0,.2);
+         
+         
+         \fill[fill=blue!25!] (1,0) rectangle (4,2) ;
+         \draw[black,ultra thick,->] (O) -- (A);
+         \draw[black,ultra thick,->] (O) -- (B);
+         \draw[black,ultra thick] (1,2) -- (4,2);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (1,0) -- (1,2);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (4,2) -- (4,0);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (0,2) -- (1,2);
+         
+         \path (A) ++(0,-.4) node {$h(m)$};
+         \path (B) ++(0,.2) node {$P(N)$};
+         \path (4,-.5) node {$h_2$};
+         \path (1,-.5) node {$h_1$};
+         \path (-.6,2) node {$mg$};
+         \path (2.5,1) node {$\mathbf{A}$};
+    \end{tikzpicture}
+    \caption{Trabalho da força peso ($\vec{P}$)}
+    \label{fig:trabalho_peso}
+\end{figure}
+Perceba que a área é a área de um retângulo, portanto:
+\begin{equation}
+    W = A \implies \boxed{W = mg\,(h_2-h_1)}
+\end{equation}
+
+\textit{Exemplo:} Trabalho da Força Elástica ($\vec{F}_{el}$)
+
+Sabemos que a força elástica é dada pela Lei de Hooke:
+\begin{equation}
+    \abs{F(x)} = k\,x
+\end{equation}
+\noindent em que 'x' é a deformação da mola em relação ao repouso.
+
+Como a força depende linearmente com 'x' ('x' está a potência 1), então o gráfico da força é uma linha reta:
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \coordinate (O) at (0,0);
+         \coordinate (A) at (6,0);
+         \coordinate (B) at (0,5);
+         \coordinate (C) at (3,2);
+         \coordinate (m) at (0,.2);
+         
+         
+         \fill[fill=blue!25!] (1,0) -- (1,1) -- (4,3) -- (4,0);
+         \draw[black,ultra thick,->] (O) -- (A);
+         \draw[black,ultra thick,->] (O) -- (B);
+         \draw[black,ultra thick] (1,1) -- (4,3);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (1,0) -- (1,1);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (4,3) -- (4,0);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (0,1) -- (1,1);
+         \draw[black,thick,dash pattern=on 3pt off 3pt] (0,3) -- (4,3);
+         
+         \path (A) ++(0,-.4) node {$x(m)$};
+         \path (B) ++(0,.2) node {$F_{el}(N)$};
+         \path (4,-.5) node {$x_2$};
+         \path (1,-.5) node {$x_1$};
+         \path (-.6,1) node {$k\,x_1$};
+         \path (-.6,3) node {$k\,x_2$};
+         \path (2.5,1) node {$\mathbf{A}$};
+    \end{tikzpicture}
+    \caption{Trabalho da força elástica ($\vec{F}_{el}$) por meio do gráfico da Força Elástica em relação ao deformação/deslocamento da mola ($x(m)$)}
+    \label{fig:trabalho_elastica}
+\end{figure}
+
+Perceba que, agora, a área é a área de um trapézio, em que a base menor é $k\,x_1$, a base maior é $k\,x_2$ e a altura é $x_2-x_1$. Portanto:
+\begin{equation}
+   \begin{split}
+        W &= A = \frac{(B+b)h}{2} \implies W = \frac{(k\,x_2+k\,x_1)(x_2-x_1)}{2} \\
+        W &= \frac{k(x_2+x_1)(x_2-x_1)}{2}\implies \boxed{W = \frac{k(x_2^2-x_1^2)}{2}}
+   \end{split}
+\end{equation}
+
+\section{Potência ($P$)}
+Potência é uma quantidade que mede a taxa da energia/trabalho em relação ao tempo:
+\begin{equation}
+    P = \frac{W}{\Delta t}
+\end{equation}
+A unidade da potência é chamada de \textbf{Watt}: $1 W = 1\frac{Joule}{segundo}$. O nome da unidade é em homenagem ao físico inglês James Watt.
+
+Substituindo a fórmula do trabalho:
+\begin{equation}
+    P = \frac{F\,d\,\cos\theta}{\Delta t}
+\end{equation}
+Lembrando que 'd' é o deslocamento que o objeto faz enquanto sofre a força e $\Delta t$ é o intervalo de tempo, $\frac{d}{\Delta t}$ lembra a definição de velocidade (mas é a velocidade, na verdade!). Então:
+\begin{equation}
+    P = F\,v\,\cos\theta
+\end{equation}
+\noindent em que 'F' é a força aplicada, 'v' é a velocidade que o objeto está e '$\theta$' é o ângulo entre a velocidade e a força aplicada.
+
+\section{Teorema da Energia Cinética (TEC)}
+
+O Teorema da Energia Cinética (TEC) é um relação matemática que conecta o trabalho de uma força (causa) com a variação de energia cinética de um objeto que sofre essa força (consequência). Em matematiquês:
+\begin{equation}
+    W = \Delta E_c 
+\end{equation}
+\noindent em que $\Delta E_c$ é a variação da energia cinética, dada por:
+\begin{equation}
+    \Delta E_c= \frac{mv_f^2}{2}-\frac{mv_i^2}{2}
+\end{equation}
+Logo, substituindo a fórmula do trabalho e a relação da variação da energia cinética:
+\begin{equation}
+    F\,d\,\cos\theta = \frac{mv_f^2}{2}-\frac{mv_i^2}{2}
+\end{equation}
+
+Essa relação demonstra como o trabalho de uma força é relacionado com a energia de um objeto e qual energia é alterada durante o processo de aplicar uma força sobre um objeto. Lembra que falamos que se a força só fizesse um corpo fazer uma curva, o trabalho dessa força tem que ser 0?
+
+Muito bem, aqui novamente esse resultado é recuperado, pensando da seguinte forma: se eu to aplicando uma força de forma que o objeto comece a fazer uma curva, mas sem ganhar/perder velocidade (ou seja, 'v' é mantida constante), então a energia cinética do objeto que está fazendo a curva é constante também (pois, se 'v' é constante, então $E_c = \frac{mv^2}{2}$ será constante também, uma vez que tanto massa quanto velocidade são constantes, nesse caso).
+
+Assim, para 2 instantes de tempo distintos enquanto o objeto faz a curva, a energia cinética nos 2 instante é igual, logo:
+\begin{equation}
+    \Delta E_c = (E_c)_2 - (E_c)_1 = 0 \implies \boxed{\Delta E_c = W = 0}
+\end{equation}
+
+\section{Energia total ($E_t$)}
+Vimos que a energia total é a soma de todas as energias de um sistema. Nos nossos exercícios, só iremos lidar com 2 tipos de energia: \textbf{a energia cinética e a energia potencial (gravitacional ou elástica)}. Logo:
+\begin{equation}
+    E_t = E_c + E_{pot}
+\end{equation}
+Também vimos que, se um sistema estiver fechado (sozinho ou sem interagir com as redondezas), então a energia total deveria ser conservada. Ou seja, olhando em 2 instante de tempo distintos:
+\begin{equation}
+    (E_t)_1 = (E_t)_2
+\end{equation}
+Substituindo a expressão da energia total:
+\begin{equation}
+    \boxed{(E_c)_1 + (E_{pot})_1 = (E_c)_2 + (E_{pot})_2}
+\end{equation}
+\noindent em que $(E_c)_1,\,(E_c)_2$ são a energia cinética nos instantes 1 e 2, respectivamente e $(E_{pot})_1,\,(E_{pot})_2$ são a energia potencial nos instantes 1 e 2, respectivamente. Dessa forma, se a energia cinética diminuir, a energia potencial tem que aumentar e vice-versa.
+\end{document}
