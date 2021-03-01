@@ -1,0 +1,221 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\newcommand{\grad}{$^\circ$}
+\setlength{\columnseprule}{1 pt}
+\usepackage[utf8]{inputenc}
+
+\title{Aula 3 - Calorimetria}
+\author{Felipe Salvador}
+\date{Atualizado em \today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+
+Calorimetria é o estudo de como a transferência de energia térmica, mais conhecida como calor, acontece e quais são os processos dela.
+
+Em geral, existem 2 tipos de calor:
+
+\begin{itemize}
+    \item \textbf{Calor sensível} - é o calor recebido ou dado por um corpo, de forma que aumente/diminua a temperatura, mas não altera a organização das moléculas dentro de um corpo;
+    \item \textbf{Calor latente} - é o calor que um corpo recebe/dá em que traz uma mudança de como as moléculas do corpo se organizam nele. \textbf{Esse calor não altera a temperatura.} Uma questão importante desse calor é que ele é o responsável pelas mudanças de fases de um corpo (seja passar de sólido para líquido ou vice-versa, por exemplo). Esse calor é responsável pela solidificação, liquefação, gaseificação e assim por diante.
+\end{itemize}
+
+\section{Quantidades relacionadas ao calor}
+\subsection{Capacidade Térmica (C)}
+
+\textbf{A capacidade térmica é uma quantidade que mede a quantidade de calor necessária para que a temperatura do corpo cresça por 1.}
+
+De forma geral, a capacidade térmica (C) é definido como:
+\begin{equation}
+    C = \frac{Q}{\Delta T} \implies Q = C\Delta T
+\end{equation}
+\noindent em que $Q$ é o calor que um corpo recebeu/deu e $\Delta T$ é a variação de temperatura que esse corpo sofreu. Como calor é um nome bonito para transferência de energia térmica, então a unidade de calor é a mesma unidade para energia.
+
+No Sistema Internacional (SI), calor é dado em Joule(J). Mas, também, calor pode ser dado em Calorias (Cal), em que veremos mais tarde o porquê. Sabemos que temperatura é dado em graus Celsius (\grad C). Logo, pela fórmula:
+
+\begin{equation}
+    [C] = \frac{[Q]}{[\Delta T]} = \frac{J}{^\circ C} \quad \text{ou} \quad \frac{cal}{^\circ C}
+\end{equation}
+
+Essa quantidade é muito boa, pois é possível saber o quanto de calor precisa ser fornecido para um corpo aquecer. \textbf{Essa quantidade varia de corpo para corpo, de material para material.} 
+
+\subsection{Calor específico (c)}
+
+Quando temos um corpo formado por um único material, podemos saber o quanto calor 1g desse material precisa para aumentar/diminuir 1 \grad C. O nome dessa quantidade é \textbf{calor específico (c)}, e ele é dado como:
+
+\begin{equation}
+    c = \frac{Q}{m\Delta T} \implies Q = mc\Delta T
+\end{equation}
+\noindent em que $Q$ é o calor recebido/dado, $m$ é a massa do objeto e $\Delta T$ é o aumento/decrescimento da temperatura. Sabendo que a unidade de massa é dado em gramas (g), a unidade do calor específico é:
+
+\begin{equation}
+    [c] = \frac{[Q]}{[m][T]} = \frac{J}{g\,^\circ C} \quad ou \quad \frac{cal}{g\,^\circ C}
+\end{equation}
+
+A utilidade de usar $\frac{cal}{g\,^\circ C}$ é porque o calor específico da água é:
+\begin{equation}
+    c_{H_2O} = 1 \frac{cal}{g\,^\circ C} \approx 4,2 \frac{J}{g\,^\circ C}
+\end{equation}
+
+Importante ver, pelas equações (1) e (3) que, os calor específico e capacidade térmica são relacionadas por:
+
+\begin{equation}
+    C = mc
+\end{equation}
+\noindent mas detalhe: \textbf{essa relação só vale se o corpo for composto de um único material. Se o corpo tiver diversos materiais nele, essa relação não vale!}
+
+\subsection{Calor Latente de Transformação (L)}
+
+Essa quantidade diz o quanto de calor é necessário para que 1g de um certo material mude de estado (ex: sólido $\rightarrow$ líquido). Durante esse processo, lembremos que a temperatura não se altera, enquanto a transformação não acabar.
+
+O calor latente de transformação é definido como:
+\begin{equation}
+    L = \frac{Q}{m} \implies Q =mL
+\end{equation}
+\noindent em que $Q$ é o calor recebido/dado pelo corpo e $m$ é a massa do corpo. Fazendo a mesma análise de unidade que fizemos para os outros, vemos que:
+\begin{equation}
+    [L] = \frac{[Q]}{[m]} = \frac{J}{g} \quad  ou \quad \frac{cal}{g}
+\end{equation}
+
+Por exemplo, o calor latente de vaporização da água (transformar água em vapor):
+\begin{equation}
+    L_{H_2O} = 540 cal/g
+\end{equation}
+
+\textbf{Importante: se o corpo estiver indo sólido $\rightarrow$ líquido, líquido $\rightarrow$ gás ou sólido $\rightarrow$ gás, L é positivo.}
+
+\textbf{Se o corpo estiver indo líquido $\rightarrow$ sólido, gás $\rightarrow$ líquido ou gás $\rightarrow$ sólido, L é negativo.}
+
+\section{Balanço de calor}
+
+Uma questão importante é que: \textbf{o calor fornecido por um corpo é o calor recebido pelo outro corpo.} Isso é equacionado por:
+
+\begin{equation}
+    Q_{dado}^{total} + Q_{recebido}^{total} =0
+\end{equation}
+\noindent em que o $Q_{dado}^{total}$ é o todo calor dado por um corpo,  e $Q_{recebido}^{total}$ é todo calor que o outro corpo recebeu. A última, é a soma dos calores recebidos (que são dados pelas equações (1), (3) e (7)).
+
+É a partir dessa relação, que iremos fazer os nossos exemplos:
+
+\section{Exemplos:}
+
+\begin{enumerate}
+    \item Foi dado 20000 cal de calor para 1000 g de água inicialmente a 20\grad C. Encontre a temperatura final para essa massa de água. A água evaporou?
+    (Dados: calor específico da água: 1 cal/g\grad C; calor latente de vaporização: 540 cal/g; calor específico de vapor: 0,5 cal/g\grad C)
+    
+    Usando a fórmula dada por (10) para o balanço de calor:
+    \begin{align*}
+        &Q_{dado}^{total} + Q_{recebido}^{total} =0
+        \end{align*}
+        Como é água, o calor recebido deve aumentar a temperatura:
+        \begin{align*}
+        &Q_{dado}^{total} + mc\Delta T =0\\
+        &-20000 + 1000. 1.(T_F - 20) =0 \\
+        &1000T_F - 20000 - 20000 =0\\
+        &1000T_F = 40000 \implies T_F = 40\,^\circ C
+        \end{align*}
+        
+        Bem, chegamos na resposta. Mas, pode ser que precisemos colocar outros termos (calor latente, por exemplo) para dar conta.
+        
+        \item Os mesmos dados do exemplo 1, mas agora a massa de água é de 100g.
+        
+        O balanço de calor é dado por
+        \begin{align*}
+        &Q_{dado}^{total}+ Q_{recebido}^{total} =0
+        \end{align*}
+        Como é água, o calor recebido deve aumentar a temperatura:
+        \begin{align*}
+        &Q_{dado}^{total} + mc\Delta T =0\\
+        &-20000 + 100. 1.(T_F - 20) =0 \\
+        &100T_F - 20000 - 2000 =0 \\
+        &100T_F = 22000 \implies T_F = 220 ^\circ C
+        \end{align*}
+        
+        A gente sabe que a água evapora a 100 \grad C, então essa resposta acima está errada. Logo, no balanço de calor, temos que contabilizar a vaporização da água.
+        
+        \begin{align*}
+            &Q_{dado}^{total} + mc\Delta T - mL =0\\
+            &-20000 + 100.1(100-20) + 100.540 =0
+            &-20000 + 8000 +54000 =0
+        \end{align*}
+        
+        Isso claramente não dá 0. Mas o que acontece aqui é que parte da massa de água vaporizou, uma outra parte ainda está líquida!
+        
+        \item Tendo uma massa de água de 100 g, inicialmente a 20 \grad C. A água foi colocada no congelador e sua temperatura final é de -5 \grad C. Qual é o calor cedido ao congelador? (Dado: calor específico do gelo: 0,5 cal/g \grad C; calor latente de fusão: 80 cal/g)
+        
+        Pelo balanço de energia:
+        
+        \begin{align*}
+            &Q_{dado}^{total} + Q_{recebido}^{total} =0
+        \end{align*}
+        
+        Nós vamos olhar da perspectiva do congelador. Então:
+        \begin{align*}
+             Q_{dado} + mc_{água}\Delta T + mL + mc_{gelo}\Delta T =0
+        \end{align*}
+        Nós sabemos que a água vira gelo à 0 \grad C, então:
+        \begin{align*}
+            &Q_{dado} + 100.1.(0-20) - 100.80 + 100.0,5 (-5-0) =0\\
+            &Q_{dado} -2000 - 8000 -250 =0\\
+            &Q_{dado} = 10250 cal
+        \end{align*}
+        
+        Lembrar que $L$ é negativo, porque a água tá se tornando gelo.
+\end{enumerate}
+
+\end{document}
