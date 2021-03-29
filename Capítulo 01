@@ -1,0 +1,162 @@
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Capítulo 01 - Unidades de medida e ordens de grandeza} 
+\author{Atualizado em 26/03/2021}
+\date{}
+\begin{document}
+\maketitle
+\textit{“Apesar da beleza matemática de algumas das teorias mais complexas e abstratas, a física é acima de tudo uma ciência experimental. Portanto, é essencial que aqueles que realizam medições precisas adotem padrões aceitos por todos para representar os resultados dessas medições, de modo que tais resultados possam ser transmitidos de um laboratório para o outro e verificados.”}\\
+(Halliday,David - Física 1, p.1 LTC)\\\\
+\textbf{\underline {1.1 GRANDEZAS FÍSICAS, PADRÕES E UNIDADES}}\\
+\par As leis da física são expressas em termos de inúmeras grandezas diferentes: massa, comprimento, tempo, força, velocidade, resistência, etc. Cada uma dessas  grandezas possui um significado preciso e faz parte da linguagem que os cientistas usam para se comunicar entre si. Por exemplo, quando um físico usa o termo “campo elétrico”, todos os outros cientistas entendem o seu significado. Além disso, cada uma dessas grandezas possui determinadas unidades usadas para expressar seus valores. Caso contrário, seria impossível para os cientistas transmitirem os seus resultados um ao outro e comparar seus valores. 
+\par Algumas grandezas derivam de outras. Para isso, algumas delas devem ser consideradas fundamentais para servir de base para entender outras. O padrão de medida para a velocidade pode ser escrito como sendo igual ao comprimento dividido pelo tempo, mencionada anteriormente, deriva de dois outros padrões.\\\\ 
+\textbf{\underline {1.2 O SISTEMA INTERNACIONAL DE UNIDADES}}\\
+\par A Conferência Geral de Pesos e Medidas selecionou as sete grandezas que são listadas na Tabela 1.1, que são conhecidas como unidades de base. A partir delas, pode-se derivar todas as outras unidades existentes. Ao longo dessa apostila serão utilizadas unidades derivadas das unidades de base do Sistema Internacional de Unidades (SI) listadas na Tabela 1.1. Por exemplo: a unidade de força no SI, chama-se \textit{newton} (N), e ela é definida como $1N = 1\:kg \cdot m/s^2$, conforme será explicado adiante.\\\\
+$$\begin{tabular}{|lll|}
+\hline
+\rowcolor[HTML]{9B9B9B} 
+Tabela  1-1                                     & {\color[HTML]{333333} Unidades de Base do SI} & {\color[HTML]{333333} }        \\ \hline
+\multicolumn{1}{|l|}{}                          & Unidades SI                                   &                                \\ \hline
+\multicolumn{1}{|l|}{Grandeza}                  & Nome                                          & {\color[HTML]{333333} Símbolo} \\ \hline
+\multicolumn{1}{|l|}{Tempo}                     & segundo                                       & s                              \\
+\multicolumn{1}{|l|}{Comprimento}               & metro                                         & m                              \\
+\multicolumn{1}{|l|}{Massa}                     & quilograma                                    & kg                             \\
+\multicolumn{1}{|l|}{Quantidade de substância}  & mol                                           & mol                            \\
+\multicolumn{1}{|l|}{Temperatura termodinâmica} & kelvin                                        & K                              \\
+\multicolumn{1}{|l|}{Corrente elétrica}         & ampère                                        & A                              \\
+\multicolumn{1}{|l|}{Intensidade luminosa}      & candela                                       & cd                             \\ \hline
+\end{tabular}$$\\\\
+\par Outro fator importante que expressamos nas unidades é a magnitude de certos números. Números muito grandes ou muito pequenos podem ser facilmente encontrados na física. O tamanho de um átomo, ou a potência de uma usina elétrica são números expressos em unidades do SI. Desse modo, a Conferência Geral de Pesos e Medidas recomendou a utilização da Tabela 1.2.\\
+\par 
+$$\begin{tabular}{|llllll|}
+\hline
+\rowcolor[HTML]{9B9B9B} 
+Tabela 1-2 & {\color[HTML]{333333} Prefixos SI} &         &            &                 &         \\ \hline
+Fator      & Prefixo                            & Símbolo & Fator      & Prefixo         & Símbolo \\ \hline
+$10^2^4$   & iota                               & Y       & $10^-^1$   & deci-           & d       \\
+$10^2^1$   & zeta                               & Z       & $10^-^2$   & \textbf{centi-} & c       \\
+$10^1^8$   & exa-                               & E       & $10^-^3$   & \textbf{mili-}  & m       \\
+$10^1^5$   & peta-                              & P       & $10^-^6$   & \textbf{micro-} & $\mu$   \\
+$10^1^2$   & tera-                              & T       & $10^-^9$   & \textbf{nano-}  & n       \\
+$10^9$     & \textbf{giga-}                     & G       & $10^-^1^2$ & \textbf{pico-}  & p       \\
+$10^6$     & \textbf{mega-}                     & M       & $10^-^1^5$ & femto-          & f       \\
+$10^3$     & \textbf{kilo-}                     & k       & $10^-^1^8$ & ato-            & a       \\
+$10^2$     & hecto                              & h       & $10^-^2^1$ & zepto-          & z       \\
+$10^1$     & deca-                              & da      & $10^-^2^4$ & iocto-          & y       \\ \hline
+\end{tabular}$$\\\\
+\par Usando a Tabela 1.2, é possível escrever a potência gerada em uma usina elétrica típica, de 1,3 gigawatts ou 1,3 GW. Da mesma forma é possível escrever o tamanho de um átomo, de 0,1 nanômetro, ou 0,1 nm.\\\\ 
+\textbf{\textcolor{black}{\underline {Problema Resolvido 1-1.}}}\\\\ 
+Viajando a serviço, você se encontra em um país onde os sinais de trânsito fornecem as distâncias em quilômetros e os velocímetros dos automóveis estão calibrados em quilômetros por hora. Se você está dirigindo a 90 km/h, quão rápido você está viajando em metros por segundo?\\\\
+\textbf{Solução:}\\\\
+Sabemos que um quilômetro possui 1000 m, que 1 hora possui 60 min e que 1 min possui 60 s, de modo que podemos escrever que $$1\:h = 60\:min \cdot \frac{60\:s}{1\:min} = 3600\:s$$
+Assim podemos escrever que:
+$$90\:km/h = \frac{90000\:m}{3600\:s} = 25\:m/s$$\\\\
+\textbf{\textcolor{black}{\underline {Problema Resolvido 1-2.}}}\\\\
+A velocidade do som no ar vale 343 m/s. Qual é a velocidade de um avião supersônico que viaja com o dobro da rapidez do som? Dê sua resposta em quilômetros por hora.\\\\
+\textbf{Solução:}\\\\
+A velocidade do avião será o dobro da velocidade do som no ar, de modo que sua velocidade pode ser calculada por:
+$$v_a{_v{_i{_a{_o}}}} = 2\cdot v_a{_r} = 2 \cdot 343\:m/s = 686\:m/s$$
+Sabendo que 1 km equivale a 1000 m e que 1 hora equivale a 3600 s, podemos escrever que:
+$$v_a{_v{_i{_a{_o}}}} = 0,686\:km/s \cdot 3600\:s/h = 2469\:km/h$$
+\newpage
+\textbf{\underline{Problema Resolvido 1-3.}}\\\\
+Os habitantes dos EUA costumam dizer que o vão principal da ponte Golden Gate mete 4200 pés. Expresse esta distância em quilômetros.(Dados: 1 pé $\approx$ 30,5 cm)\\\\
+\textbf{Solução:}\\\\
+Como 1 pé é igual a 30,5 cm, podemos dizer que $$4200\:pes = 4200\:pes\cdot 30,5\:\frac{cm}{pes} = 128100\:cm$$
+Como 1 quilômetro possui 1000 m e 1 metro possui 100 cm, então:
+$$1\:km = 1000\:m \cdot 100\:\frac{cm}{m} = 100000\:cm$$
+De modo que a ponte possui então:
+$$P = \frac{128100\:cm}{100000\:cm/km} = 1,28\:km$$
+\textbf{\underline {Problema Resolvido 1-4.}}\\\\
+Encontre o fator de conversão de km/h para m/s. Em seguida converta 90 km/h para m/s\\\\
+\textbf{Solução:}\\\\
+Sabemos que 1 km = 1000 m e que 1 hora possui 3600 segundos, de modo que podemos escrever que:
+$$ 1\:km/h = \frac{1000\:m}{3600\:s} \approx 0,277\:m/s$$
+Como 1 km/h = 0,277 m/s, então:
+$$90\:km/h = 90 \cdot 0,277\:m/s \approx 25\:m/s $$\\\\
+\textbf{ \underline{1.3 NOTAÇÃO CIENTÍFICA}}\\ %lembrar de usar \par
+\par A notação científica é uma forma simplificada de escrever números muito grandes ou muito pequenos. Essa simplificação é especialmente importante na física, uma área em que é tratada grandezas muito grandes, como o tamanho do universo, ou muito pequenas, como o tamanho de um elétron. Vejamos por exemplo, como seria o número 1 trilhão em notação científica.\\
+$$1.000.000.000.000 = 1\times 10^1^2$$ %\cdot
+A notação científica é sempre escrita em forma de potência de dez, dessa forma a generalização a seguir é valida:\\
+$$N=a\times 10^b$$  \par Em que $N$ representa um número muito grande ou muito pequeno, a letra “$a$” é sempre um valor maior ou igual a 1 e menor ou igual a 10 ( $1 \le a < 10 $). Já $b$, pode ser qualquer número inteiro. Para multiplicar dois números expressos utilizando a notação científica, utilizamos que, seja $A=a\times 10^b$ e $B=c \times 10^d$, então:
+$$A\times B =a\cdot 10^b \cdot c \cdot 10^d = (a \cdot c) \times 10^{(b+d)}$$
+Já para dividir, utilizamos que:
+$$\frac{A}{B}=\frac{a \times 10^b}{c \times 10^d} = \frac{a}{c}\times 10^{(b-d)}$$
+Vejamos alguns exemplos:\\\\
+\textbf{\underline {Problema resolvido 1-5}}\\\\
+\textbf{(UFRGS 2013)} Um adulto humano saudável abriga cerca de 100 bilhões de bactérias, somente em seu trato digestivo, esse número de bactérias podem ser escritos como?\\\\
+\textbf{Solução:}\\\\ Sabemos que um bilhão equivale a $10^9$. Assim $100\cdot10^9$ = $10^2 \cdot 10^9$ = $10^{2+9}$=$10^1^1$\\\\
+Assim, 100 bilhões pode ser escrito como $10^{11}$\\\\
+\textbf{\underline {Problema resolvido 1-6}}\\\\
+Uma membrana celular tem uma espessura de 7,0 nm. Quantas membranas celulares seriam necessárias para fazer uma pilha de 2,54 cm?\\\\
+\textbf{Solução:}\\\\
+Basta dividir, lembrando que \textbf{centi}, pela Tabela 1.2, equivale a $10^{-2}$, e que \textbf{nano} (n), equivale a $10^{-9}$:
+$$N = \frac{2,54 \times 10^-^2\:m}{7,0 \times 10^-^9\:m} = 0,36 \times 10^(^-^2^-^(^-^9^)^) = 0,36 \times 10^7$$
+Como nesse caso, nosso valor acaba sendo menor que um, temos que multiplicar nosso resultado por 10, ou seja:
+$$ 0,36 \times 10^7=0,36 \times 10 \times 10^6 = 3,6 \times 10^6\:celulas$$
+\textbf{\underline{1.4 O PADRÃO DE TEMPO}}\\\\ 
+Na maioria dos trabalhos científicos, é necessário conhecer quanto tempo dura um evento, ou seja, o intervalo de tempo que determinada experiência se faz acontecer. A Tabela 1.3 mostra a ordem de grandeza de alguns intervalos de tempo:\\\\
+$$\begin{tabular}{ll}
+\hline
+\rowcolor[HTML]{9B9B9B} 
+\multicolumn{1}{|l}{\cellcolor[HTML]{9B9B9B}Tabela 1-3   Alguns intervalos de tempo} & \multicolumn{1}{l|}{\cellcolor[HTML]{9B9B9B}} \\ \hline
+\multicolumn{1}{|l}{Intervalo de tempo}                                              & \multicolumn{1}{l|}{Segundos}                 \\ \hline
+\multicolumn{1}{|l}{Tempo de vida de um próton}                                      & \multicolumn{1}{l|}{$10^4^0$}                 \\
+\multicolumn{1}{|l}{Idade do universo}                                               & \multicolumn{1}{l|}{$5\cdot10^1^7$}           \\
+\multicolumn{1}{|l}{Idade da pirâmide de Quéops}                                     & \multicolumn{1}{l|}{$1\cdot10^1^1$}           \\
+\multicolumn{1}{|l}{Expectativa de vida humana}                                      & \multicolumn{1}{l|}{$2\cdot10^9$}             \\
+\multicolumn{1}{|l}{Intervalo de tempo entre batidas do coração}                     & \multicolumn{1}{l|}{$8\cdot10^-^1$}           \\
+\multicolumn{1}{|l}{Período de rotação de uma molécula}                              & \multicolumn{1}{l|}{$1\cdot10^-^1^2$}         \\
+\multicolumn{1}{|l}{Tempo de vida das partículas menos estáveis}                     & \multicolumn{1}{l|}{$<10^-^2^3$}              \\ \hline
+\end{tabular}$$\\
+\par É possível utilizar qualquer fenômeno cíclico. Pode-se utilizar um pêndulo, um sistema massa-mola ou um cristal de quartzo. Dentre estes, um que serviu durante vários séculos foi o período de rotação da Terra em torno do próprio eixo. Um segundo (solar médio) foi definido como 1/86,400 de um dia (solar médio). Relógios de cristal de quartzo, que operam com base nas vibrações de um cristal de quartzo mantidas por meio de energia elétrica podem ser usados como padrões de tempo. Em 1967, a Conferência Geral de Pesos e Medidas adotou a definição do segundo de acordo com a frequência característica da radiação emitida por um átomo de césio. Em particular, foi estabelecido que o segundo é: \\\\\textit{\centerline{“ a duração de 9.192.631.770 vibrações da radiação emitida por um isótopo do átomo de césio.”}}\\\\
+\textbf{\underline{1.5 O PADRÃO DE COMPRIMENTO}}\\
+\par O primeiro padrão internacional de comprimento foi uma barra de uma liga metálica, chamada de metro padrão, mantida na Agência Internacional de Pesos e Medidas, localizado na França. O metro foi definido como a distância entre dois traços finos gravados perto das extremidades da barra, quando esta se encontra a 0$^{\circ}$C e esta em uma posição pré-estabelecida. Atualmente, este padrão já não é mais suficiente para a ciência e tecnologia modernas. Em 1983, a demanda por padrões de maior precisão exigiu uma nova definição para o metro. Nas palavras da Conferência Geral de Pesos e Medidas:\\\\ \textit{\centerline{“O metro é a distância percorrida pela luz no vácuo, durante o intervalo de tempo de 1/299.792.458 segundo.”}}\\
+\par Curiosidade: isto é equivalente a dizer que a velocidade da luz, c, é agora definida como\\
+$$c=299.792.458 m/s$$
+Essas definições estão aqui presentes como curiosidades, não sendo necessário memoriza-las.\\\\
+\textbf{\underline {Problema Resolvido 1-7.}}\\\\
+Um ano-luz é uma medida de comprimento (não uma medida de tempo) igual à distância percorrida pela luz em um ano.Calcule o fator de conversão entre anos-luz e metros,e encontre a distância à estrela \textit{Proxima Centauri} ($4.10^6$ m) em anos-luz.\\\\
+\textbf{Solução:}\\\\
+O fator de conversão de anos para segundo é:
+$$1\:ano=1\:ano \times \frac{365\:dias}{ano}\times \frac{24\:h}{dia}\times \frac{60\:min}{1\:h} \times \frac{60\:s}{min}=3,15 \times 10^7\:s$$
+A velocidade da luz é igual a aproximadamente $3 \times 10^8$ $m/s$. Então, em um ano, a luz percorre a distância $D$ de:
+$$D=(3 \times 10^8\:m/s)\cdot (3,15 \times 10^7\:s)=9,48 \times 10^{15}\:m$$
+Então a distância $x$ à estrela \textit{Proxima Centauri} é:
+$$x=\frac{(4,0\times 10^{16}\:m)}{(9,48\times 10^{15}\:m)}=4,2\:anos-luz$$
+A luz de \textit{Proxima Centauri} demora cerca de 4,2 anos para percorrer a distância até a Terra.\newpage
+\textbf{\underline{1.6 O PADRÃO DE MASSA}}\\
+\par O padrão de massa do SI é um cilindro de uma liga metálica mantido na Agência Internacional de Pesos e Medidas, cuja massa, atribuída em acordo internacional, é de 1 quilograma. A Tabela 1.4 mostra algumas massas medidas. Observe que elas variam segundo um fator de $10^8^3$. A maioria das massas foi medida em termos do quilograma padrão através de métodos indiretos.\\\\
+$$\begin{tabular}{|ll|}
+\hline
+\rowcolor[HTML]{9B9B9B} 
+Tabela 1-4  Algumas massas medidas &                      \\ \hline
+\textit{Objeto}                    & \textit{Quilogramas} \\ \hline
+Universo conhecido (estimado)      & $10^5^3$             \\
+Terra                              & $2\cdot10^4^3$       \\
+Elefante                           & $4\cdot10^3$         \\
+Uva                                & $3\cdot10^-^3$       \\
+Vírus                              & $1\cdot10^-^1^5$     \\
+Próton                             & $2\cdot10^-^2^7$     \\ \hline
+\end{tabular}$$\\\\\\\\
+\textbf{\underline{1.7 ANÁLISE DIMENSIONAL}}\\
+\par Toda grandeza física medida ou calculada está associada à uma dimensão. Tanto a absorção de som em uma sala fechada quanto a probabilidade de reações nucleares possuem dimensões.
+\par Assim como foram definidos os padrões de medida como grandezas fundamentais, pode-se escolher um um conjunto de dimensões fundamentais independentes de padrões de medição. As grandezas mecânicas, massa, comprimento e tempo são elementares e independentes e, dessa maneira servem como dimensões fundamentais. Elas são representadas, respectivamente, como M, L e T. É importante ressaltar que todas as equações devem ser dimensionalmente consistentes, ou seja, as dimensões de ambos os lados da equação devem ser iguais.
+\par Colchetes [ ] são usados para denotar a dimensão de determinada grandeza de modo que [S] = L (a dimensão da variável S, posição, é L, de comprimento), ou [t] = T (a dimensão da variável t, tempo, é T, de mesmo nome).
+\newpage
+\textbf{\underline{Exercícios de fixação:}}\\\\
+1) Um litro (l) é o volume de um cubo de 10 cm por 10 cm por 10 cm Se você bebe (exatamente) 1 L de água, qual o volume ocupado em seu estômago, em centímetros cúbicos $(cm^3)$ e em metros cúbicos $(m^3)$? \\\\
+2) Uma pessoa que está seguindo uma dieta, perde 2,3 kg por semana.Expresse a taxa de perda de massa em miligramas por segundo, expressando sua resposta final utilizando notação científica\\\\
+3-) (\textbf{Desafio}) Em 12,0 g de carbono há $N_A = 6,02 \times 10^2^3$ átomos de carbono (número de Avogadro). Se você pudesse contar um átomo de carbono por segundo, quanto tempo levaria para contar os átomos de 1,00 g de carbono? Expresse sua resposta em anos.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Referência bibliográficas: HALLIDAY, D. Fundamentos de Física: Mecânica, vol1.  5 ed. LTC, 2006. 
+\end{document}
