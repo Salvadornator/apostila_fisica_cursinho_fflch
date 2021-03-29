@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Soluções do Exercícios}
+\author{1ª Lista de Exercícios Vestibulares - Medição}
+\begin{document}
+\date{Atualizado em 27/03/2021}
+\maketitle
+1-) \textbf{(ENEM - 2001)}\\
+\centerline{\textbf{SEU OLHAR}}
+\centerline{(Gilberto Gil, 1984)}\\\\
+\centerline{Na eternidade}
+\centerline{Eu quisera ter}
+\centerline{Tantos anos-luz}
+\centerline{Quantos fosse precisar}
+\centerline{Pra cruzar o túnel}
+\centerline{Do tempo do seu olhar}\\\\
+Gilberto Gil usa na letra da música a palavra composta anos anos-luz luz. O sentido prático, em geral, não é obrigatoriamente o mesmo que na ciência. Na Física, um ano luz é uma medida que relaciona a velocidade da luz e o tempo de um ano e que, portanto, se refere a:\\\\
+(a) tempo.\\
+(b) aceleração.\\
+(c) distância.\\
+(d) velocidade.\\
+(e) luminosidade.\\\\
+\textbf{\underline{Solução}}\\\\
+Um ano-luz é uma unidade de medida de distâncias, que corresponde a distância percorrida pela luz, que possui uma velocidade de $3\times 10^8\:m/s$ durante um período de um ano. Portanto, sendo uma distância, a alternativa correta é a letra (c).\\\\
+
+2-) \textbf{(PUC-RS)} Um estudante mandou o seguinte e-mail a um colega: “No último fim de semana fui com minha família à praia. Depois de 2hrs de viagem, tínhamos viajado 110Km e paramos durante 20 MIN para descansar e fazer compras em um shopping. Meu pai comprou 2KG de queijo colonial e minha mãe 5ltrs de suco concentrado. Depois de viajarmos mais 2h, com uma velocidade média de 80KM/H, chegamos ao destino.”O número de erros referentes à grafia de unidades, nesse e-mail, é:\\\\
+(a) 2\\
+(b) 3\\
+(c) 4\\
+(d) 5\\
+(e) 6\\\\
+\textbf{\underline{Solução}}\\\\
+Temos alguns erros referentes à escrita do estudante. O primeiro é que utilizamos "h" e não "hrs" para nos referirmos a hora. Segundo: quilômetros é escrito como "km" e não "Km". Terceiro: O correto é "min" e não "MIN". Quarto: o correto é "km/h" e não "KM/H". Quinto: o correto é "kg" e não "KG". Sexto e último, portanto, é que o correto se escreve "l" para litros e não "ltrs". Portanto temos 6 erros, que equivale à alternativa (e).\\\\
+3-) \textbf{(UFCE-CE)} A energia relativística do fóton é dada por $E = X\cdot c$, onde c indica a velocidade da luz. Utilizando conhecimentos de física moderna e análise dimensional, assinale a alternativa correta no tocante à dimensão de X.\\\\
+(a) Força\\
+(b) Massa\\
+(c) Velocidade\\
+(d) Comprimento\\
+(e) Quantidade de movimento\\\\
+\textbf{\underline{Solução}}\\\\
+A energia, como veremos no decorrer do curso, é dada em Newtons vezes metro, sendo um Newton, dado em $kg\cdot m/s^2$. Sendo $c$, uma velocidade, ela é dada em distância dividida pelo tempo, ou seja, $m/s$. Assim, em termos das unidades, temos a equação:
+$$kg\cdot \frac{m}{s^2} \cdot m = X \cdot \frac{m}{s}$$
+$$kg \cdot \frac{m^2}{s^2} = X \cdot \frac{m}{s}$$
+Cancelando $m/s$ em ambos os lados, temos que $X$ é dado em:
+$$X = kg \cdot \frac{m}{s}$$
+Como veremos posteriormente, essa unidade é a mesma da quantidade de movimento, portanto temos a alternativa (e) como resposta correta.\\\\
+4-) \textbf{(UNESP-SP)} Um estudante de física resolvendo certo problema chegou à expressão final: $F = 2(m_1 + m_2)vt^2$ onde F representa uma força, $m_1$ e $m_2$ representam massas, $v$ é uma velocidade linear, $t$ é tempo. Outro estudante resolvendo o mesmo problema chegou à expressão: $F = 2(m_1+ m_2)vt^-{^1}$. Mesmo sem conhecer os detalhes do problema você deve ser capaz de verificar qual das respostas acima obviamente deve estar errada. Explique qual delas é certamente errada.\\\\
+\textbf{\underline{Solução}}\\\\
+Podemos descobrir qual das duas expressões é a correta facilmente, pois basta que vejamos se a mesma está com as unidades de força, que é $kg\cdot m/s^2$. Assim, a expressão do primeiro estudante terá as unidades:
+$$F=2(m_1+m_2)vt^2$$
+Aqui, o fator dois não altera a unidade, de modo que podemos omiti-lo. Além disso, dado que a soma de duas massas ($m_1+m_2$) continua tendo a unidade de massa, podemos escrever que:
+$$F=mvt^2$$
+Como a velocidade é dada em metros por segundo, podemos escrever que:
+$$F=kg\bigg(\frac{m}{s}\bigg)s^2$$
+$$F=kg\cdot m\cdot s$$
+Portanto, essa expressão não possui unidades de força. Vamos agora a segunda expressão:
+$$F=2(m_1+m_2)vt^{-1}$$
+Novamente podemos escrever que:$2(m_1+m_2)=m$ é uma massa genérica. Assim:
+$$F=kg\:vt^{-1}=\frac{kg\:v}{t}=kg \frac{m}{s^2}$$
+Que, tendo unidade de força, é a expressão correta.\\\\
+5-) \textbf{(FATEC-SP)} O kWh é unidade usual da medida de consumo de energia elétrica, um múltiplo do joule, que é a unidade do Sistema Internacional. O fator que relaciona estas unidades é:\\\\
+(a) $1,0 \times 10^3$\\
+(b) $3,6 \times 10^3$\\
+(c) $9,8 \times 10^3$\\
+(d) $3,6 \times 10^6$\\
+(e) $9,8$\\\\
+\textbf{\underline{Solução}}\\\\
+O joule é o produto da força pelo deslocamento, ou seja, sua unidade é $\displaystyle kg \cdot \frac{m}{s}\cdot m = kg \cdot \frac{m^2}{s^2}$. Sendo o Watt ($W$) conhecido como $J/s$, então o prefixo $kWh$ pode ser escrito como:
+$$kWh = 10^3\: \frac{J}{s} \cdot 3600\:s = 3,6 \times 10^6 J$$
+Assim, o fator que relaciona $kWh$ com $J$ é $3,6 \times 10^6$, que corresponde à alternativa (d).\\\\
+6-) \textbf{(UFC-SC)}Uma esfera de cobre com raio da ordem de micrômetros possui uma carga da ordem de dez mil cargas elementares, distribuídas uniformemente sobre sua superfície. Considere que a densidade superficial é mantida constante. Assinale a alternativa que contém a ordem de grandeza do número de cargas elementares em uma esfera de cobre com raio da ordem de milímetros.\\\\
+(a) $10^1^9$\\
+(b) $10^1^6$\\
+(c) $10^1^3$\\
+(d) $10^1^0$\\
+(e) $10^1$\\\\
+\textbf{\underline{Solução}}\\\\
+O dado mais importante aqui é que a densidade é mantida constante, o que significa que a relação carga/volume é a mesma para a esfera com raio de micrômetro e para a esfera da ordem de milímetros, ou seja:
+$$ \frac{q_1}{4\pi r_1^2}=\frac{q_2}{4\pi r_2^2}$$
+Sendo $r_1$a esfera da ordem de milímetros e $r_2$ a esfera da ordem de micrômetros. Iremos agora aproximar a ordem para $1 \times unidade$. O que significa que iremos considerar $r_1 = 10^{-3}\:m$ e $r_2=10^{-6}\:m$. Sendo dez mil equivalente a $10^4$, substituímos os valores:
+$$\frac{q_1}{(10^{-3}\:m)^2}=\frac{10^4\:cargas}{(10^{-6}\:m)^2}$$
+$$q_1=\frac{10^4\:cargas}{(10^{-6}\:m)^2}\cdot (10^{-3}\:m)^2=10^{10}\:cargas$$
+Isso significa que descobrimos que a \textbf{ordem de grandeza} é de $10^{10}$ cargas. Isso não significa que a esfera possui exatamente esse número de cargas. Ela pode possuir $2 \times 10^{10}$, $3 \times 10^{10}$ ou qualquer número. Entretanto $10^{10}$ é certamente um valor sólido do número aproximado. Portanto, a alternativa correta é a letra (d).\\\\
+7-) \textbf{(PUCC-SP)} Na expressão $F = Ax^2$, F representa força e x um comprimento. Se $MLT^-{^2}$ é a fórmula dimensional da força onde M é o símbolo da dimensão massa, L da dimensão comprimento e T da dimensão tempo, a fórmula dimensional de A é:\\\\
+(a)  $ML^-^1T^-^2$\\
+(b)  $ML^3T^-^2$\\
+(c)  $L^2$\\
+(d)  $MT^-^2$\\
+(e)  $M$\\\\
+\textbf{\underline{Solução}}\\\\
+O enunciado nos dá que a unidade da força é $kg\cdot m \cdot s^{-2}$, ou seja: $kg \cdot m/s^2$, pois nos é dito que M é o símbolo da dimensão massa, L da dimensão comprimento e T da dimensão tempo. Assim, temos a expressão:
+$$kg \cdot \frac{m}{s^2} = A\: m^2$$
+Portanto, vale que:
+$$A = \frac{\displaystyle kg \cdot \frac{m}{s^2}}{m^2}= kg \cdot \frac{m}{s^2} \cdot \frac{1}{m^2}= kg \cdot \frac{1}{s^2}\cdot \frac{1}{m}=\frac{kg}{s^2\:m}=kg\:m^{-1}\:s^{-2}$$
+Transformando de volta para as unidades do exercício, temos que:
+$$A = ML^{-1}T^{-2}$$
+Portanto a alternativa correta é a letra (a).\\\\
+8-) \textbf{(FUVEST-SP)} Qual é a ordem de grandeza do número de voltas dadas pela roda de um automóvel ao percorrer uma estrada de 200km?\\\\
+(a) $10^2$\\
+(b) $10^3$\\
+(c) $10^5$\\
+(d) $10^7$\\
+(e) $10^9$\\\\
+\textbf{\underline{Solução}}\\\\
+Quando a roda da uma volta, ela percorre o equivalente a seu comprimento, ou seja:
+$$C = 2 \pi r$$
+Temos que supor o comprimento da roda aqui, já que não nos é dado. Parece que 50 cm é um número razoável para o raio de uma roda. Portanto, sendo $50 cm = 0,5 m$:
+$$C = 2 \pi (0,5\:m) = 3,14\:m$$
+Sendo o comprimento da estrada 200 km, então o número de voltas será:
+$$numero=\frac{200\:km}{3,14\:m}=\frac{2 \times 10^5\:m}{3,14\:m} \approx 6 \times 10^4\:voltas$$
+Portanto, temos que o número mais próximo é $10^5$. Equivale a alternativa (c). O resultado pode variar dependendo do raio da roda adotado. Talvez 50 centímetros tenha sido um valor superestimado.
+\newpage
+9-) {(CEFET-MG)} Nos trabalhos científicos, números muito grandes ou próximos de zero, são escritos em notação científica, que consiste em um número x, tal que $1<x<10$ multiplicado por uma potência de base 10. Assim sendo, 0,00000045 deve ser escrito da seguinte forma:\\\\
+(a)  $0,45 \times 10^-^7$\\ 
+(b)  $4,5 \times 10^-^7$\\ 
+(c)  $45 \times 10^-^6$\\ 
+(d)  $4,5 \times 10^-^8$\\
+(e)  $4,5 \times 10^-^5$\\\\
+\textbf{\underline{Solução}}\\\\
+Basta utilizarmos as regras descritas no enunciado, de forma que nossa expressão poderá ser escrita como:
+$0,00000045 = 4,5 \times 10^{-7}$. Portanto a alternativa correta é a letra (b).\\\\
+10-) \textbf{(UFRGS)} Durante os jogos Pan-Americanos de Santo Domingo, os brasileiros perderam o ouro para os cubanos por 37 centésimos de segundo nas provas de remo. Dentre as alternativas, o valor mais próximo desse tempo, medido em horas, é:\\\\
+(a) $1,03 \times 10^-^4$\\
+(b) $1,3 \times 10^-^4$\\
+(c) $1,03 \times 10^-^3$\\
+(d) $1,3 \times 10^-^3$\\
+(e) $1,03 \times 10^-^2$\\\\
+\textbf{\underline{Solução}}\\\\
+Para responder esse exercício, devemos nos lembrar que um centésimo de segundo é $0,01\:s$. Assim, 37 centésimos é $0,37\:s$. Para descobrir o tempo em horas utilizaremos uma regra de 3, de modo que vale que:
+$$1\:hora \longrightarrow 3600\:s$$
+$$x\:hora \longrightarrow 0,37\:s$$
+Multiplicando em cruz, temos que:
+$$3600\:x=0,37$$
+$$x=\frac{0,37\:s}{3600}=0,000103\:h=1,03 \times 10^{-4}\:h$$
+Portanto a alternativa correta é a letra (a).\\\\
+11-) \textbf{(UFRGS)} Considere que o corpo de uma determina pessoa contém 5,5 litros de sangue e 5 milhões de glóbulos vermelhos por milímetro cúbico de sangue. Com base nesses dados, é correto afirmar que o número de glóbulos vermelhos no corpo dessa pessoa é:\\\\
+(a) $2,75 \times 10^1^9$\\
+(b) $5,5 \times 10^1^0$\\
+(c) $5 \times 10^1^1$\\
+(d) $5,5 \times 10^1^2$\\
+(e) $2,75 \times 10^1^3$\\\\
+\textbf{\underline{Solução}}\\\\
+Um milímetro cúbico de sangue ocupa um volume igual a:
+$$v=a^3=(1\times 10^{-3})^3\:m^3=10^{-6}\:litros$$
+Dado que $1\:m^3=1000\:l$. Assim, podemos utilizar uma regra de três simples, ou fator de conversão 1, para resolvermos:
+$$10^{-6}\:l \longrightarrow5\times 10^6\:globulos$$
+$$5,5\:l \longrightarrow x$$
+Multiplicando em cruz, obtemos que:
+$$x=\frac{(5\times 10^6\:globulos)(5,5\:l)}{(10^{-6}\:l)}=2,75\:\times 10^{13}\:globulos$$
+Que equivale a alternativa E.\\\\
+12-) \textbf{(UFRGS)} Dadas as informações:\\\\
+I. Velocidade da luz no vácuo: 300000000 m/s
+
+II. Distância da Terra ao Sol: 149000000 km
+
+III. Raio do átomo de hidrogênio: 0,000000005 cm
+
+IV. Idade das rochas mais antigas: 100000000000000000 s\\\\
+Escreva cada um desses número sob forma de notação científica.\\\\
+\textbf{\underline{Solução}}\\\\
+Transformando os números para a notação científica, temos que:\\\\
+I: $300000000\:m/s = 3 \times 10^8\:m/s$\\
+II: $149000000\:km = 1,49\: 10^8\:km$\\
+III: $0,000000005\:cm = 5 \times 10^{-9}\:cm$\\
+IV: $100000000000000000\:s = 10^{17}\:s$\\\\
+13-) \textbf{(UFRGS)} Em texto publicado na Folha de S. Paulo, o físico Marcelo Gleiser escreveu que “átomos têm diâmetros de aproximadamente um décimo de bilionésimo de metro”. Escrito em potência de 10, um décimo de bilionésimo é\\\\
+(a) $10^-^8$\\
+(b) $10^-^9$\\
+(c) $10^-^1^0$\\
+(d) $10^-^1^1$\\
+(e) $10^-^1^2$\\\\
+\textbf{\underline{Solução}}\\\\
+Você deve saber que mil, milhão e bilhão significam respectivamente, $10^3$,$10^6$ e $10^9$. Um décimo de algo é $0,1=10^{-1}$ desse mesmo algo. Assim, quando dizemos que algo equivalem a um décimo de um bilionésimo estamos na verdade dizendo $10^{-1} \times 10^{-9} = 10^{-10}$. Portanto, a alternativa correta é a letra (c).\\\\
+14-) \textbf{(UFPE-PE)} Em um hotel com 200 apartamentos o consumo médio de água por apartamento é de 100 litros por dia. Qual a ordem de grandeza do volume que deve ter o reservatório do hotel, em metros cúbicos, para abastecer todos os apartamentos durante um dia?\\\\
+(a) $10^1$\\          
+(b) $10^2$\\   
+(c) $10^3$\\           
+(d) $10^4$\\           
+(e) $10^5$\\\\
+\textbf{\underline{Solução:}}\\\\
+Como temos 200 apartamentos que consomem cada, 100 litros de água por dia, temos que o volume total de água deve ser:
+$$200\:apartamentos \times 100\:litros/dia=20000\:litros$$
+Como $20000=2 \times 10^4$ litros. Transformando isso para unidade de volume, temos que $1000\:l=1\:m^3$, portanto, temos:
+$$\frac{2 \times 10^4}{10^3}=2 \times 10^1$$
+Cuja ordem de grandeza é $10^1$, que equivale portanto a alternativa (a).
+\newpage
+15-) \textbf{(UFRRJ)} Uma determinada marca de automóvel possui um tanque de gasolina com volume igual a 54 litros. O manual de apresentação do veiculo informa que ele pode percorrer 12 km com 1 litro. Supondo que a informações do fabricante sejam verdadeiras, a ordem de grandeza da distancia, medida em metros, que o automóvel pode percorrer, após ter o tanque completamente cheio, sem precisar reabastecer, é de:\\\\
+(a) $10^0$\\ 
+(b) $10^2$\\
+(c) $10^3$\\ 
+(d) $10^5$\\ 
+(e) $10^6$\\\\
+\textbf{\underline{Solução:}}\\\\
+Se o automóvel percorre 12 km com um litro e ele possui 54 litros, então ele percorrerá o equivalente a:
+$$12\:km/l \cdot 54\:l = 648\:km=6,48 \times 10^2\:km$$
+Como um quilometro possui 1000 metros, vale que a ordem de grandeza é $10^2 \cdot 10^3 = 10^5\:m$. Portanto a alternativa correta é a letra (d).\\\\
+16-) \textbf{(UFF-RJ)}  A luz proveniente do Sol demora, aproximadamente, 8 minutos para chegar à Terra. A ordem de grandeza da distancia entre estes dois astros celestes, em km, é (Dado: velocidade da luz no vácuo é $3 \times 10^8 \:m/s$)\\\\
+(a) $10^3$\\
+(b) $10^6$\\
+(c) $10^8$\\
+(d) $10^1^0$\\
+(e) $10^2^3$\\\\
+\textbf{\underline{Solução:}}\\\\
+Primeiro descobriremos quantos segundos existem em 8 minutos. Se lembrarmos que 1 minuto possui 60 segundos, vale que:
+$$8\:minutos \cdot 60\: \frac{segundos}{minutos} = 480\:segundos$$
+Assim, temos que, se multiplicarmos a velocidade pelo tempo, obtemos a distância, que é de:
+$$3 \times 10^8\:m/s \cdot 480\:s = 1,44 \times 10^{11}\:m$$
+Assim, como queremos em quilômetros, dividimos por $10^3$ de modo a obter que a ordem de grandeza é $10^8\:m$, que equivale a alternativa (c).
+
+
+
+
+
+
+\end{document}
