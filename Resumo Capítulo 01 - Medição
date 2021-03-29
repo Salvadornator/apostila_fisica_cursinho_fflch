@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Resumo do Capítulo 1 - Medição} 
+\begin{document}
+\author{Equações Relevantes e Observações}
+\date{Atualizado em 21/03/2021}
+\maketitle
+\textbf{Neste capítulo inicial vamos tratar de alguns conceitos preliminares que você precisará saber durante seu estudo de física. Comentaremos brevemente a natureza da física, estabelecendo algumas definições básicas, introduziremos sistemas de unidades e veremos como utilizá-los.}\\\\ 
+\textbf{Unidades:} Quantidades físicas são números obtidos tomando medidas de objetos físicos. Definições operacionais especificam operações ou procedimentos que, se seguidos, definem quantidades físicas. A magnitude de uma quantidade física é expressa como um número vezes uma unidade\\\\
+\textbf{Unidades Básicas:} As unidades básicas do sistema SI são o metro (m), o segundo (s), o quilograma (kg), o kelvin (K), o ampère (A), o mol (mol) e a candela (cd). A(s) unidade(s) de toda quantidade física pode ser expressa em termos destas unidades básicas.\\\\
+\textbf{Unidades em equações:} Unidades em equações são tratadas como quaisquer outras quantidades algébricas\\\\
+\textbf{Conversão:} Fatores de conversão, que são iguais a 1, fornecem um método conveniente para converter de um tipo de unidade para outro.\\\\
+\textbf{Dimensões:} Os termos de uma equação devem ter as mesmas dimensões.\\\\
+\textbf{Notação científica:} Por conveniência, números muito pequenos e muito grandes são geralmente escritos como um número $a$ entre 1 e 10 $(1 \leq a <10)$ vezes uma potência de 10.
+$$a\cdot 10^b$$
+\textbf{Expoentes:}\\\\
+\textbf{Mutiplicação:} Ao se multiplicar dois números, os expoentes são somados.
+$$(3 \times 10^2) \times (2\times 10^7)=(2\cdot 3) \times 10^{(2+7)}=6 \times 10^9$$
+\textbf{Divisão:} Ao se dividir dois números, os expoentes são subtraídos.
+$$\frac{2\times 10^7}{1\times 10^5}=\frac{2}{1} \times 10^{7-2}=2\times 10^5$$
+\textbf{Elevação a uma potência:} Quando um número contendo um expoente é ele próprio elevado a uma potência, os expoentes são multiplicados.
+$$(2\times 10^2)^3=4\times 10^{2\times 3}=4\times 10^6$$
+\textbf{Ordem de grandeza:} Um número arredondado à potência de dez mais próxima é uma ordem de grandeza. A ordem de grandeza de uma quantidade pode, com frequência, ser estimada usando-se superposições plausíveis e cálculos simples.
+\end{document}
