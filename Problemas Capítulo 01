@@ -1,0 +1,178 @@
+%=======================================================
+%------------LISTA DE EXERCÍCIOS
+%=======================================================
+\documentclass[12pt,a4paper,oneside,openany]{book} 
+%=======================================================
+%-------------PACOTES 
+%=======================================================
+\usepackage[top=1cm,left=1cm,right=1.5cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}%Especif. a codif. de caracteres
+\usepackage{ae}%Auxílio para fontes e pdf
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}%Gerar Texto Aleatório
+\usepackage[brazil]{babel}%Traduzir para Português
+\usepackage{indentfirst}%Faz indentações em parágrafos
+\usepackage{graphicx}%Permite incluir figuras
+\usepackage{subfig} %para criar sub figuras
+\usepackage{float}% figuras
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}%Admitir cores
+\usepackage{amsmath,amssymb,amsthm}%Incluir expressões  matemáticas, equações, teoremas, símbolos, etc
+\usepackage{lastpage}%Incluir Ficha catalográfica
+\usepackage{epigraph}%Incluir Epígrafo
+\usepackage{enumerate}
+\usepackage{enumitem}
+\newlist{questions}{enumerate}{3}
+\setlist[questions]{label=\arabic*.}
+\newcommand{\question}{\item}
+\setlist[enumerate,1]{% (
+leftmargin=*, itemsep=12pt, label={\textbf{\arabic*.)}}}
+%---
+\newlist{partes}{enumerate}{3}
+\setlist[partes]{label=(\alph*)}
+\newcommand{\parte}{\item}
+%---
+\newlist{subpartes}{enumerate}{3}
+\setlist[subpartes]{label=\roman*)}
+\newcommand{\subparte}{\item}
+%---
+\usepackage{array}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\usepackage[sort&compress,round,comma,authoryear]{natbib}
+\usepackage{makeidx}
+\usepackage[colorlinks=true,urlcolor=magenta,citecolor=red,linkcolor=violet,bookmarks=true]{hyperref}
+\usepackage{lscape}%Altera a orientação de uma página
+\usepackage{pdflscape}
+\usepackage{epstopdf} %converte figs eps em figs pdf
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{textcomp}
+\usepackage[many]{tcolorbox}
+\usepackage{empheq}
+\usepackage{tasks}%lista alfabética
+\pagestyle{plain}
+%================================================================
+%------------DIGITE AQUI
+%===============================================================
+\newcommand{\orgao}{Cursinho Popular da FFLCH}
+\newcommand{\instituto}{Física Mecânica}
+\newcommand{\departamento}{Atualizado em 09/11/2019}
+\newcommand{\curso}{}
+\newcommand{\professor}{Rafael Lopes Sabainsk}
+\newcommand{\titulo}{1ª Lista de Problemas: Medição}
+\newcommand{\data}{\today}
+\newcommand{\aluno}{ALUNO:}
+\newcommand{\email}{rafaelsabainsk@usp.br}
+\newcommand{\turma}{Intensivo}
+%===========================================================
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\y}{\boldsymbol{y}}
+\newcommand{\balpha}{\mbox{${ \bm \alpha}$}}
+\newcommand{\bmu}{\mbox{${\bm \mu}$}}
+\newcommand{\bbeta}{\mbox{${\bm \beta}$}}
+\newcommand{\bteta}{\mbox{${\bm \theta}$}}
+\newcommand{\bgama}{\mbox{${\bm \gamma}$}}
+\newcommand{\bxi}{\mbox{${\bm \xl}$}}
+\newcommand{\bvarphi}{\mbox{${ \bm \varphi}$}}
+\newcommand{\SZ}{\mbox{ $Z$}}
+\newcommand{\muz}{\mu_{z,l}}
+\newcommand{\muo}{\mu_{0,l}}
+\newcommand{\etao}{\eta_{0,l}}
+\newcommand{\etaz}{\eta_{z,l}}
+\newcommand{\xbeta}{x_{l}\bgama}
+\newcommand{\mui}{\mu_{l}}
+\newcommand{\zetaind}{\zeta \mathtt{I}_{\{s_{l} \in Z \}}} 
+\newcommand{\spz}{ s_{l} \in z}
+\newcommand{\snpz}{ s_{l} \notin z}
+\newcommand{\sps}{ s_{l} \in S}
+\newcommand{\gphi}{ \Gamma(\phi)}
+\newcommand{\scan}{ \Lambda_{z}}
+\newcommand{\gmuop}{ \Gamma(\muo\phi)}
+\newcommand{\gmuzp}{ \Gamma(\muz \phi)}
+\newcommand{\gumuop}{ \Gamma((1-\muo)\phi)}
+\newcommand{\gumuzp}{ \Gamma((1-\muz)\phi)}
+\newcommand{\dlobeta}{ \frac{\parteial l_{0}(\bgama, \phi, 0) }{\parteial \bgama}}
+\newcommand{\lz}{  l_{z}(\bgama, \phi, \tau)}
+\newcommand{\lo}{  l_{0}(\beta, \phi, 0)}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\dis}{\displaystyle}
+\linespread{1.0}%espaço entre linhas
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      CABEÇALHO                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep{\fill}}}
+\begin{tabular}[l]{@{}l@{}}\textbf{\orgao}\\\textbf{\instituto}\\\textbf{\departamento} \end{tabular} & \begin{tabular}[l]{@{}l@{}}\textbf{Professor: \professor}\\ {\email}\\ \end{tabular}                                                       
+\end{tabular*}
+\end{table}
+\begin{center}
+\rule[2ex]{\textwidth}{1pt}\\
+{\Large{\titulo}}
+\end{center}
+\rule[2ex]{\textwidth}{1pt}\\
+
+\begin{questions}[label=\protect\circled{\bfseries\arabic*}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Questões                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%=====================
+\question Qual das seguintes não é quantidade básica no sistema SI? 
+\begin{partes}
+\parte Massa.
+\parte Comprimento.
+\parte Energia.
+\parte Tempo.
+\parte Todas estas são quantidades básicas.
+\end{partes}
+\question
+Após efetuar um cálculo, você tem $m/s$ no numerador e $m/s^2$ no denominador. Quais são suas unidades finais?
+\begin{partes}
+\parte $m^2/s^3$
+\parte $1/s$
+\parte $s^3/m^2$
+\parte $s$
+\parte $m/s$
+\end{partes}
+\question
+O prefixo giga e o prefixo mega significam respectivamente:
+\begin{partes}
+\parte $10^3$ e $10^-^9$
+\parte $10^6$ e $10^9$
+\parte $10^9$ e $10^6$
+\parte $10^1^2$ e $10^9$
+\parte $10^-^9$ e $10^-^6$
+\end{partes}
+\question Nas equações seguintes, a distância $x$ está sem metros, o tempo $t$ está em segundos e a velocidade $v$ está em metros por segundo. Quais são as unidades SI das constantes $C_1$ e $C_2$ em cada um dos casos?
+\begin{partes}
+\parte $x = C_1 + C_2t$
+\parte $x = \frac{1}{2}C_1t^2$
+\parte $v^2 = 2C_1x$
+\parte $x = C_1\:cos(C_2t)$
+\parte $v^2 = 2C_1v - (C_2x)^2$
+\end{partes}
+\newpage
+\question Você é entregador de uma empresa de água mineral. Seu caminhão carrega 4 plataformas de carga. Cada plataforma carrega 60 fardos. Cada fardo possui 24 garrafas de um litro de água. O carrinho que você utiliza para transportar a água para as lojas tem um limite de peso de 250 lb. (a) Se um mililitro de água tem uma massa de 1g e um quilograma tem o peso de 2,2 lb, qual é o peso, em libras, de toda a água em seu caminhão? (b) Quantos fardos completos de água você consegue transportar no carrinho?
+\question No que se segue, $x$ está em metros, $t$ em segundos, $v$ está em metros por segundo e a aceleração $a$ está em metros por segundo ao quadrado. Encontre as unidades SI de cada uma das combinações:
+\begin{partes}
+\parte $v^2/x$
+\parte $\sqrt{x/a}$
+\parte $\frac{1}{2}at^2$
+\end{partes}{}
+\question A unidade SI de força, o quilograma-metro por segundo ao quadrado ($kg\cdot m/s^2$), é chamada de newton (N). Encontre as dimensões e as unidades SI da constante G na lei de Newton da gravitação, $F = \displaystyle G\cdot\frac{m_1\cdot m_2}{r^2}$
+\question Quando um objeto cai no ar, existe uma força resistiva que depende do produto da área da seção reta do objeto e do quadrado de sua velocidade, isto é, $F_a{_r} = CAv^2$, onde C é uma constante. Determine as dimensões de C.
+\question A magnitude de força (F) que uma mola exerce quando distendida de uma distância $x$ a partir de seu comprimento quando frouxa é governada pela lei de Hooke, $F = kx$.(a) Quais as dimensões da constante de força, $k$?. (b) Quais as dimensões e as unidades SI da quantidade $kx^2$?
+\question (\textbf{Desafio}) O detector de neutrinos japonês Super-Kamiokande é um grande cilindro transparente cheio de água ultra pura. A altura do cilindro é 41,4 m e o diâmetro é 39,3 m. Calcule a massa da água no cilindro. Isto coincide com a alegação colocada no site oficial do Super-K de que o detector usa 50000 toneladas de água?
+\question A massa de um átomo de urânio é $4,0 \times 10^-^2^6\:kg$. Quantos átomos de urânio existem em 8,0 g de urânio puro?
+\question (\textbf{Desafio}) As cidades de Nova York e Los Angeles estão separadas por aproximadamente 3000 milhas; a diferença entre tempo entre as duas cidades é de 3 horas. Calcule a circunferência da Terra.
+\question (\textbf{Desafio}) O período T de um pêndulo simples depende do comprimento L do pêndulo e da aceleração da gravidade $g$ (dimensões $L/T^2$) (a) Encontre uma combinação simples de L e g que tenha a dimensão do tempo. (b) Cheque a dependência do período T com o comprimento L medindo o período (tempo para um balanço de ida e volta completo) de um pêndulo para dois valores diferentes de L. (c) A fórmula correta que relaciona T com L e $g$ envolve uma constante que é múltipla de $\pi$ e não pode ser obtida pela análise dimensional da Parte (a). Ela pode ser encontrada experimentalmente, como na parte (b), se $g$ é conhecido. Usando o valor de $g = 9,81\:m/s^2$ e seus resultados experimentais da Parte (b), encontre a fórmula que relaciona $T$ com $L$ e $g$.(Dados : utilize que o período para um pêndulo de 1,0 m é igual a 2,0 s e que o período para um pêndulo de 0,50 m é igual a 1,4 s)
+\end{questions}
+\end{document}
