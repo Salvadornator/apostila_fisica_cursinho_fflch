@@ -1,0 +1,272 @@
+%=======================================================
+%------------LISTA DE EXERCÍCIOS
+%=======================================================
+\documentclass[12pt,a4paper,oneside,openany]{book} 
+%=======================================================
+%-------------PACOTES 
+%=======================================================
+\usepackage[top=1cm,left=1cm,right=1.5cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}%Especif. a codif. de caracteres
+\usepackage{ae}%Auxílio para fontes e pdf
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}%Gerar Texto Aleatório
+\usepackage[brazil]{babel}%Traduzir para Português
+\usepackage{indentfirst}%Faz indentações em parágrafos
+\usepackage{graphicx}%Permite incluir figuras
+\usepackage{subfig} %para criar sub figuras
+\usepackage{float}% figuras
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}%Admitir cores
+\usepackage{amsmath,amssymb,amsthm}%Incluir expressões  matemáticas, equações, teoremas, símbolos, etc
+\usepackage{lastpage}%Incluir Ficha catalográfica
+\usepackage{epigraph}%Incluir Epígrafo
+\usepackage{enumerate}
+\usepackage{enumitem}
+\newlist{questions}{enumerate}{3}
+\setlist[questions]{label=\arabic*.}
+\newcommand{\question}{\item}
+\setlist[enumerate,1]{% (
+leftmargin=*, itemsep=12pt, label={\textbf{\arabic*.)}}}
+%---
+\newlist{partes}{enumerate}{3}
+\setlist[partes]{label=(\alph*)}
+\newcommand{\parte}{\item}
+%---
+\newlist{subpartes}{enumerate}{3}
+\setlist[subpartes]{label=\roman*)}
+\newcommand{\subparte}{\item}
+%---
+\usepackage{array}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\usepackage[sort&compress,round,comma,authoryear]{natbib}
+\usepackage{makeidx}
+\usepackage[colorlinks=true,urlcolor=magenta,citecolor=red,linkcolor=violet,bookmarks=true]{hyperref}
+\usepackage{lscape}%Altera a orientação de uma página
+\usepackage{pdflscape}
+\usepackage{epstopdf} %converte figs eps em figs pdf
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{textcomp}
+\usepackage[many]{tcolorbox}
+\usepackage{empheq}
+\usepackage{tasks}%lista alfabética
+\pagestyle{plain}
+%================================================================
+%------------DIGITE AQUI
+%===============================================================
+\newcommand{\orgao}{Cursinho Popular da FFLCH}
+\newcommand{\instituto}{Física Mecânica}
+\newcommand{\departamento}{Atualizado em 12/01/2019}
+\newcommand{\curso}{}
+\newcommand{\professor}{Rafael Lopes Sabainsk}
+\newcommand{\titulo}{1ª Lista de Exercícios: Medição}
+\newcommand{\data}{\today}
+\newcommand{\aluno}{ALUNO:}
+\newcommand{\email}{rafaelsabainsk@usp.br}
+\newcommand{\turma}{Intensivo}
+%===========================================================
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\y}{\boldsymbol{y}}
+\newcommand{\balpha}{\mbox{${ \bm \alpha}$}}
+\newcommand{\bmu}{\mbox{${\bm \mu}$}}
+\newcommand{\bbeta}{\mbox{${\bm \beta}$}}
+\newcommand{\bteta}{\mbox{${\bm \theta}$}}
+\newcommand{\bgama}{\mbox{${\bm \gamma}$}}
+\newcommand{\bxi}{\mbox{${\bm \xl}$}}
+\newcommand{\bvarphi}{\mbox{${ \bm \varphi}$}}
+\newcommand{\SZ}{\mbox{ $Z$}}
+\newcommand{\muz}{\mu_{z,l}}
+\newcommand{\muo}{\mu_{0,l}}
+\newcommand{\etao}{\eta_{0,l}}
+\newcommand{\etaz}{\eta_{z,l}}
+\newcommand{\xbeta}{x_{l}\bgama}
+\newcommand{\mui}{\mu_{l}}
+\newcommand{\zetaind}{\zeta \mathtt{I}_{\{s_{l} \in Z \}}} 
+\newcommand{\spz}{ s_{l} \in z}
+\newcommand{\snpz}{ s_{l} \notin z}
+\newcommand{\sps}{ s_{l} \in S}
+\newcommand{\gphi}{ \Gamma(\phi)}
+\newcommand{\scan}{ \Lambda_{z}}
+\newcommand{\gmuop}{ \Gamma(\muo\phi)}
+\newcommand{\gmuzp}{ \Gamma(\muz \phi)}
+\newcommand{\gumuop}{ \Gamma((1-\muo)\phi)}
+\newcommand{\gumuzp}{ \Gamma((1-\muz)\phi)}
+\newcommand{\dlobeta}{ \frac{\parteial l_{0}(\bgama, \phi, 0) }{\parteial \bgama}}
+\newcommand{\lz}{  l_{z}(\bgama, \phi, \tau)}
+\newcommand{\lo}{  l_{0}(\beta, \phi, 0)}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\dis}{\displaystyle}
+\linespread{1.0}%espaço entre linhas
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      CABEÇALHO                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep{\fill}}}
+\begin{tabular}[l]{@{}l@{}}\textbf{\orgao}\\\textbf{\instituto}\\\textbf{\departamento} \end{tabular} & \begin{tabular}[l]{@{}l@{}}\textbf{Professor: \professor}\\ {\email}\\ \end{tabular}                                                       
+\end{tabular*}
+\end{table}
+\begin{center}
+\rule[2ex]{\textwidth}{1pt}\\
+{\Large{\titulo}}
+\end{center}
+\rule[2ex]{\textwidth}{1pt}\\
+
+\begin{questions}[label=\protect\circled{\bfseries\arabic*}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Questões                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%=====================
+\question \textbf{(ENEM - 2001)}\\
+\centerline{\textbf{SEU OLHAR}}
+\centerline{(Gilberto Gil, 1984)}\\\\
+\centerline{Na eternidade}
+\centerline{Eu quisera ter}
+\centerline{Tantos anos-luz}
+\centerline{Quantos fosse precisar}
+\centerline{Pra cruzar o túnel}
+\centerline{Do tempo do seu olhar}\\\\
+Gilberto Gil usa na letra da música a palavra composta anos anos-luz luz. O sentido prático, em geral, não é obrigatoriamente o mesmo que na ciência. Na Física, um ano luz é uma medida que relaciona a velocidade da luz e o tempo de um ano e que, portanto, se refere a:
+\begin{partes}
+\parte tempo.
+\parte aceleração.
+\parte distância.
+\parte velocidade.
+\parte luminosidade.
+\end{partes}
+\question \textbf{(PUC-RS)} Um estudante mandou o seguinte e-mail a um colega: “No último fim de semana fui com minha família à praia. Depois de 2hrs de viagem, tínhamos viajado 110Km e paramos durante 20 MIN para descansar e fazer compras em um shopping. Meu pai comprou 2KG de queijo colonial e minha mãe 5ltrs de suco concentrado. Depois de viajarmos mais 2h, com uma velocidade média de 80KM/H, chegamos ao destino.”O número de erros referentes à grafia de unidades, nesse e-mail, é:
+\begin{partes}
+\parte 2
+\parte 3
+\parte 4
+\parte 5
+\parte 6
+\end{partes}
+\question \textbf{(UFCE-CE)} A energia relativística do fóton é dada por $E = X\cdot c$, onde c indica a velocidade da luz. Utilizando conhecimentos de física moderna e análise dimensional, assinale a alternativa correta no tocante à dimensão de X .
+\begin{partes}
+\parte Força
+\parte Massa 
+\parte Velocidade
+\parte Comprimento
+\parte Quantidade de movimento
+\end{partes}
+\question \textbf{(UNESP-SP)} Um estudante de física resolvendo certo problema chegou à expressão final: $F = 2(m_1 + m_2)vt^2$ onde F representa uma força, $m_1$ e $m_2$ representam massas, $v$ é uma velocidade linear, $t$ é tempo. Outro estudante resolvendo o mesmo problema chegou à expressão: $F = 2(m_1+ m_2)vt^-{^1}$. Mesmo sem conhecer os detalhes do problema você deve ser capaz de verificar qual das respostas acima obviamente deve estar errada. Explique qual delas é certamente errada.
+\question \textbf{(FATEC-SP)} O kWh é unidade usual da medida de consumo de energia elétrica, um múltiplo do joule, que é a unidade do Sistema Internacional. O fator que relaciona estas unidades é:
+\begin{partes}
+\parte $1,0 \times 10^3$
+\parte $3,6 \times 10^3$
+\parte $9,8 \times 10^3$
+\parte $3,6 \times 10^6$
+\parte $9,8$
+\end{partes}
+\question \textbf{(UFC-SC)}Uma esfera de cobre com raio da ordem de micrômetros possui uma carga da ordem de dez mil cargas elementares, distribuídas uniformemente sobre sua superfície. Considere que a densidade superficial é mantida constante. Assinale a alternativa que contém a ordem de grandeza do número de cargas elementares em uma esfera de cobre com raio da ordem de milímetros.
+\begin{partes}
+\parte $10^1^9$
+\parte $10^1^6$
+\parte $10^1^3$
+\parte $10^1^0$
+\parte $10^1$
+\end{partes}
+\question \textbf{(PUCC-SP)} Na expressão $F = Ax^2$, F representa força e x um comprimento. Se $MLT^-{^2}$ é a fórmula dimensional da força onde M é o símbolo da dimensão massa, L da dimensão comprimento e T da dimensão tempo, a fórmula dimensional de A é:
+\begin{partes}
+\parte  $ML^-^1T^-^2$
+\parte  $ML^3T^-^2$
+\parte  $L^2$
+\parte  $MT^-^2$
+\parte  $M$
+\end{partes}
+\question \textbf{(FUVEST-SP)} Qual é a ordem de grandeza do número de voltas dadas pela roda de um automóvel ao percorrer uma estrada de 200km?
+\begin{partes}
+\parte $10^2$
+\parte $10^3$
+\parte $10^5$
+\parte $10^7$
+\parte $10^9$
+\end{partes}
+\question \textbf{(CEFET-MG)} Nos trabalhos científicos, números muito grandes ou próximos de zero, são escritos em notação científica, que consiste em um número x, tal que $1<x<10$ multiplicado por uma potência de base 10. Assim sendo, 0,00000045 deve ser escrito da seguinte forma:
+\begin{partes}
+\parte  $0,45 \times 10^-^7$ 
+\parte  $4,5 \times 10^-^7$ 
+\parte  $45 \times 10^-^6$ 
+\parte  $4,5 \times 10^-^8$ 
+\parte  $4,5 \times 10^-^5$
+\end{partes}
+\question \textbf{(UFRGS)} Durante os jogos Pan-Americanos de Santo Domingo, os brasileiros perderam o ouro para os cubanos por 37 centésimos de segundo nas provas de remo. Dentre as alternativas, o valor mais próximo desse tempo, medido em horas, é:
+\begin{partes}
+\parte  $1,03 \times 10^-^4$
+\parte  $1,3 \times 10^-^4$
+\parte  $1,03 \times 10^-^3$
+\parte  $1,3 \times 10^-^3$
+\parte  $1,03 \times 10^-^2$ 
+\end{partes}
+\question \textbf{(UFRGS)} Considere que o corpo de uma determina pessoa contém 5,5 litros de sangue e 5 milhões de glóbulos vermelhos por milímetro cúbico de sangue. Com base nesses dados, é correto afirmar que o número de glóbulos vermelhos no corpo dessa pessoa é:
+\begin{partes}
+\parte $2,75 \times 10^1^9$
+\parte $5,5 \times 10^1^0$
+\parte $5 \times 10^1^1$
+\parte $5,5 \times 10^1^2$
+\parte $2,75 \times 10^1^3$
+\end{partes}
+
+\question \textbf{(UFRGS)} Dadas as informações:
+
+I. Velocidade da luz no vácuo: 300000000 m/s
+
+II. Distância da Terra ao Sol: 149000000 km
+
+III. Raio do átomo de hidrogênio: 0,000000005 cm
+
+IV. Idade das rochas mais antigas: 100000000000000000 s
+
+Escreva cada um desses número sob forma de notação científica.
+
+\question \textbf{(UFRGS)} Em texto publicado na Folha de S. Paulo, o físico Marcelo Gleiser escreveu que “átomos têm diâmetros de aproximadamente um décimo de bilionésimo de metro”. Escrito em potência de 10, um décimo de bilionésimo é
+\begin{partes}
+\parte $10^-^8$
+\parte $10^-^9$
+\parte $10^-^1^0$
+\parte $10^-^1^1$
+\parte $10^-^1^2$
+\end{partes}
+
+\question \textbf{(UFPE-PE)} Em um hotel com 200 apartamentos o consumo médio de água por apartamento é de 100 litros por dia. Qual a ordem de grandeza do volume que deve ter o reservatório do hotel, em metros cúbicos, para abastecer todos os apartamentos durante um dia?
+\begin{partes}
+\parte $10^1$          
+\parte $10^2$    
+\parte $10^3$            
+\parte $10^4$            
+\parte $10^5$
+
+\end{partes}
+
+\question \textbf{(UFRRJ)} Uma determinada marca de automóvel possui um tanque de gasolina com volume igual a 54 litros. O manual de apresentação do veiculo informa que ele pode percorrer 12 km com 1 litro. Supondo que a informações do fabricante sejam verdadeiras, a ordem de grandeza da distancia, medida em metros, que o automóvel pode percorrer, após ter o tanque completamente cheio, sem precisar reabastecer, é de:
+\begin{partes}
+\parte $10^0$ 
+\parte $10^2$
+\parte $10^3$ 
+\parte $10^5$ 
+\parte $10^6$ 
+\end{partes}
+\question \textbf{(UFF-RJ)}  A luz proveniente do Sol demora, aproximadamente, 8 minutos para chegar à Terra. A ordem de grandeza da distancia entre estes dois astros celestes, em km, é (Dado: velocidade da luz no vácuo é $3 \times 10^8 \:m/s$)
+\begin{partes}
+\parte $10^3$
+\parte $10^6$
+\parte $10^8$
+\parte $10^1^0$
+\parte $10^2^3$
+\end{partes}
+
+
+
+
+\end{questions}
+
+\end{document}
