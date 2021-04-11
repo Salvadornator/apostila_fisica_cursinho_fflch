@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Soluções dos Exercícios Propostos}
+\author{Capítulo 2 - Vetores}
+\date{ Atualizado em 09/11/2019}
+\begin{document}
+\date{Atualizado em 29/03/2021}
+\maketitle
+1-) Você caminha 100 m em linha reta em um plano horizontal. Se esta caminhada o levou 50 m para o leste, quais são seus possíveis movimentos para o norte ou para o sul? Quais são os possíveis ângulos que sua caminhada formou em relação ao sentido para o leste?\\\\
+\textbf{Solução:}\\\\
+Existem duas direções que você poderia ter andado que são consistentes com o fato de você ter andado 50 m para o leste. Uma das possibilidades seria você ter andado no sentido do nordeste e a outra seria se você tivesse andado na direção do sudeste. Podemos utilizar o teorema de Pitágoras para determinar a distância que você andou (seja para o sul ou para o norte) e depois utilizar as relações trigonométricas para determinar os ângulos que correspondem a essas direções.\\
+Iremos determinar a magnitude dos seu deslocamento com a letra A. Assim podemos aplicar o teorema de Pitágoras:
+$$A^2 = A_x^2 + A_y^2$$
+$$A_y = A^2 - A_x^2$$
+$$A_y = \sqrt{A^2 - A_x^2}$$
+Substituindo os valores, podemos determinar $A_y$:
+$$A_y = \sqrt{(100\:m)^2 - (50\:m)^2} =  \pm 87\:m$$
+O sinal de mais ou de menos significa que você pode ter andado 87 m para o norte ou 87 para o sul.
+Utilizando trigonometria, podemos determinar a direção que você andou a partir da expressão:
+$$\theta = cos^-^1\bigg(\frac{50}{100}\bigg) = \pm 60^\circ$$
+Novamente, o sinal de mais ou menos significa que você pode ter andado 60 graus para o nordeste ou 60 graus para o sudeste.\\\\
+\newpage
+2-) Reescreva os seguintes vetores em termos da magnitude e do ângulo (medido no sentido anti-horário a partir do eixo +x). (a) Um vetor deslocamento com uma componente x de +8,5 m e uma componente y de -5,5 m. (b) Um vetor velocidade com uma componente x de -75 m/s e uma componente y de +35 m/s. (c) Um vetor força com uma magnitude de 50 N que está no terceiro quadrante e tem uma componente x cuja magnitude vale 40 N. Utilize uma calculadora para determinar os ângulos.\\\\
+\textbf{Solução:}\\\\
+Podemos utilizar o teorema de Pitágoras para descobrir a magnitude desses vetores a partir de suas componentes x e y e munir-se da trigonometria para determinar seus ângulos.\\\\
+(a) Desenhe as componentes do vetor deslocamento (chamaremos de \overrightarrow A):
+$$\includegraphics[]{A4.png}$$
+Utilizando o teorema de Pitágoras, descobriremos a magnitude de \overrightarrow A (|\overrightarrow A|): 
+$$A = \sqrt{A_x^2 + A_y^2} = \sqrt{(8,5\:m)^2 + (-5,5\:m)^2} = 10\:m$$
+Agora, determinaremos a direção de \overrightarrow A:
+$$\theta = tan^-^1 \bigg(\frac{A_y}{A_x}\bigg) = tan^-^1\bigg(\frac{-5,5\:m}{8,5\:m}\bigg) = -33^\circ = 327^\circ$$
+(b) Desenhe as componentes do vetor velocidade que chamaremos de $\overrightarrow v$:
+$$\includegraphics[]{A5.png}$$
+Utilizando o teorema de Pitágoras, determinaremos a magnitude de \overrightarrow v e a partir da trigonometria, descobriremos sua direção (inclinação):
+$$v = \sqrt{v_x^2 + v_y^2} = \sqrt{(-75\:m/s)^2 + (35\:m/s)^2} = 83\:m/s$$
+$$\alpha = tan^-^1\bigg(\frac{v_y}{v_x}\bigg) = tan^-^1\bigg(\frac{35\:m/s}{75\:m/s}\bigg) = 25^\circ$$
+E portanto:
+$$\theta = 180^\circ - \alpha = 180^\circ - 25^\circ = 155^\circ$$
+(c) Desenharemos as componentes do vetor força (chamaremos de \overrightarrow F) e novamente utilizaremos trigonometria para determinar $\alpha$ e portanto $\theta$:
+$$\includegraphics[]{A6.png}$$
+$$\alpha = cos^-^1 \bigg(\frac{F_x}{F}\bigg) = cos^-^1\bigg(\frac{40\:N}{50\:N}\bigg) = 37^\circ$$
+$$\theta = 180^\circ + \alpha = 180^\circ + 37^\circ = 217^\circ$$\\
+Para determinar a componente horizontal de \overrightarrow F , ou seja, $F_y$, utilizaremos a projeção horizontal de \overrightarrow F que pode ser encontrada através da fórmula:
+$$F_y = F\cdot sen(\theta) = 50\:N \cdot sen(217^\circ) = -30\:N$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
