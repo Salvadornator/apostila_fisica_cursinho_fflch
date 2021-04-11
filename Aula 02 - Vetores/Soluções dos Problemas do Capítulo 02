@@ -1,0 +1,113 @@
+\usepackage{gensymb}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Soluções dos Problemas}
+\author{2ª Lista de Problemas: Capítulo 2 - Vetores}
+\date{ Atualizado em 08/11/2019}
+\begin{document}
+\date{Atualizado em 04/04/2021}
+\maketitle
+1-) Um vetor com 7,0 unidades de comprimento e um vetor com 5,5 unidades de comprimento são somados. Sua soma é um vetor com 10,0 unidades de comprimento. (a) Mostre graficamente pelo menos uma maneira pela qual esses vetores podem ser somados.\\\\
+\textbf{Solução:}\\\\
+Consideremos $\overrightarrow A$ como sendo aquele que possui comprimento de 7,0 unidades e $\overrightarrow B$ aquele que possui o comprimento de 5,5 unidades.
+$\overrightarrow C = \overrightarrow A + \overrightarrow B$ é a soma de $\overrightarrow A$ e $\overrightarrow B$. O fato da
+magnitude da soma desses vetores ser de 10 unidades nos diz que esses vetores não são colineares.\\\\
+(a) Uma representação possível é mostrada abaixo, em que \overrightarrow A , \overrightarrow B e $\overrightarrow C$ são mostrados. $\theta$ é o ângulo entre os vetores $\overrightarrow A$ e $\overrightarrow B$.
+$$\includegraphics[]{A7.png}$$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+2-) São dados os seguintes vetores: $\overrightarrow A$ vale 25 N e forma um ângulo de $30^\circ$ no sentido horário com o eixo +x e $\overrightarrow B$ vale 42 N e forma um ângulo de $50^\circ$ no sentido horário com o eixo +y. (a) Faça um esboço e estime, visualmente, a magnitude e o ângulo do vetor $\overrightarrow C$ tal que $2\overrightarrow A + \overrightarrow C - \overrightarrow B$ resulta em um vetor de magnitude de 35 N apontando no sentido +x. (b) Repita o cálculo da Parte (a) usando o método de componentes e compare seu resultado com a estimativa feita em (a).\\\\
+\textbf{Solução:}\\\\
+(a) Um diagrama mostrando a  condição imposta de que $2\overrightarrow A + \overrightarrow C - \overrightarrow B = 35 \hat i$ é mostrada abaixo:\\
+$$\includegraphics[scale = 0.9]{A8.png}$$
+Se o diagrama for feito com precisão e mantendo-se as proporções adequadas, então a magnitude de $\overrightarrow C$  será de aproximadamente $57\:N$ e seu ângulo $\theta$ será de aproximadamente $68^\circ$\\\\
+(b) Expressaremos a condição relacionando os vetores $\overrightarrow A$, $\overrightarrow B$ e $\overrightarrow C$:
+$$2\overrightarrow A + \overrightarrow C - \overrightarrow B = 35 \hat i$$
+As correspondentes equações de suas componentes serão:
+$$2A_x + C_x - B_x = 35$$
+$$2A_y + C_y - B_y = 0$$
+Isolando $C_x$ e $C_y$ obteremos que:
+$$C_x = 35 - 2A_x + B_x$$
+$$C_y = -2A_y + B_y$$
+Substituindo para x e y as componentes de $\overrightarrow A$ e $\overrightarrow B$, obteremos:
+$$C_x = 35\:N - 2[(25\:N)\:cos(330^\circ)] + (42\:N)\:cos(40^\circ) = 24\:N$$
+$$C_y = -2[(25\:N)\:sen(330^\circ)] + (42\:N)\:sen(40^\circ) = 52\:N$$
+Aplicando o teorema de Pitágoras, obteremos que a magnitude de $\overrightarrow C$ será descrito pela formula:
+$$C = \sqrt{C_x^2 + C_y^2}$$
+Substituindo:
+$$C = \sqrt{(23,9\:N)^2 + (52\:N)^2} = 57\:N$$
+Utilizando trigonometria, podemos escrever que:
+$$\theta = tan^-^1 \bigg(\frac{C_y}{C_x}\bigg) = tan^-^1 \bigg(\frac{52,0\:N}{23,9\:N}\bigg) = 65^\circ$$\\\\
+3-) Os vetores unitários $\hat \:i$ e $\hat \:j$ apontam para o leste e o norte respectivamente. Calcule o vetor unitário (em termos de $\hat \:i$ e $\hat \:j$) das seguintes orientações:\\\\ (a) para nordeste,\\\\ (b) $70^\circ$ medidos no sentido horário com o eixo -y,\\\\ (c) para sudoeste.\\\\
+\textbf{Solução:}\\\\
+Os vetores unitários em uma determinada direção é um vetor apontando para aquela direção com magnitude igual a 1.\\\\
+(a) O vetor apontando para nordeste é dado por:
+$$\hat u_N{_E} = (1)\:cos(45^\circ)\: \hat i + (1) sen(45^\circ)\: \hat j $$
+$$ = 0,707 \hat i + 0,707 \hat j$$
+(b) O vetor unitário com $70^\circ$ medidos no sentido anti-horário com o eixo -y é dado por:
+$$\hat u = (1)\:cos(200^\circ)\: \hat i + (1)\: sen(200^\circ) \hat j$$
+$$ = -0,940\: \hat i - 0,342 \: \hat j$$
+(c) O vetor unitário apontando para o sudoeste é dado por:
+$$\hat u_S{_O} = (1)\:cos(225^\circ)\: \hat i + (1) sen(225^\circ)\: \hat j $$
+$$ = -0,707 \hat i - 0,707 \hat j$$
+(Você pode verificar se os vetores são de fatos unitários, checando sua magnitude. - Verifique!)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+4-) (\textbf{Desafio}) Você observa um avião que está a 1,5 km ao norte, 2,5 km a leste e a uma altitude de 5,0 km em relação à sua posição. (a) Qual a distância do avião até você? (b) Você está observando formando qual ângulo com o norte, no plano horizontal?\\\\
+\textbf{Solução:}\\\\
+Um diagrama mostrando as informações dadas é mostrado abaixo. Podemos utilizar o teorema de Pitágoras, trigonometria e álgebra vetorial para encontrar as distâncias, ângulos e o vetor posição do enunciado.
+$$\includegraphics[]{A9.png}$$
+(a) Utilizaremos o teorema de Pitágoras para expressar a distância $d$ em termos de $h$ e $l$:
+$$d = \sqrt{l^2 + h^2 + m^2}$$
+Substituindo os valores:
+$$d = \sqrt{(2,5\:km)^2 + (1,5\:km)^2 + (5,0\:km)^2} = 5,8\:km$$
+(b) Utilizaremos trigonometria (a partir do esquema) para descobrir o ângulo com o norte no plano horizontal:
+$$\theta = tan^-^1\bigg(\frac{2,5\:km}{1,5\:km}\bigg) = 59^\circ$$
+\newpage
+5-) (\textbf{Desafio}) O sistema de coordenadas que usamos para descrever as posições no espaço pode ser totalmente arbitrário. Analise a imagem abaixo:
+$$\includegraphics[scale=0.5]{13.png}$$
+Você pode ver que o sistema $\overline{x}$,$\overline{y}$ sofreu uma rotação de um ângulo $\phi$ em relação a $x,y$.\\\\
+(a) A partir da figura, encontre as componentes $x$ e $y$ de $\overrightarrow{A}$ medidos em relação ao eixo $x,y$.\\
+(b) Agora, encontre as as componentes $x$ e $y$ de $\overrightarrow{A}$ medidos em relação ao eixo $\overline{x},\overline{y}$ (em termos do resultado anterior).\\
+(c) Mostre que o comprimento medido por $\overline{x},\overline{y}$ é o mesmo que o medido por $x,y$.\\\\
+\textbf{Solução:}\\\\
+(a) A partir da Figura, podemos ver que:
+$$A_x=A\cdot cos(\theta)$$
+$$A_y=A\cdot sen(\theta)$$
+(b) Já para alguem posicionado em $\overline{x},\overline{y}$, as medições seriam:
+$$\overline{A_x}=A\cdot cos(\overline{\theta})=A\cdot cos(\theta - \phi)=A[cos(\theta)cos(\phi)+sen(\theta)sen(\phi)]$$
+Em termos do resultado anterior:
+$$\overline{A_x}=cos(\phi)A_x+sen(\phi)A_y$$
+Já a componente $\overline{y}$:
+$$\overline{A_y}=A\cdot sen(\overline{\theta})=A\:sen(\theta-\phi)=A[sen(\theta)cos(\phi)-cos(\theta)sen(\phi)$$
+$$\overline{A_y}=-sen(\phi)A_x+cos(\phi)A_y$$
+(c) O comprimento do vetor medido por $x,y$ é:
+$$\mid x,y \mid = \sqrt{A_x^2+A_y^2}=\sqrt{(A\:cos(\theta))^2+(A\:sen(\theta)^2)}=A$$
+Uma vez que $cos^2(\theta)+sen^2(\theta)=1$. O comprimento medido por $\overline{x},\overline{y}$ é:
+$$\mid \overline{x},\overline{y} \mid  =\sqrt{(\overline{A_x})^2+(\overline{A_y})^2}$$
+Como:
+$$(\overline{A_x})^2=(cos(\phi)A_x+sen(\phi)A_y)^2=cos^2(\phi)A_x^2+sen^2(\phi)A_y^2+2A_xA_y\:cos(\phi)\:sen(\phi)$$
+$$(\overline{A_y})^2=(-sen(\phi)A_x+cos(\phi)A_y)^2=cos^2(\phi)A_y^2+sen^2(\phi)A_x^2-2A_xA_y\:cos(\phi)\:sen(\phi)$$
+Somando as duas expressões chegamos que:
+$$(\overline{A_x}^2+\overline{A_y}^2)=cos^2(\phi)A_x^2+sen^2(\phi)A_y^2+cos(\phi)A_y^2+sen^2(\phi)A_x^2$$
+$$(\overline{A_x}^2+\overline{A_y}^2)=A_x^2(sen^2(\phi)+cos^2(\phi))+A_y^2(sen^2(\phi)+cos^2(\phi))=A_x^2+A_y^2$$
+Logo chegamos que os comprimentos dos vetores são iguais, uma vez que:
+$$\mid \overline{x},\overline{y} \mid=\mid x,y \mid = \sqrt{(\overline{A_x})^2+(\overline{A_y})^2} = A $$
+Como já erá de se esperar, uma vez que o comprimento de algo não muda se outra pessoa o mede em outra posição.\\\\
+
+
+
+
+
+
+\end{document}
