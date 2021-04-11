@@ -1,0 +1,167 @@
+\documentclass[12pt,a4paper,oneside,openany]{book} 
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\usepackage[top=1cm,left=1cm,right=1.5cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}%Especif. a codif. de caracteres
+\usepackage{ae}%Auxílio para fontes e pdf
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}%Gerar Texto Aleatório
+\usepackage[brazil]{babel}%Traduzir para Português
+\usepackage{indentfirst}%Faz indentações em parágrafos
+\usepackage{graphicx}%Permite incluir figuras
+\usepackage{subfig} %para criar sub figuras
+\usepackage{float}% figuras
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}%Admitir cores
+\usepackage{amsmath,amssymb,amsthm}%Incluir expressões  matemáticas, equações, teoremas, símbolos, etc
+\usepackage{lastpage}%Incluir Ficha catalográfica
+\usepackage{epigraph}%Incluir Epígrafo
+\usepackage{enumerate}
+\usepackage{enumitem}
+\newlist{questions}{enumerate}{3}
+\setlist[questions]{label=\arabic*.}
+\newcommand{\question}{\item}
+\setlist[enumerate,1]{% (
+leftmargin=*, itemsep=12pt, label={\textbf{\arabic*.)}}}
+%---
+\newlist{partes}{enumerate}{3}
+\setlist[partes]{label=(\alph*)}
+\newcommand{\parte}{\item}
+%---
+\newlist{subpartes}{enumerate}{3}
+\setlist[subpartes]{label=\roman*)}
+\newcommand{\subparte}{\item}
+%---
+\usepackage{array}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\usepackage[sort&compress,round,comma,authoryear]{natbib}
+\usepackage{makeidx}
+\usepackage[colorlinks=true,urlcolor=magenta,citecolor=red,linkcolor=violet,bookmarks=true]{hyperref}
+\usepackage{lscape}%Altera a orientação de uma página
+\usepackage{pdflscape}
+\usepackage{epstopdf} %converte figs eps em figs pdf
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{textcomp}
+\usepackage[many]{tcolorbox}
+\usepackage{empheq}
+\usepackage{tasks}%lista alfabética
+\pagestyle{plain}
+%================================================================
+%------------DIGITE AQUI
+%===============================================================
+\newcommand{\orgao}{Cursinho Popular da FFLCH}
+\newcommand{\instituto}{Física Mecânica}
+\newcommand{\departamento}{Atualizado em 29/03/2021}
+\newcommand{\curso}{}
+\newcommand{\professor}{Rafael Lopes Sabainsk}
+\newcommand{\titulo}{2ª Lista de Problemas: Vetores}
+\newcommand{\data}{\today}
+\newcommand{\aluno}{ALUNO:}
+\newcommand{\email}{rafaelsabainsk@usp.br}
+\newcommand{\turma}{Intensivo}
+%===========================================================
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\y}{\boldsymbol{y}}
+\newcommand{\balpha}{\mbox{${ \bm \alpha}$}}
+\newcommand{\bmu}{\mbox{${\bm \mu}$}}
+\newcommand{\bbeta}{\mbox{${\bm \beta}$}}
+\newcommand{\bteta}{\mbox{${\bm \theta}$}}
+\newcommand{\bgama}{\mbox{${\bm \gamma}$}}
+\newcommand{\bxi}{\mbox{${\bm \xl}$}}
+\newcommand{\bvarphi}{\mbox{${ \bm \varphi}$}}
+\newcommand{\SZ}{\mbox{ $Z$}}
+\newcommand{\muz}{\mu_{z,l}}
+\newcommand{\muo}{\mu_{0,l}}
+\newcommand{\etao}{\eta_{0,l}}
+\newcommand{\etaz}{\eta_{z,l}}
+\newcommand{\xbeta}{x_{l}\bgama}
+\newcommand{\mui}{\mu_{l}}
+\newcommand{\zetaind}{\zeta \mathtt{I}_{\{s_{l} \in Z \}}} 
+\newcommand{\spz}{ s_{l} \in z}
+\newcommand{\snpz}{ s_{l} \notin z}
+\newcommand{\sps}{ s_{l} \in S}
+\newcommand{\gphi}{ \Gamma(\phi)}
+\newcommand{\scan}{ \Lambda_{z}}
+\newcommand{\gmuop}{ \Gamma(\muo\phi)}
+\newcommand{\gmuzp}{ \Gamma(\muz \phi)}
+\newcommand{\gumuop}{ \Gamma((1-\muo)\phi)}
+\newcommand{\gumuzp}{ \Gamma((1-\muz)\phi)}
+\newcommand{\dlobeta}{ \frac{\parteial l_{0}(\bgama, \phi, 0) }{\parteial \bgama}}
+\newcommand{\lz}{  l_{z}(\bgama, \phi, \tau)}
+\newcommand{\lo}{  l_{0}(\beta, \phi, 0)}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\dis}{\displaystyle}
+\linespread{1.0}%espaço entre linhas
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      CABEÇALHO                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep{\fill}}}
+\begin{tabular}[l]{@{}l@{}}\textbf{\orgao}\\\textbf{\instituto}\\\textbf{\departamento} \end{tabular} & \begin{tabular}[l]{@{}l@{}}\textbf{Professor: \professor}\\ {\email}\\ \end{tabular}                                                       
+\end{tabular*}
+\end{table}
+\begin{center}
+\rule[2ex]{\textwidth}{1pt}\\
+{\Large{\titulo}}
+\end{center}
+\rule[2ex]{\textwidth}{1pt}\\
+
+\begin{questions}[label=\protect\circled{\bfseries\arabic*}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Questões                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%=====================
+\question Um vetor com 7,0 unidades de comprimento e um vetor com 5,5 unidades de comprimento são somados. Sua soma é um vetor com 10,0 unidades de comprimento. (a) Mostre graficamente pelo menos uma maneira pela qual esses vetores podem ser somados.
+\question São dados os seguintes vetores: $\overrightarrow A$ vale 25 N e forma um ângulo de $30^\circ$ no sentido horário com o eixo +x e $\overrightarrow B$ vale 42 N e forma um ângulo de $50^\circ$ no sentido horário com o eixo +y. (a) Faça um esboço e estime, visualmente, a magnitude e o ângulo do vetor $\overrightarrow C$ tal que $2\overrightarrow A + \overrightarrow C - \overrightarrow B$ resulta em um vetor de magnitude de 35 N apontando no sentido +x. (b) Repita o cálculo da Parte (a) usando o método de componentes e compare seu resultado com a estimativa feita em (a).
+\question Os vetores unitários $\hat i$ e $\hat j$ apontam para o leste e o norte respectivamente. Calcule o vetor unitário (em termos de $\hat i$ e $\hat j$) das seguintes orientações: (a) para nordeste, (b) $70^\circ$ medidos no sentido horário com o eixo -y, (c) para sudoeste.
+\question Você observa um avião que está a 1,5 km ao norte, 2,5 km a leste e a uma altitude de 5,0 km em relação à sua posição. (a) Qual a distância do avião até você? (b) Você está observando formando qual ângulo com o norte, no plano horizontal?
+\question \textbf{(Desafio)} O sistema de coordenadas que usamos para descrever as posições no espaço pode ser totalmente arbitrário. Analise a imagem abaixo:
+$$\includegraphics[scale=0.5]{13.png}$$
+Você pode ver que o sistema $\overline{x}$,$\overline{y}$ sofreu uma rotação de um ângulo $\phi$ em relação a $x,y$.\\\\
+(a) A partir da figura, encontre as componentes $x$ e $y$ de $\overrightarrow{A}$ medidos em relação ao eixo $x,y$.\\
+(b) Agora, encontre as as componentes $x$ e $y$ de $\overrightarrow{A}$ medidos em relação ao eixo $\overline{x},\overline{y}$ (em termos do resultado anterior) .\\
+(c) Mostre que o comprimento medido por $\overline{x},\overline{y}$ é o mesmo que o medido por $x,y$.\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+
+\end{document}
