@@ -1,0 +1,36 @@
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Resumo do Capítulo 2 - Vetores} 
+\begin{document}
+\author{Equações Relevantes e Observações}
+\date{Atualizado em 29/03/2021}
+\maketitle
+\textbf{Neste capítulo apresentaremos uma introdução à matemática de vetores de modo a familiarizá-los a esta importante ferramenta.}\\\\
+\textbf{Definição:} Vetores são quantidades que possuem ambas magnitude e orientação. Os vetores se somam como os deslocamentos.\\\\
+\textbf{Componentes:} As componentes de um vetor ao longo de uma orientação no espaço é a projeção do vetor sobre um eixo com essa orientação. Se forma um ângulo $\theta$ com a orientação positiva de x, suas componentes x e y são:
+$$A_x = A\: cos(\theta)$$
+$$A_y = A\: sen(\theta)$$
+\textbf{Magnitude, Intensidade ou Módulo:} é o comprimento do vetor, pode ser determinado a partir da expressão:
+$$A = \sqrt{A_x^2 + A_y^2}$$
+\textbf{Direção:} é o ângulo que o vetor possui com relação à sua projeção (geralmente o eixo x)\\\\
+\textbf{Sentido:} Nos diz em que direção o vetor está indo (da esquerda para a direita, de cima para baixo, etc.)\\\\
+\textbf{Somando Vetores Graficamente:}
+Dois vetores podem ser somados graficamente desenhando-os com a origem da segunda seta na ponta da primeira seta. A seta que representa o vetor resultante é desenhada da origem do primeiro vetor para a ponta do segundo.\\\\
+\textbf{Somando Vetores Usando Componentes:} Se $\overrightarrow C = \overrightarrow A + \overrightarrow B$, então:
+$$C_x = A_x + B_x$$
+$$C_y = A_y + B_y$$
+\textbf{Ângulo medido:} Se conhecemos $A_x$ e $A_y$ podemos encontrar o ângulo $\theta$ a partir de:
+$$tan(\theta) = \frac{A_y}{A_x}$$
+$$\theta = tan^-^1 \bigg(\frac{A_y}{A_x}\bigg)$$
+\textbf{Vetores unitários:} Alguns exercícios podem ser simplificados, ao percebermos que um vetor pode ser escrito em termos de vetores unitários $\hat i$, $\hat j$ , que são adimensionais, têm magnitude unitária e as orientações dos eixos $x$ e $y$ são, respectivamente:
+$$ \overrightarrow A = A_x\: \hat i + A_y\: \hat j$$
+
+\end{document}
