@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Capítulo 02 - Vetores} 
+\begin{document}
+\author{Atualizado em 01/04/2021}
+\date{}
+\maketitle
+\textbf{\underline{2.1 VETORES}}\\
+\par Se um objeto se move em linha reta, podemos descrever seu movimento informando quão longe e com que velocidade ele se move, e se ele se move para a esquerda ou para a direita da origem. Mas, quando observamos o movimento de um objeto que se move em duas ou três dimensões, necessitamos de mais que apenas sinais de mais e de menos para indicar a orientação. Quantidades que possuem magnitude (módulo) e orientação, como velocidade, aceleração e força, são chamadas de \textbf{vetores}. Quantidades com magnitude, mas sem uma orientação associada como massa, volume e tempo são chamadas de \textbf{escalares}.
+\par Assim, para definir um vetor, não nos basta definir seu valor (que chamaremos de módulo), mas também precisaremos especificar para onde esse vetor esta apontando, bem como o tipo de grandeza que ele representa. Um exemplo disso é a velocidade. Não basta dizer que um carro está se movendo a 2 m/s. Precisamos também especificar para onde o carro está indo. Para isso, representamos um vetor graficamente utilizando uma seta. O comprimento da seta representa a magnitude da quantidade vetorial. A orientação da seta indica a orientação da quantidade vetorial. A Fig 2.1 mostra uma representação gráfica de um vetor. Denotamos vetores com letra em itálico encimada por uma seta, \overrightarrow A. A magnitude de \overrightarrow A é escrita |\overrightarrow A| ou ||\overrightarrow A||
+\par Trabalhando com vetores, você deve \underline{sempre} desenhar uma seta sobre a letra, para indicar a quantidade vetorial. A letra sem a seta indica apenas a magnitude da quantidade vetorial.
+$$\includegraphics[scale = 0.7]{vetor.png}$$
+\centerline{\textit{Fig. 2-1 : Exemplo de um vetor deslocamento}}\\\\
+\textbf{\underline{2.2 PROPRIEDADES GERAIS DOS VETORES}}\\\\
+Se um objeto se desloca de uma posição A para uma posição B, podemos representar o seu deslocamento por uma seta que aponta de A para B, como mostra a Figura 2-1. O comprimento da seta representa a distância entre as duas posições. A orientação da seta representa a orientação de A para B. Um vetor deslocamento é um segmento de reta, orientado da posição inicial para a posição final, que representa a mudança de posição de um objeto. Ele não necessariamente representa o caminho descrito pelo objeto. Por exemplo na Figura 2-2, o mesmo vetor deslocamento corresponde a todos os três caminhos entre os pontos A e B.
+$$\includegraphics[scale = 0.7]{vetor2.png}$$
+\centerline{\textit{Figura 2-2 : Todos os caminhos representados pelo mesmo vetor deslocamento}}\\\\
+\par Se dois vetores têm a mesma direção (inclinação) e sentido (para onde aponta), eles são \textbf{paralelos}. Se eles tem a mesma direção mas sentidos opostos então eles são 
+\textbf{antiparalelos}. Se dois vetores tem o mesmo módulo, direção e sentido, dizemos que eles são iguais. Graficamente, isso significa que eles tem o mesmo comprimento e são paralelos entre si. É importante observar que um vetor pode ser desenhado em  diferentes posições, desde que seja desenhado com a magnitude correta (comprimento) e com a orientação correta. Assim, por exemplo, todos os vetores da Fig. 2-3 são paralelos (note que eles não são iguais pois não possuem o mesmo comprimento). 
+$$\includegraphics[scale = 0.9]{VETOR3.png}$$
+\centerline{\textit{Fig. 2-3 : Vários vetores paralelos}}\\\\
+\underline{\textbf{2.3 ADIÇÃO E SUBTRAÇÃO DE VETORES}}\\
+\par Suponha que você decida caminhar por uma trilha através de uma floresta. A Figura 2-4 mostra seu caminho, movendo-se do ponto $P_1$ para um segundo ponto $P_2$ e, depois, para um terceiro ponto $P_3$. O vetor \overrightarrow A representa seu deslocamento de $P_1$ para $P_2$, enquanto \overrightarrow B representa seu deslocamento de $P_2$ para $P_3$. Note que estes vetores deslocamento dependem apenas dos pontos terminais, e não do caminho escolhido. Seu deslocamento efetivo de $P_1$ para $P_3$ é um novo vetor, indicado por \overrightarrow C na figura, e é chamado de soma dos dois deslocamentos sucessivos \overrightarrow A e \overrightarrow B, de modo que:
+\begin{equation}
+    \overrightarrow C = \overrightarrow A + \overrightarrow B
+\end{equation}
+$$\includegraphics[scale = 0.7]{VETOR4.png}$$
+\centerline{\textit{Fig. 2-4}}\\
+\par A soma de dois vetores é chamada de \textbf{soma vetorial}. O sinal de mais na equação (1) se refere a um processo chamado de \textit{soma vetorial}. Encontramos a soma usando um método geométrico que leva em conta ambas as magnitudes e as orientações das quantidades. Para somar dois vetores deslocamento graficamente, desenhamos o segundo vetor \overrightarrow B com sua origem na ponta do primeiro vetor \overrightarrow A. O vetor resultante é então traçado da origem do primeiro para a ponta do segundo. Este método de soma de vetores é chamado de \textbf{método geométrico}, conforme é mostrado na Fig. 2-5:
+$$\includegraphics[scale = 0.7]{VETOR5.png}$$
+\centerline{\textit{Fig. 2-5: Método geométrico de soma de vetores.}}\\\\
+Para somar mais de dois vetores - por exemplo \overrightarrow A , \overrightarrow B e \overrightarrow C - primeiro somamos dois vetores como mostra a Figura 2.6 e depois somamos o terceiro vetor ao vetor soma dos dois primeiros. A ordem em que os vetores são agrupados antes da soma não importa; isto é, $(\overrightarrow A + \overrightarrow B) + \overrightarrow C = \overrightarrow A + (\overrightarrow B + \overrightarrow C)$.
+$$\includegraphics[scale = 0.7]{vetor6.png}$$
+\centerline{\textit{Figura 2-6: A soma vetorial é associativa.}}\\\\
+\par Se os vetores \overrightarrow A e \overrightarrow B são iguais em magnitude e opostos em orientação, então o vetor $\overrightarrow C = \overrightarrow A + \overrightarrow B$ é um vetor de magnitude zero. Isto pode ser mostrado usando o método geométrico da soma vetorial para construir graficamente a soma \overrightarrow A + \overrightarrow B. Qualquer vetor de magnitude zero é o chamado do vetor zero, \overrightarrow 0. A orientação de um vetor de magnitude zero não tem significado, de forma que neste utilizaremos 0 em vez de \overrightarrow 0, para denotar o vetor zero. Se \overrightarrow A + \overrightarrow B = 0, então se diz que \overrightarrow B é o negativo de \overrightarrow A e vice-versa. Note que \overrightarrow B é o negativo de \overrightarrow A se \overrightarrow B tem a mesma magnitude \overrightarrow A, mas com sentido oposto. O negativo de \overrightarrow A é escrito como -\overrightarrow A e, se \overrightarrow A + \overrightarrow B = 0, então \overrightarrow B = - \overrightarrow A. 
+$$\includegraphics[]{VETOR7.png}$$
+\centerline{\textit{Figura 2-7: Dois vetores opostos se anulam}}\\\\
+Para subtrair o vetor \overrightarrow B do vetor \overrightarrow A, some o negativo de \overrightarrow B com \overrightarrow A. O resultado é $\overrightarrow C = \overrightarrow A - \overrightarrow B = \overrightarrow A + (-\overrightarrow B)$, conforme mostra a Figura 2-8.
+$$\includegraphics[scale = 0.7]{VETOR8.png}$$
+\centerline{\textit{Figura 2-8}}\\\\\\
+\textbf{Problema Resolvido 2-1.}\\\\
+Você caminha 3,00 km para o leste e depois 4,00 km para o norte. Determine a intensidade de seu deslocamento resultante somando graficamente estes dois vetores deslocamento.\\\\
+\textbf{Solução:}\\\\
+Seu deslocamento é o vetor que se origina em sua posição inicial e tem a ponta em sua posição final. Você pode somar os dois deslocamentos individuais graficamente para encontrar o deslocamento resultante.\\
+Faça \overrightarrow A e \overrightarrow B representarem deslocamentos de 3,00 km para o leste e de 4,00 km para o norte, respectivamente, e faça $\overrightarrow C = \overrightarrow A + \overrightarrow B$. Desenhe \overrightarrow A e \overrightarrow B com a origem de \overrightarrow B na ponta de \overrightarrow A, e \overrightarrow C é traçado da origem de \overrightarrow A para ponta de \overrightarrow B (Figura 2-9).
+$$\includegraphics[scale = 0.7]{VETOR9.png}$$
+\centerline{\textit{Figura 2-9}}
+Utilizando pitágoras, podemos escrever que:
+$$C^2 = A^2 + B^2$$
+Substituindo:
+$$C^2=(3,00\:km)^2+(4,00\:km)^2=9,00\:km^2+16,00\:km^2$$
+$$C = \sqrt{9,00\:km^2 + 16\:km^2} = \sqrt{25\:km^2} = 5\:km$$\\\\
+\textbf{\underline{2.4 MULTIPLICANDO UM VETOR POR UM ESCALAR}}\\
+\par A expressão 3\overrightarrow A, onde \overrightarrow A é um vetor qualquer, representa a soma $\overrightarrow A + \overrightarrow A + \overrightarrow A$. Mais geralmente, o vetor \overrightarrow A multiplicado por um escalar $s$ é o vetor $\overrightarrow B = s\overrightarrow A$, onde \overrightarrow B tem a magnitude $|s|A$. É importante ressaltar que \overrightarrow B tem a mesma direção e sentido de \overrightarrow A se $s$ é positivo e tem a orientação sentido contrário se $s$ é negativo. As dimensões de $s\overrightarrow A$ são as de $s$ multiplicadas pelas de A.\\
+(Por extensão, para dividir \overrightarrow A pelo escalar $s$, você multiplica \overrightarrow A por 1/s)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\textbf{\underline{2.5 COMPONENTES DE VETORES}}\\
+\par A componente de um vetor em uma dada orientação é a projeção do vetor sobe um eixo com essa orientação. Podemos encontrar as componentes de um vetor baixando linhas perpendiculares das extremidades de um vetor ao eixo, como mostrado na Figura 2-10. Podemos usar a trigonometria do triângulo retângulo para encontrar as componentes retangulares de um vetor. Se $\theta$ é o ângulo medido no sentido anti-horário, então:
+$$\includegraphics[scale = 0.4]{103.png}$$
+\centerline{\textit{Fig. 2-10}}\\\\
+As componentes $v_x$ e $v_y$ são respectivamente:
+$$v_x = v\:cos(\theta)$$
+$$v_y = v\:sen(\theta)$$
+Se conhecemos $v_x$ e $v_y$, podemos encontrar o ângulo $\theta$ a partir de:
+$$tan(\theta) = \frac{v_y}{v_x}$$
+E a magnitude $\mid \overrightarrow v \mid \:= v$ usando o teorema de Pitágoras:
+$$v= \sqrt{v_x^2 + v_y^2}$$
+\textbf{Problema Resolvido 2-2}\\\\
+Determine as componentes x e y dos seguintes três vetores do plano xy. (a) Um vetor deslocamento de 10 m que forma um ângulo de $30^\circ$ no sentido horário a partir do eixo +y. (b) Um vetor velocidade de 25 m/s que forma um ângulo de $40^\circ$ no sentido anti-horário com o eixo -x. (c) Uma força de 40 N que forma um ângulo de $120^\circ$ no sentido anti-horário com o eixo -y.\\\\
+\textbf{Solução:}\\\\
+As componentes x e y desses vetores são suas projeções nos eixos x e y. Observe que todas as componentes são calculadas usando o ângulo que cada vetor faz com o eixo +x.\\\\
+(a) Desenhe vetor (chamaremos de \overrightarrow A) e observe que ele possui um ângulo de $60^\circ$ com o eixo +x:\\
+$$\includegraphics[]{A1.png}$$
+Ache as componentes x e y de \overrightarrow A através da fórmula:
+$$A_x = (10\:m)cos(60^\circ) = 5,0\:m$$
+$$A_y = (10\:m)sen(60^\circ) = 8,7\:m$$
+(b) Desenhe o vetor (chamaremos de \overrightarrow v) e observe que ele faz um ângulo de $220^\circ$ com o eixo +x:
+$$\includegraphics[]{A2.png}$$
+Suas componentes x e y serão:
+$$v_x = (25\:m/s)cos(220^\circ) = -19\:m/s$$
+$$v_y = (25\:m/s)sen(220^\circ) = -16\:m/s$$
+(c) Desenhe o vetor força (chamaremos de \overrightarrow F) e observe que ele faz um ângulo de $30^\circ$ com relação ao eixo +x.
+$$\includegraphics[]{A3.png}$$
+Suas componentes serão portanto:
+$$F_x = (40\:N)cos(30^\circ) = 35\:N$$
+$$F_y = (40\:N)sen(30^\circ) = 20\:N$$\\\\\
+\textbf{\underline{Exercícios de fixação:}}\\\\
+1-) Você caminha 100 m em linha reta em um plano horizontal. Se esta caminhada o levou 50 m para o leste, quais são seus possíveis movimentos para o norte ou para o sul? Quais são os possíveis ângulos que sua caminhada formou em relação ao sentido para o leste?\\\\
+2-) Reescreva os seguintes vetores em termos da magnitude e do ângulo (medido no sentido anti-horário a partir do eixo +x). (a) Um vetor deslocamento com uma componente x de +8,5 m e uma componente y de -5,5 m. (b) Um vetor velocidade com uma componente x de -75 m/s e uma componente y de +35 m/s. (c) Um vetor força com uma magnitude de 50 N que está no terceiro quadrante e tem uma componente x cuja magnitude vale 40 N. Utilize uma calculadora para determinar os ângulos.
+\end{document}
