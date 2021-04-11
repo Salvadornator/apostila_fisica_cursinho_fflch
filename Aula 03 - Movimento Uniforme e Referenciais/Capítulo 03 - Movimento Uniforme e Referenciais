@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\title{Capítulo 03 - Movimento Uniforme e Referenciais} 
+\begin{document}
+\author{Atualizado em 05/04/2021}
+\date{}
+\maketitle
+O estudo do movimento e os conceitos relacionados a força e massa é chamado de \textbf{mecânica}. Começamos o estudo do movimento com a \textbf{cinemática}, ramo que estuda as características do movimento. O movimento está por toda a física e uma compreensão da cinemática é necessária para compreender como força e massa afetam o movimento.\\\\
+\textbf{\underline {3.1 DESLOCAMENTO E VELOCIDADE}}\\\\
+Em uma corrida de cavalos, o vencedor é aquele cujo nariz é o primeiro a cruzar a linha de chegada. Podemos argumentar que o que realmente importa durante a corrida é o movimento deste ponto particular do cavalo, e que o tamanho, a forma e o movimento do resto do cavalo é desimportante. Em física este tipo de simplificação também é útil no exame do movimento de outros objetos. Podemos, com frequência, descrever o movimento de um objeto descrevendo o movimento de um único ponto do objeto. Um objeto, portanto, pode muitas vezes ser considerado uma partícula. Em cinemática, qualquer objeto pode ser considerado uma partícula desde que não estejamos interessados em seu tamanho ou forma. Ao passo em que isso é feito, dizemos que agora o corpo extenso se torna um ponto material, que possui todas as propriedades de um corpo com dimensão, como carga elétrica, massa, temperatura, não possuindo apenas dimensão significante.\\\\
+\textbf{POSIÇÃO E DESLOCAMENTO}\\\\
+Para descrever o movimento de uma partícula, precisamos ser capazes de descrever a posição da partícula e como essa posição varia enquanto a partícula se move. Por exemplo, considere uma partícula na posição $s_i$ no instante $t_i$. Em um tempo posterior $t_f$ a partícula está na posição $s_f$ conforme mostra a Figura 3-1. A variação da posição da partícula é chamada de \textbf{deslocamento}.\\
+$$\includegraphics[scale = 0.6]{R1.png}$$
+\centerline{\textit{Figura 3-1 : Uma partícula se move no sentido positivo de x}}\\\\
+Usamos a letra grega $\Delta$ para indicar a variação de uma quantidade; assim, a variação de x pode ser escrita como:
+$$\Delta s = s_f - s_i$$
+É importante ressaltar que existe diferença entre deslocamento e distância percorrida. A distância percorrida por uma partícula é o comprimento do caminho descrito pela partícula de sua posição inicial até sua posição final, portanto a distância é uma quantidade escalar e é sempre indicada por um número positivo. Já o deslocamento é a variação de posição da partícula. É positivo se a variação ocorre no sentido positivo de $x$ e é negativo se ocorre no sentido negativo de $x$.\\\\\\\\
+\textbf{Problema Resolvido 3-1}\\\\
+Você  está exercitando um cachorro. O cachorro está inicialmente junto a você. Depois, ele corre 20 metros em linha reta para buscar um graveto e traz o graveto de volta 15 metros pelo mesmo caminho antes de se deitar no chão e começar a mascar o graveto. (a) Qual a distância percorrida pelo cachorro? (b) Qual o deslocamento do cachorro?\\\\
+\textbf{Solução:}\\\\
+(a) A distância total percorrida é a soma dos deslocamento do cachorro, de modo que será:
+$$ s_0{_2} = s_0{_1} + s_1{_2} = (20\:m) + (15\:m) = 35\:m$$
+(b) O deslocamento final é encontrado a partir de sua definição, $\Delta x = x_f - x_i$, em que $x_i = 0$ e $x_f = 5\:m$:
+$$\Delta s = s_f - s_i = 5\:m - 0\:m = 5\:m$$
+\textbf{\underline{3.2 VELOCIDADE MÉDIA}}\\\\
+Uma quantidade que descreve o quão rápido e em que sentido o objeto se move é a velocidade média. A velocidade média, $v_m$, de uma partícula é definida como sendo a razão entre o deslocamento $\Delta s$ e o intervalo de tempo $\Delta t$
+$$v_m = \frac{\Delta s}{\Delta t} = \frac{s_f - s_i}{t_f - t_i}\quad (logo\:\Delta s = v_m \cdot \Delta t)$$
+Um valor positivo para a velocidade média indica que o deslocamento tem a orientação positiva, comumente dada pelo sentido positivo do eixo $x$, enquanto que um valor negativo indica que a partícula se desloca na orientação $-x$. As dimensões da velocidade são $L/T$ e a unidade no sistema internacional (SI) é o metro por segundo (m/s), mas as vezes a velocidade pode ser dada em quilômetros por hora (km/h).\\\\
+\textbf{Problema Resolvido 3-2}\\\\
+O cachorro que estava se exercitando no Problema Resolvido 3-1 correu 20 metros afastando-se de você em 1,0 segundo para alcançar o graveto. Na volta ele caminhou 15 metros em 1,5 segundos. Calcule a velocidade média do cachorro para o total da viagem.\\\\
+\textbf{Solução:}\\\\
+A velocidade média do cachorro é a razão entre o deslocamento total $\Delta s$ e o intervalo de tempo $\Delta t$. O tempo total que o cachorro demorou pode ser determinado somando os dois intervalos de tempo, de modo que o tempo final é:
+$$\Delta t = 2,5\:s$$
+Assim, a velocidade média pode ser obtida usando $\Delta s$ e $\Delta t$:
+$$v_m = \frac{\Delta s}{\Delta t} = \frac{20\:m - 15\:m}{2,5\:s} = 2,0\:m/s$$\\\\\\\\\\\\\\\\\\\\\
+\textbf{Problema Resolvido 3-3}\\\\
+Você normalmente leva 10 min para percorrer os 5,0 km até a escola, por uma estrada reta. Você sai de casa 15 min antes do início das aulas. O retardo causado por um semáforo com defeito o força a viajar a 20 km/h durante os primeiros 2,0 km do; percurso. Você chegará atrasado para as aulas?\\\\
+\textbf{Solução:}\\\\
+Você precisa encontrar o tempo total que levará para chegar à escola. Para isto, você deve encontrar o tempo $\Delta t_2{_k{_m}}$ que levará dirigindo a 20 km/h, e o tempo  $\Delta t_3{_k{_m}}$ para o restante do percurso, durante o qual você estará dirigindo com sua velocidade usual.\\
+O tempo total é igual ao tempo para percorrer as primeiras 2,0 km mais o tempo para percorrer os restantes 3,0 km.
+$$\Delta t = \Delta t_2{_k{_m}} + \Delta t_3{_k{_m}} $$
+Usando $\Delta x = v_m \cdot \Delta t$, resolva para o tempo necessário para percorrer 2,0 km a 20 km/h:
+$$\Delta t_2{_k{_m}} = \frac{\Delta s_1}{v_m} = \frac{2,0\:km}{20\:km/h} = 0,10\:h = 6,0\:min $$
+$$\Delta t_3{_k{_m}} = \frac{\Delta s_2}{v_m} = \frac{3,0\:km}{v_n{_o{_r{_m{_a{_l}}}}}}$$
+Agora precisamos descobrir a velocidade que normalmente você viaja:
+$$v_n{_o{_r{_m{_a{_l}}}}} = \frac{\Delta s_t{_o{_t}}}{\Delta t_n{_o{_r{_m{_a{_l}}}}}} = \frac{5,0\:km}{10\:min} = 0,50\:km/min$$
+Substituindo:
+$$\Delta t_3{_k{_m}} = \frac{\Delta s_2}{v_m} = \frac{3,0\:km}{v_n{_o{_r{_m{_a{_l}}}}}} = \frac{3,0\:km}{0,50\:km/min} = 6,0\:min$$
+O tempo total será então:
+$$\Delta t = \Delta t_2{_k{_m}} + \Delta t_3{_k{_m}} = 12\:min$$
+A viajem leva 12 min com o retardo, em comparação com os 10 min usuais logo você não se atrasará para as aulas.\\\\
+\textbf{\underline{3.3 GRÁFICOS MOVIMENTO UNIFORME}}\\\\
+Um gráfico que $v_m$ \textit{versus} $t$ de um movimento com velocidade constante é uma linha reta. Como a velocidade é sempre constante então o gráfico será uma linha horizontal paralela ao eixo x. Para obter uma equação da posição s como função do tempo, primeiro olhamos para o caso especial de movimento com velocidade constante $v_x = v_o_x$. A variação da posição $\Delta s$ durante um intervalo de tempo $\Delta t$ é:
+$$\Delta s = v_o_x \cdot \Delta t$$
+$$\includegraphics[scale = 0.6]{grafico.png}$$
+A área do retângulo sombreado sob a curva $v_x$ \textit{versus} $t$ é sua altura $v_o_x$ vezes sua largura $\Delta t$ e, portanto, a área sob a curva é o deslocamento $\Delta s$. Se $v_o_x$ é negativo então o deslocamento $\Delta x$ é negativo. A interpretação geométrica do deslocamento como uma área sob a curva $v_x$ versus t é verdadeira não apenas para velocidades constantes, mas também no geral, com velocidades que variam no decorrer do tempo, como veremos a seguir.\\
+Uma observação importante é que podemos manipular algebricamente a equação: $$v_m = \frac{\Delta s}{\Delta t}$$
+$$v_m = \frac{s_f - s_i}{\Delta t}$$
+$$s_f(t) = s_o + v_m\:\Delta t$$
+\textbf{\underline{3.4 REFERENCIAIS}}\\
+\par Um referencial é um lugar ou um corpo material a partir do qual as observações sobre determinado fenômenos são feitas. O movimento é uma característica que depende quase que exclusivamente do referencial adotado. Imagine que você esteja esperando por um ônibus. Em relação a você que está parado, o ônibus vem se aproximando com velocidade constante. Logo o ônibus está em movimento em relação a você. Porém para um passageiro de dentro do ônibus, ele não está em movimento: a lâmpada do ônibus não se mexe em relação a ele e muito menos o cobrador. Desse modo a noção de movimento e repouso de um corpo é sempre relativa a outro corpo. Essa noção de movimento é imprecisa se não definirmos o corpo em relação ao qual se considera o estado de movimento ou de repouso de um móvel. O corpo em relação ao qual identificamos se um móvel está em movimento ou em repouso é chamado de referencial ou sistema de referencia.
+\par Vejamos um outro exemplo: um passageiro sentado em um ônibus transitando numa cidade está em movimento em relação a um edifício próximo a pista de tráfego, mas estará em repouso em relação a um passageiro que esteja em pé ao seu lado. A ideia de parado ou em movimento leva em conta mudança, ou não, da posição do corpo em relação a outro que sirva de referência com o decorrer do tempo. 
+\par Um referencial é denominado de inercial se para ele as leis de Newton forem válidas. Referenciais inerciais devem estar em repouso ou em movimento retilíneo uniforme. Se tomarmos o interior de uma aeronave no momento da aceleração da decolagem como referência para observação de fenômenos, as análises feitas estariam comprometidas, pois, em movimento acelerado ou de rotação, o referencial é considerado não inercial.\\\\
+\textbf{\underline{Exercícios de Fixação}}\\\\
+1-) Um automóvel viaja em linha reta com velocidade média de 80 km/h durante 2,5 horas e depois, com uma velocidade média de 40 km/h durante 1,5 h. (a) Qual é o deslocamento total para a viagem de 4,0 h? (b) Qual é a velocidade média para toda a viagem?\\\\
+2-) Uma rota muito utilizada através do Oceano Atlântico é de aproximadamente 5500 km. O agora aposentado Concorde, um jato supersônico capaz de voar com o dobro da velocidade do som, foi usado nessa rota. (a) Quanto tempo, aproximadamente, ele levava em uma viagem de ida? (Use 343 m/s para a velocidade do som). (b) Compare este tempo com o tempo que leva um jato subsônico voando a 0,90 vez a velocidade do som.\\\\
+3-) \textbf{(Desafio)} Um carro, viajando com uma rapidez constante de 20 m/s, passa por um cruzamento em $t = 0$. Um segundo carro, viajando com uma velocidade constante de 30 m/s no mesmo sentido, passa pelo mesmo cruzamento 5,0 s após. (a) Esboçe as funções posição $x_1(t)$ e $x_2(t)$ para os dois carros para o intervalo $0 \leq t \leq 20s$. (b) Determine quando o segundo carro ultrapassará o primeiro. (c) A que distância do cruzamento os carros estarão quando emparelharem? (d) Onde está o primeiro carro quando o segundo passa pelo cruzamento?
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
