@@ -1,0 +1,251 @@
+
+\documentclass[12pt,a4paper,oneside,openany]{book} 
+
+\usepackage[top=1cm,left=1cm,right=1.5cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}%Especif. a codif. de caracteres
+\usepackage{ae}%Auxílio para fontes e pdf
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}%Gerar Texto Aleatório
+\usepackage[brazil]{babel}%Traduzir para Português
+\usepackage{indentfirst}%Faz indentações em parágrafos
+\usepackage{graphicx}%Permite incluir figuras
+\usepackage{subfig} %para criar sub figuras
+\usepackage{float}% figuras
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}%Admitir cores
+\usepackage{amsmath,amssymb,amsthm}%Incluir expressões  matemáticas, equações, teoremas, símbolos, etc
+\usepackage{lastpage}%Incluir Ficha catalográfica
+\usepackage{epigraph}%Incluir Epígrafo
+\usepackage{enumerate}
+\usepackage{enumitem}
+\newlist{questions}{enumerate}{3}
+\setlist[questions]{label=\arabic*.}
+\newcommand{\question}{\item}
+\setlist[enumerate,1]{% (
+leftmargin=*, itemsep=12pt, label={\textbf{\arabic*.)}}}
+%---
+\newlist{partes}{enumerate}{3}
+\setlist[partes]{label=(\alph*)}
+\newcommand{\parte}{\item}
+%---
+\newlist{subpartes}{enumerate}{3}
+\setlist[subpartes]{label=\roman*)}
+\newcommand{\subparte}{\item}
+%---
+\usepackage{array}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\usepackage[sort&compress,round,comma,authoryear]{natbib}
+\usepackage{makeidx}
+\usepackage[colorlinks=true,urlcolor=magenta,citecolor=red,linkcolor=violet,bookmarks=true]{hyperref}
+\usepackage{lscape}%Altera a orientação de uma página
+\usepackage{pdflscape}
+\usepackage{epstopdf} %converte figs eps em figs pdf
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{textcomp}
+\usepackage[many]{tcolorbox}
+\usepackage{empheq}
+\usepackage{tasks}%lista alfabética
+\pagestyle{plain}
+%================================================================
+%------------DIGITE AQUI
+%===============================================================
+\newcommand{\orgao}{Cursinho Popular da FFLCH}
+\newcommand{\instituto}{Física Mecânica}
+\newcommand{\departamento}{Atualizado em 12/01/2019}
+\newcommand{\curso}{}
+\newcommand{\professor}{Rafael Lopes Sabainsk}
+\newcommand{\titulo}{2ª Lista de Exercícios: Vetores}
+\newcommand{\data}{\today}
+\newcommand{\aluno}{ALUNO:}
+\newcommand{\email}{rafaelsabainsk@usp.br}
+\newcommand{\turma}{Intensivo}
+%===========================================================
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\y}{\boldsymbol{y}}
+\newcommand{\balpha}{\mbox{${ \bm \alpha}$}}
+\newcommand{\bmu}{\mbox{${\bm \mu}$}}
+\newcommand{\bbeta}{\mbox{${\bm \beta}$}}
+\newcommand{\bteta}{\mbox{${\bm \theta}$}}
+\newcommand{\bgama}{\mbox{${\bm \gamma}$}}
+\newcommand{\bxi}{\mbox{${\bm \xl}$}}
+\newcommand{\bvarphi}{\mbox{${ \bm \varphi}$}}
+\newcommand{\SZ}{\mbox{ $Z$}}
+\newcommand{\muz}{\mu_{z,l}}
+\newcommand{\muo}{\mu_{0,l}}
+\newcommand{\etao}{\eta_{0,l}}
+\newcommand{\etaz}{\eta_{z,l}}
+\newcommand{\xbeta}{x_{l}\bgama}
+\newcommand{\mui}{\mu_{l}}
+\newcommand{\zetaind}{\zeta \mathtt{I}_{\{s_{l} \in Z \}}} 
+\newcommand{\spz}{ s_{l} \in z}
+\newcommand{\snpz}{ s_{l} \notin z}
+\newcommand{\sps}{ s_{l} \in S}
+\newcommand{\gphi}{ \Gamma(\phi)}
+\newcommand{\scan}{ \Lambda_{z}}
+\newcommand{\gmuop}{ \Gamma(\muo\phi)}
+\newcommand{\gmuzp}{ \Gamma(\muz \phi)}
+\newcommand{\gumuop}{ \Gamma((1-\muo)\phi)}
+\newcommand{\gumuzp}{ \Gamma((1-\muz)\phi)}
+\newcommand{\dlobeta}{ \frac{\parteial l_{0}(\bgama, \phi, 0) }{\parteial \bgama}}
+\newcommand{\lz}{  l_{z}(\bgama, \phi, \tau)}
+\newcommand{\lo}{  l_{0}(\beta, \phi, 0)}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\dis}{\displaystyle}
+\linespread{1.0}%espaço entre linhas
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      CABEÇALHO                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep{\fill}}}
+\begin{tabular}[l]{@{}l@{}}\textbf{\orgao}\\\textbf{\instituto}\\\textbf{\departamento} \end{tabular} & \begin{tabular}[l]{@{}l@{}}\textbf{Professor: \professor}\\ {\email}\\ \end{tabular}                                                       
+\end{tabular*}
+\end{table}
+\begin{center}
+\rule[2ex]{\textwidth}{1pt}\\
+{\Large{\titulo}}
+\end{center}
+\rule[2ex]{\textwidth}{1pt}\\
+
+\begin{questions}[label=\protect\circled{\bfseries\arabic*}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Questões                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%=====================
+\question \textbf{(UFB)} Observe a figura a seguir e determine quais os vetores que:
+$$\includegraphics[scale = 0.7]{1.png}$$
+\begin{partes}
+\parte tem a mesma direção.
+\parte tem o mesmo sentido.
+\parte tem a mesma intensidade (módulo)
+\parte são iguais.
+\end{partes}
+\question \textbf{(UFB)} Quantos sentidos possui uma direção?
+\question \textbf{(FGV-SP)} São grandezas escalares:
+\begin{partes}
+\parte tempo, deslocamento e força         
+\parte força, velocidade e aceleração        
+\parte tempo, temperatura e volume      
+\parte temperatura, velocidade e volume         
+\parte tempo, temperatura e deslocamento
+\end{partes}
+\question \textbf{(UEPG-PR)} Quando dizemos que a velocidade de uma bola é de 20 m/s, horizontal e para a direita, estamos definindo a velocidade como uma grandeza:
+\begin{partes}
+\parte escalar
+\parte algébrica
+\parte linear
+\parte vetorial
+\end{partes}
+\question \textbf{(UFMG)} Uma pessoa sai para dar um passeio pela cidade, fazendo o seguinte percurso: sai de casa e anda 2 quarteirões para o Norte; dobra à esquerda andando mais 2 quarteirões para Oeste, virando, a seguir, novamente à esquerda e andando mais dois quarteirões para o Sul. Sabendo que cada quarteirão mede 100m, o deslocamento da pessoa é:
+\begin{partes}
+\parte 700m para Sudeste     
+\parte 200m para Oeste     
+\parte 200m para Norte     
+\parte 700m em direções variadas     
+\parte 0m
+\end{partes}
+\question \textbf{(PUC-RJ)} Os ponteiros de hora e minuto de um relógio suíço têm, respectivamente, 1 cm e 2 cm. Supondo que cada ponteiro do relógio é um vetor que sai do centro do relógio e aponta na direção dos números na extremidade do relógio, determine o vetor resultante da soma dos dois vetores correspondentes aos ponteiros de hora e minuto quando o relógio marca 6 horas.
+\begin{partes}
+\parte O vetor tem módulo 1 cm e aponta na direção do número 12 do relógio.
+\parte O vetor tem módulo 2 cm e aponta na direção do número 12 do relógio.
+\parte O vetor tem módulo 1 cm e aponta na direção do número 6 do relógio.
+\parte O vetor tem módulo 2 cm e aponta na direção do número 6 do relógio.
+\end{partes}
+\question \textbf{(CFT-CE)} Dados os vetores $\overrightarrow A$, $\overrightarrow B$, $\overrightarrow C$, $\overrightarrow D$ e $\overrightarrow E$ a seguir representados, obtenha o módulo do vetor soma:
+$$\includegraphics[]{2.png}$$
+$$\overrightarrow R = \overrightarrow A + \overrightarrow B + \overrightarrow C + \overrightarrow D + \overrightarrow E$$
+\begin{partes}
+\parte zero
+\parte $\sqrt{20}$
+\parte 1
+\parte 2
+\parte $\sqrt{52}$
+\end{partes}
+\question \textbf{(FATEC-SP)} Um automóvel percorre 6,0km para o norte e, em seguida 8,0km para o leste. A intensidade do vetor posição, em relação ao ponto de partida é:
+\begin{partes}
+\parte 14,0 km
+\parte 2,0 km
+\parte 12,0 km
+\parte 10,0 km
+\parte 8,0 km
+\end{partes}
+\newpage
+\question \textbf{(FATEC-SP)} Duas forças têm intensidades $F_1=10\:N$ e $F_2=15\:N$. O módulo da resultante da soma vetorial desses dois vetores, não pode ser:
+\begin{partes}
+\parte 4 N
+\parte 10 N
+\parte 15 N 
+\parte 20 N
+\parte 25 N
+\end{partes}
+\question \textbf{(FATEC-SP)} No gráfico anexo estão representados três vetores $\overrightarrow a$, $\overrightarrow b$ e $\overrightarrow c$ . Os vetores $\overrightarrow i$ e $\overrightarrow j$ são unitários. Analise as informações:
+$$\includegraphics[]{3.png}$$
+\centerline{(I) $\overrightarrow a = 2 \hat i + 3 \hat j $}
+\centerline{(II) $\overrightarrow b = 2 \hat j$}
+\centerline{(III) $\overrightarrow b + \overrightarrow c = \hat i $}
+Podemos afirmar que:
+\begin{partes}
+\parte são corretas apenas a (I) e a (II)
+\parte são corretas apenas a (II) e a (III) 
+\parte são corretas apenas a (I) e a (III)
+\parte são todas corretas
+\parte há apenas uma correta
+\end{partes}
+\question \textbf{(PUC-RJ)} Um veleiro deixa o porto navegando 70 km em direção leste. Em seguida, para atingir seu destino, navega mais 100 km na direção nordeste. Desprezando a curvatura da terra admitindo que todos os deslocamentos são coplanares, determine o deslocamento total do veleiro em relação ao porto de origem. 
+(Considere $\sqrt{2} = 1,40$ e $\sqrt{5} = 2,20$)
+\begin{partes}
+\parte 106 km              
+\parte 34 km                   
+\parte 154 km                  
+\parte 284 km                  
+\parte 217 km
+\end{partes}
+\newpage
+\question \textbf{(UFAL-AL)}  A localização de um lago, em relação a uma caverna pré-histórica, exigia que se caminhasse 200 m numa certa direção e, a seguir, 480 m numa direção perpendicular à primeira. A distância em linha reta, da caverna ao lago era, em metros, 
+\begin{partes}
+\parte 680                           
+\parte 600                                
+\parte 540                                
+\parte 520                                  
+\parte 500 
+\end{partes}
+
+\question \textbf{(UnB-DF)} Considere um relógio com mostrador circular de 10 cm de raio e cujo ponteiro dos minutos tem comprimento igual ao raio do mostrador. Considere esse ponteiro como um vetor de origem no centro do relógio e direção variável. O módulo da soma dos três vetores determinados pela posição desse ponteiro quando o relógio marca exatamente 12 horas, 12 horas e 20 minutos e, por fim, 12 horas e 40 minutos é, em cm, igual a:
+\begin{partes}
+\parte 30 
+\parte $10(10 + \sqrt{3})$
+\parte 20
+\parte zero
+\end{partes}
+\question \textbf{(UFPB-PB)} Uma bola de bilhar sofre quatro deslocamentos sucessivos representados pelos vetores $\overrightarrow {d_1}$, $\overrightarrow {d_2}$, $\overrightarrow {d_3}$ e $\overrightarrow {d_4}$ apresentados no diagrama abaixo.
+$$\includegraphics[scale = 0.8]{4.png}$$
+O vetor deslocamento total $\overrightarrow d$ é:
+\begin{partes}
+\parte $\overrightarrow d = -4 \hat i + 2 \hat j$
+\parte $\overrightarrow d = -2 \hat i + 4 \hat j $
+\parte $\overrightarrow d = 2 \hat i + 4 \hat j $
+\parte $\overrightarrow d = 4 \hat i + 2 \hat j $
+\parte $\overrightarrow d = 4 \hat i + 4 \hat j$
+\end{partes}
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+
+\end{document}
