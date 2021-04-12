@@ -1,0 +1,235 @@
+\documentclass[12pt]{extarticle}
+
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{commath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textcomp}
+\usepackage[brazilian]{babel}
+\usepackage{setspace}
+
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\setlength{\columnseprule}{1 pt}
+
+\title{Lei de Coulomb}
+\author{Erick Silva \thanks{e-mail: erick\_00\_2011@usp.br}}
+\date{10/04/2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução e Motivação}
+
+Na Grécia antiga, quando gregos atritaram âmbar (resina amarelada) com pele de animais, observaram que tal resina poderia atrair algumas coisas leves, como fragmentos de palha. Daí nasceu o conceito de \textit{eletrização por atrito} e também a ideia de \textit{indução eletrostática}. Como forma de explicar esta atração misteriosa, e a partir de estudos do século XVIII, foi proposto o conceito de \textbf{carga elétrica}. 
+
+Charles François du Fay, em 1733, propôs a ideia de cargas elétricas positivas e cargas elétricas negativas. A ideia era que cargas de mesmo sinal se repeliam e cargas de sinais opostos se atraiam. Mas qual é a intensidade da interação que ocorre entre estas cargas elétricas?
+
+\begin{figure} [H]
+     \centering
+     \includegraphics[width=0.6 \textwidth]{carga eletrica.png}
+     \caption{Representação esquemática de cargas elétricas de mesmo sinal (mesma cor) se repelindo e cargas de sinais diferentes (cores diferentes) se atraindo.\centering}
+     \label{fig: carga eletrica}
+ \end{figure}
+
+\section{Força Elétrica}
+
+Em 1785, Charles Augustin de Coulomb, investigou experimentalmente a interação entre dois corpos eletrizados, utilizando uma \textit{balança de torção} (Figura 2). A balança de torção consiste de uma haste isolante (bastão isolante) com duas esferas metálicas nas pontas, suspensa no ponto médio por uma fibra fina T ligada a um ponteiro P com uma escala graduada. Uma das esferas está carregada (carga q$_1$) e a outra serve de contrapeso (para que a haste não penda para um lado).
+
+\begin{figure} [H]
+     \centering
+     \includegraphics[width=0.6 \textwidth]{balança de torção.pdf}
+     \caption{Representação esquemática de uma balança de torção (esquerda), onde T é a fibra fina ligada ao ponteiro P, o qual marca o ângulo de rotação devido à interação entre as cargas elétricas $q_1$ e $q_2$.\centering}
+     \label{fig: torção}
+ \end{figure}
+
+A balança está inicialmente em equilíbrio dinâmico. Aproxima-se então da esfera carregada (q$_1$) outra esfera com carga q$_2$. Suponha, por exemplo, que as cargas tenham o mesmo sinal. Devido à repulsão elétrica, e mantendo a carga q$_2$ fixa, a haste tende a girar, torcendo o fio T. Tal torção é traduzida em um giro no ponteiro graduado P. A força de interação pode então ser calculada em termos do ângulo de rotação do ponteiro.
+
+Por conta desta e de outras contribuições de Coulomb para o entendimento da interação eletrostática, a unidade de carga elétrica, no SI\footnote{Sistema Intercional de unidades.}, é conhecida como Coulomb (C).
+
+Coulomb obteve o seguinte resultado para esta força elétrica (medida em Newtons (N), no SI), conhecido justamente como a \textit{lei de Coulomb}:
+
+\begin{equation} \label{eq: coulomb}
+    F_e = \frac{1}{4\pi \epsilon_0}\frac{|q_1| |q_2|}{d^2}
+\end{equation}
+onde:
+\begin{itemize}
+\item
+$\epsilon_0$ é uma constante de proporcionalidade chamada constante de permissividade elétrica e vale, no vácuo: $\epsilon_0$ $\approx$ 8,85 \cdot 10$^{-12}$ C$^2$ m$^{-2}$ N$^{-1}$. Podemos também reunir $\frac{1}{4\pi \epsilon_0}$ como uma constante $k$ denominada constante de Coulomb, a qual vale $k$ \approx 8,99 \cdot 10$^9$ N m$^2$ C$^{-2}$.
+
+\item
+$|q_1|$ e $|q_2|$ são os módulos das cargas elétricas envolvidas na interação.
+
+\item
+$d$ é a distância entre estas cargas puntiformes.
+
+\end{itemize}
+
+\section{Força Elétrica como Vetor}
+
+Analogamente à força da Segunda Lei de Newton ($\vec{F}$ = m$\vec{a}$), a força de Coulomb (\ref{eq: coulomb}) também é uma grandeza vetorial, pois, além de uma intensidade, possui direção e sentido, como já mostrou a Figura 1.
+
+Neste sentido, a lei de Coulomb pode ser reescrita em sua forma vetorial; isto é:
+
+\begin{equation} \label{eq: coulomb vetor}
+    \vec{F_{2(1)}} = \frac{1}{4\pi \epsilon_0}\frac{q_1 q_2}{d^2}\hat{r} = -\vec{F_{1(2)}}
+\end{equation}
+onde:
+\begin{itemize}
+\item 
+${\vec{F}}_{2(1)}$ é a força que $q_1$ faz sobre $q_2$ e ${\vec{F}}_{1(2)}$ é a força que $q_2$ faz sobre $q_1$. 
+
+\item
+$\hat{r}$ é o vetor (de módulo unitário) que indica a direção e o sentido de $\vec{F_{2(1)}}$.
+
+\end{itemize}
+
+\section{O Princípio da Superposição}
+
+Imagine que temos três cargas elétricas em repouso com relação à algum referencial no vácuo. Qual a força que age sobre uma dessas cargas?
+
+\begin{figure} [H]
+     \centering
+     \includegraphics[width=0.6 \textwidth]{três cargas.pdf}
+     \caption{Representação esquemática de um sistema contendo três cargas elétricas. $F_{1(2)}$ é a força que $q_2$ faz sobre $q_1$ e $F_{1(3)}$ é a força que $q_3$ faz sobre $q_1$. \centering}
+     \label{fig: torção}
+ \end{figure}
+
+A Figura 3 mostra a situação descrita. Sobre a carga $q_1$, por exemplo, agem as forças devido à $q_2$ e à $q_3$. Deste modo, agem duas forças sobre $q_1$, fazendo com que a força total sobre esta carga seja igual a
+
+\begin{equation} \label{eq: superposicao}
+    \vec{F_1} = \frac{1}{4\pi \epsilon_0}\frac{q_1 q_2}{d_1^2}\hat{r_1} + \frac{1}{4\pi \epsilon_0}\frac{q_1 q_3}{d_2^2}\hat{r_2}
+\end{equation}
+
+Esse é o \textit{Princípio da Superposição}, o qual afirma que a força sobre uma carga pontual será igual a soma (vetorial) das forças devido às cargas próximas desta. Se tivermos N cargas elétricas, a força elétrica total sobre uma carga $q_j$ será
+
+\begin{equation} \label{eq: n cargas}
+    \vec{F_j} = \frac{q_j}{4\pi \epsilon_0}\sum_{i=1}^{N}\frac{q_i}{d_i^2} \hat{r_i}
+\end{equation}
+para i $\neq$ j, pois uma carga não interage com ela mesma.
+
+\section{A Carga Elementar \textit{e}}
+
+Na natureza, existe um valor mínimo para a carga elétrica, que é carga do elétron e do próton. Essa carga elétrica é denominada \textit{carga elementar} e é representada por \textit{e}. Ela vale \textbf{\textit{e} = 1,602177 $\cdot$ 10$^{-19}$ C}. 
+
+Todos os corpos eletricamente carregados possuem cargas elétricas com valor como sendo um múltiplo inteiro da carga elementar, seja ele positivo (+\textit{e}) ou negativo (-\textit{e}). Isto é, corpos carregados possuem ou excesso de prótons ou excesso de elétrons.
+
+\section{Exemplos}
+
+\textbf{1} - (FUVEST) Duas partículas eletricamente carregadas com +8,0 \cdot 10$^{-6}$ C cada uma são colocadas no vácuo a uma distância de 30cm, onde K = 9 \cdot 10$^9$ N.m$^2$/C$^2$. A força de interação entre essas cargas é:
+
+\textbf{Resposta:} A força de interação é repulsiva pois as cargas possuem mesmo sinal e tem intensidade igual a:
+
+\begin{equation*}
+    F_e = 9 \cdot 10^9 \frac{(8 \cdot 10^{-6})^2}{0.3^2}
+\end{equation*}
+\begin{equation*}
+    F_e = 9 \cdot 10^9 \frac{(64 \cdot 10^{-12})}{9 \cdot 10^{-2}} = \textbf{6,4 N}
+\end{equation*}
+
+\vspace{1cm}
+\textbf{2} - (Moysés) Duas esferinhas idênticas de massa $m$ estão carregadas com carga $q$ e suspensas por fios isolantes de comprimento $l$. O ângulo de abertura resultante é 2$\theta$.
+
+(a) Mostre que 
+\begin{equation*}
+    q^2 cos(\theta) = 16\pi \epsilon_0 l^2 mg sen^3(\theta).
+\end{equation*}
+
+\textbf{Resposta:} O sistema está em equilíbrio quando a abertura é igual a 2$\theta$, como mostra a Figura 4. Assim, a resultante entre $F_e$ e $P = mg$ deve ser igual a força de tensão $T$ porém com sentido contrário. Deste modo, decompondo a força de tensão em duas, as relações que temos são as seguintes:
+
+\begin{equation*}
+    F_e = T sen(\theta)
+\end{equation*}
+\begin{equation*}
+    mg = T cos(\theta)
+\end{equation*}
+
+\begin{figure} [H]
+     \centering
+     \includegraphics[width=0.6 \textwidth]{q e q.pdf}
+     \caption{Ilustração da situação do problema. $F_e$ é a força elétrica entre as cargas $q$, $mg$ é a força da gravidade entre cada carga e a Terra e $T$ é a força de tensão do fio.\centering}
+     \label{fig: torção}
+ \end{figure}
+ 
+Dividindo $F_e$ por $mg$, obtemos:
+
+\begin{equation*}
+    \frac{F_e}{mg} = tang(\theta)
+\end{equation*}
+ou
+\begin{equation}
+    F_e cos(\theta) = mg sen(\theta)
+\end{equation}
+A pergunta que fica é: quanto vale $F_e$? A força elétrica de repulsão $F_e$ vale:
+
+\begin{equation*}
+    F_e = \frac{1}{4\pi \epsilon_0}\frac{q^2}{d^2}
+\end{equation*}
+sendo $d$ a distância entre as cargas. O valor de $d$ pode ser calculado da seguinte forma:
+
+\begin{equation*}
+    sen(\theta) = \frac{d/2}{l}
+\end{equation*}
+\begin{equation*}
+    d = 2 l sen(\theta)
+\end{equation*}
+Portanto $F_e = \frac{1}{4\pi \epsilon_0}\frac{q^2}{4 l^2 sen^2(\theta)}$. Assim, a relação (5) se torna
+
+\begin{equation}
+    q^2 cos(\theta) = 16\pi \epsilon_0 l^2 mg sen^3(\theta)
+\end{equation}
+que é justamente o que queríamos provar.
+
+(b) Se $m$ = 1 g, $l$ = 20 cm e $\theta$ = 30°, qual é o valor de $q$?
+
+\textbf{Resposta:} O valor de $q$ pode ser encontrado através da fórmula (6); isto é
+
+\begin{equation*}
+    q = \sqrt{\frac{16\pi \epsilon_0 l^2 mg sen^3(\theta)}{cos(\theta)}} = 1,6 \cdot 10^{-7} C.
+\end{equation*}
+
+\end{document}
