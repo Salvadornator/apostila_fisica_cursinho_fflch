@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[dvipsnames, usenames, svgnames]{xcolor}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage[brazilian]{babel}
+
+\newenvironment{caixa}[1][White]
+  {\def\FrameCommand{\fboxsep=\FrameSep\fcolorbox{#1}{Orchid!50!}}
+    \MakeFramed {\advance\hsize-\width \FrameRestore}}
+  {\endMakeFramed}
+
+\title{Reflexão de Ondas em Cordas}
+\author{Erick Silva Pereira \thanks{e-mail: erick\_00\_2011@usp.br}}
+\date{19/04/2021}
+
+\begin{document}
+
+\maketitle
+
+Vamos tratar agora da reflexão de ondas mecânicas transversais nas extremidades de uma corda. Nesse caso, há duas situações possíveis a se considerar.
+
+\section{Extremidade Fixa}
+
+Imaginemos uma onda transversal se propagando por uma corda de densidade linear (massa por unidade de comprimento) constante - como veremos, isso faz toda a diferença. Suponha que a corda esteja fixada a um suporte e que o pulso inicial esteja se propagando para a direita, como mostra a Figura 1.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7 \textwidth]{extremidade fixa.png}
+\caption{Onda transversal se propagando em uma corda fixa em uma das extremidades. Ocorre uma inversão da fase da onda na reflexão.\centering}
+\end{figure}
+
+Devido a 3ª Lei de Newton (Lei de Ação e Reação), quando o pulso $"empurra"$ o suporte fixo, o suporte empurra o pulso de volta, porém \textbf{invertido}. Isto é, dizemos que o pulso refletido está \textit{defasado} de 180° com relação ao pulso incidente da onda.
+
+\newpage
+\section{Extremidade Livre}
+
+Considere agora uma onda transversal que também se propaga por uma corda de densidade linear constante, porém possui uma de suas extremidades livre (Figura 2).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7 \textwidth]{extremidade livre.png}
+\caption{Onda transversal se propagando em uma corda com extremidade livre. A onda é refletida com a mesma fase da onda incidente.\centering}
+\end{figure}
+
+A extremidade livre pode ser pensada como um anel leve que desliza sem atrito ao longo de uma haste.
+
+Neste caso, o pulso será refletido \textbf{sem inversão}. Por que isso acontece? Quando você brinca de \textit{pular corda}, para que a corda balance você faz um movimento vertical para cima e para baixo com o seu braço. Agora imagine que você faça esse mesmo movimento em uma corda onde a outra extremidade está livre, como na Figura 2. Quando o pulso de onda chegar no anel, ele vai fazer um movimento de sobe e desce, assim como seu braço na brincadeira. Ou seja, é como se o anel gerasse o mesmo pulso que seu braço gera porém agora para o outro lado.
+
+\begin{caixa}
+\begin{center}
+\large{\textbf{Curiosidade:} Reverberação}
+\end{center}
+\par Quando estamos em um quarto muito vazio (poucos objetos ou nenhum) e falamos nele, ouvimos o famoso \textit{eco}. O eco nesse caso ocorre quando, além do som que sai da nossa boca, ouvimos também o que falamos depois de refletido nas paredes do cômodo.
+\par A reverberação é análoga ao eco, e é criada quando o som é refletido causando várias reflexões que se atenuam (perdem intensidade) a medida que as paredes e os objetos presentes no local vão absorvendo o som.
+\par O efeito que temos então é de um eco contínuo que vai ficando cada vez menos intenso a cada reflexão.
+
+\end{caixa}
+
+\section{Refração}
+
+O que acontece quando um pulso de onda se propaga em uma corda com densidade inomogênea, ou seja, não constante? Ou, sendo mais específico, o que acontece com um pulso de onda que se propaga de uma corda com densidade $\mu_1$ para uma corda com densidade $\mu_2$ (Figura 3)? 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{pulso 1.pdf} \\
+\vspace{1cm}
+\includegraphics[scale=1]{pulso 2.pdf}
+\caption{As imagens acima mostram um pulso de onda transversal se propagando por uma corda com densidade linear de massa $\mu_1$ e passando por outra corda de densidade $\mu_2$.\centering}
+\end{figure}
+
+Neste caso, parte do pulso é refletido de volta e a outra parte é \textit{refratada} para a outra corda. A \textbf{refração} é um fenômeno que ocorre quando uma onda atravessa dois meios de características diferentes. No nosso caso, os meios são as cordas, as quais possuem densidades lineares ($\mu$ = m/L) diferentes. 
+
+Como a energia do pulso se conserva, a amplitude das ondas refletida e refratada será menor do que a amplitude da onda original. Isso porque a energia se divide entre os pulsos refletido e refratado.
+
+A onda refletida irá presenciar uma mudança de fase de 180° (inversão) pois a extremidade da corda $\mu_1$ está fixa no ponto de contato com a corda $\mu_2$.
+
+\section{Problemas Resolvidos}
+
+\textbf{1} - A imagem abaixo mostra uma onda que se propaga em uma corda. A extremidade esquerda da corda é livre e a extremidade direita está fixa. Marque a alternativa que traz a informação correta a respeito das possíveis reflexões sofridas pelo pulso.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4 \textwidth]{corda.png}
+\caption{Onda transversal se propagando para a esquerda, em uma corda com extremidades livre e fixa. Créditos: Brasil Escola.\centering}
+\end{figure}
+
+a) Em todos os casos de reflexão, o pulso sempre manterá sua fase.
+
+b) Ao ser refletido e voltar para a extremidade fixa, o pulso voltará com a fase invertida.
+
+c) Da próxima vez que o pulso voltar à extremidade livre, sua fase será invertida em relação àquela apresentada na figura.
+
+d) Da próxima vez que o pulso voltar à extremidade livre, sua fase será a mesma daquela apresentada na figura.
+
+e) Todas as alternativas estão incorretas.
+
+\vspace{0.5cm}
+
+\textbf{Solução:} Alternativa \textbf{(c)}. Quando o pulso chega na extremidade livre, ele volta à extremidade fixa sem mudança de fase. Quando o pulso então atinge a extremidade fixa ele muda de fase (inversão) e volta à extremidade livre com sua fase invertida (180°) com relação ao pulso mostrado na imagem.
+
+\vspace{1cm}
+
+\textbf{2} - (Adaptado/FMABC-SP) Considere duas cordas elásticas e de densidades diferentes ($\mu_1$ e $\mu_2$, onde $\mu_1$ $\neq$ $\mu_2$) emendadas, como mostra a figura abaixo. Quando um pulso é produzido na extremidade livre da corda $\mu_1$, ele propaga-se com velocidade $\textbf{v}$ até encontrar a junção das duas cordas. Após o pulso incidir no ponto de junção das cordas, observaremos:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5 \textwidth]{pulso 1.pdf} \\
+\caption{Situação descrita no problema.\centering}
+\end{figure}
+
+a) os fenômenos da reflexão do pulso na corda $\mu_1$ e o da refração do pulso na corda $\mu_2$, ambos sem inversão de fase tanto do pulso refletido quanto do pulso refratado e ambos com a mesma velocidade \textbf{v} do pulso incidente.
+
+b) os fenômenos da reflexão do pulso na corda $\mu_1$, com inversão de fase do pulso refletido e manutenção da velocidade \textbf{v} do pulso incidente, e o da refração do pulso na corda $\mu_2$, sem inversão de fase do pulso refratado e com velocidade diferente da do pulso incidente.
+
+c) o fenômeno da continuidade do pulso na corda $\mu_1$, sem inversão de fase do pulso, porém com velocidade de propagação diferente da velocidade do pulso incidente.
+
+d) os fenômenos da refração do pulso na corda $\mu_1$ e o da reflexão do pulso na corda $\mu_2$, ambos com inversão de fase tanto do pulso refletido quanto do pulso refratado e ambos com a mesma velocidade \textbf{v} do pulso incidente.
+
+e) os fenômenos da refração do pulso na corda $\mu_1$, com inversão de fase do pulso refratado e manutenção da velocidade \textbf{v} do pulso incidente, e o da reflexão do pulso na corda $\mu_2$, sem inversão de fase do pulso refletido e com velocidade diferente da do pulso incidente.
+
+\vspace{0.5cm}
+
+\textbf{Solução:} Alternativa \textbf{(b)}. O pulso, quando chega na junção entre as cordas $\mu_1$ e $\mu_2$, é refletido de volta para a corda $\mu_1$ e refratado para a corda $\mu_2$. A reflexão ocorre \textbf{com} mudança de fase pois a conexão entre as cordas é uma extremidade fixa. E então a outra parte do pulso de onda é transmitida (refratada) para a corda $\mu_2$ sem mudança de fase com relação ao pulso inicial, porém com velocidade diferente de \textbf{v} já que a velocidade da onda em uma corda depende da densidade da corda.
+
+\begin{thebibliography}{1}
+\bibitem{moyses}
+NUSSENZVEIG, H. Moysés. \textbf{Curso de Física Básica}: Volume 2. 4ª edição. São Paulo: Edgard Bl{\"u}cher, 2002.
+
+\bibitem{topicos}
+BÔAS, Newton Villas; DOCA, Ricardo Helou; BISCUOLA, Gualter José. \textbf{Tópicos de Física, 2}: Termologia, Ondulatória, Óptica. São Paulo: Saraiva, 2007.  
+
+\bibitem{wave propagation}
+DALL'AGNOL, Fernando Fuzinatto. \textbf{Wave propagation in a non-uniform string}. Revista Brasileira de Ensino de Física, v. 33, n. 4, 4306 (2011).
+
+\end{thebibliography}
+
+\end{document}
