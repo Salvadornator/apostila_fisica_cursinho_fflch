@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+\usepackage[dvipsnames, usenames, svgnames]{xcolor}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{gensymb}
+\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{amsmath,amssymb}
+\usepackage{physics}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage[brazilian]{babel}
+
+\newenvironment{caixa}[1][White]
+  {\def\FrameCommand{\fboxsep=\FrameSep\fcolorbox{#1}{Orchid!50!}}
+    \MakeFramed {\advance\hsize-\width \FrameRestore}}
+  {\endMakeFramed}
+
+\title{Velocidade de Ondas em Cordas}
+\author{Erick Silva Pereira \thanks{e-mail: erick\_00\_2011@usp.br}}
+\date{17/05/2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Equação de Taylor}
+
+Para que ondas se propaguem em cordas, é necessário que a mesma esteja tensionada\footnote{Tensão e tração são sinônimos quando se trata de cordas.} (ou seja, sinta uma força de tração). Essa ideia é expressa pela \textbf{equação de Taylor}, a qual afirma que a velocidade de propagação das ondas na corda é dada por
+
+\begin{equation}
+    v = \sqrt{\frac{T}{\mu}}
+\end{equation}
+onde $T$ é a força de tração (ou tensão) que age sobre a corda e $\mu$ (se pronuncia $mi$) é a densidade linear da corda. Quanto mais esticada uma corda, maior a força de tensão e portanto maior a velocidade das ondas que percorrem essa corda.
+
+Vamos agora explorar um pouco mais a ideia de densidade.
+
+\section{Densidade de Massa}
+
+Sempre quando falamos em \textit{densidade}, intuitivamente pensamos na razão massa por volume: quanto de massa cabe em uma unidade volume de uma certa substância. Por exemplo, a água é mais densa do que o óleo de cozinha. Se pegarmos 1 litro de água e compararmos com a massa de 1 litro de óleo, veremos que a água é mais pesada. Essa é a chamada densidade volumétrica de massa, a qual comumente chamamos apenas de densidade.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25 \textwidth]{agua-e-oleo-em-copo.jpg}
+    \caption{A água é mais densa do que o óleo, por isso não se misturam. Créditos: Victor Blacus.\centering}
+\end{figure}
+
+Analogamente, podemos pensar em uma \textit{densidade linear de massa}: o quanto de massa de um certo material (fio de cabelo, por exemplo) cabe em uma unidade de comprimento (razão massa por comprimento). Assim, um fio de cabelo de comprimento $L$ mais grosso será mais denso do que outro mais fino de mesmo comprimento, pois possui mais massa (faz sentido?).
+
+\section{Exercício Resolvido}
+
+\textit{Traciona-se uma corda homogênea de 4,0 m de comprimento com uma força de intensidade 50 N. Ondas produzidas nessa corda propagam-se com velocidade de 10 m/s. Qual é a massa dessa corda?}
+
+\vspace{0.5cm}
+
+\textbf{Solução:} Pela equação de Taylor (1), a velocidade de propagação de uma onda em uma corda de densidade $\mu$ sujeita a uma tensão $T$ é igual a $v$ = $\sqrt{T/\mu}$. 
+
+A densidade $\mu$ é a densidade linear de massa da corda e pode ser escrita como $\mu$ = $M$/$L$ onde $M$ é a massa da corda e $L$ é o comprimento dela. Nesse caso $\mu$ é constante pois a corda é homogênea. Substituindo $\mu$ por $M/L$ na fórmula de Taylor obtemos o seguinte:
+
+\begin{equation*}
+    v = \sqrt{\frac{T \cdot L}{M}}
+\end{equation*}
+
+Elevando os dois lados dessa equação ao quadrado, ficamos com:
+
+\begin{equation*}
+    v^2 = \frac{T \cdot L}{M}
+\end{equation*}
+
+Podemos isolar a massa $M$ passando para o lado de $v^2$ da equação e passando $v^2$ para o lado de $M$. Isto é:
+
+\begin{equation*}
+    M = \frac{T \cdot L}{v^2} = \frac{50 \cdot 4}{100} = 2 kg
+\end{equation*}
+
+A massa da corda vale $M$ = 2 kg.
+\vspace{1cm}
+
+\begin{caixa}
+\begin{center}
+    \large{\textbf{Curiosidade:} Por que o hélio altera sua voz do jeito que altera?}
+\end{center}
+\par O som da sua voz é produzido pela vibração das suas cordas vocais. Esse som que sai da sua boca é uma grande mistura de ondas de diferentes frequências. Sua boca serve como um tubo para a propagação de ondas, e por isso a ideia de harmônicos também se aplicam aqui, assim como para cordas.
+
+\par O gás hélio é menos denso do que o ar que nos rodeia. Por isso, pela \textit{equação de Taylor}, ondas passam pelo hélio mais rápido do que as ondas que passam pelo ar, pois a velocidade é inversamente proporcional à raiz quadrada da densidade ($v = \sqrt{T/\mu}$). Entretanto, a frequência do som se mantém constante e o que varia é o comprimento de onda: a onda sonora que passa do ar ao gás hélio é esticada, já que o comprimento de onda é diretamente proporcional à velocidade de propagação da onda ($v = \lambda f$, onde $\lambda$ é o comprimento de onda e $f$ é a frequência).
+
+\par O que acontece é que o hélio ''estica'' as ondas de tal forma que harmônicos correspondentes à maiores comprimentos de onda deixam de caber na sua boca (tubo), e então deixam de ser oscilações. Então, o que sobra são as ondas de comprimento de onda ($\lambda$) menor, que também são esticadas, porém ainda se mantém como ondas sonoras. O que ouvimos então, majoritariamente, são sons mais agudos (menor comprimento de onda).
+
+\par No site abaixo é possível brincar com esse efeito. Basta falar algo no microfone e o site muda sua voz como se você estivesse com gás hélio na boca.
+
+\begin{center}
+Acesse: https://lingojam.com/HeliumVoiceChanger
+\end{center}
+\end{caixa}
+
+\end{document}
