@@ -43,23 +43,9 @@ Quando ondas mecânicas transversais se propagam por uma corda, pulsos de onda p
 
 Recapitulando, ondas transversais são aquelas em que a direção de propagação é perpendicular à direção de vibração. Além disso, a reflexão acontece quando a onda incide em algum objeto e volta a se propagar no meio de origem.
 
-Antes de entrar no assunto principal do capítulo, vamos entender o significado físico do termo \textit{densidade}. Este conceito será útil nas discussões procedentes.
-
-\section{Densidade de Massa}
-
-Sempre quando falamos em \textit{densidade}, intuitivamente pensamos na razão massa por volume: quanto de massa cabe em uma unidade volume de uma certa substância. Por exemplo, a água é mais densa do que o óleo de cozinha. Se pegarmos 1 litro de água e compararmos com a massa de 1 litro de óleo, veremos que a água é mais pesada. Essa é a chamada densidade volumétrica de massa, a qual comumente chamamos apenas de densidade.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.3 \textwidth]{agua-e-oleo-em-copo.jpg}
-    \caption{A água é mais densa do que o óleo, por isso não se misturam. Créditos: Victor Blacus.\centering}
-\end{figure}
-
-Analogamente, podemos pensar em uma \textit{densidade linear de massa}: o quanto de massa de um certo material (fio de cabelo, por exemplo) cabe em uma unidade de comprimento. Assim, um fio de cabelo de comprimento $L$ mais grosso será mais denso do que outro mais fino de mesmo comprimento pois possui mais massa (faz sentido?).
-
 \section{Extremidade Fixa}
 
-Imaginemos uma onda transversal se propagando por uma corda de densidade linear constante (homogênea) - como veremos, isso faz toda a diferença. Suponha que a corda esteja fixada a um suporte e que o pulso inicial esteja se propagando para a direita, como mostra a Figura 2.
+Imaginemos uma onda transversal se propagando por uma corda de densidade linear constante (homogênea) - como veremos, isso faz toda a diferença. Suponha que a corda esteja fixada a um suporte e que o pulso inicial esteja se propagando para a direita, como mostra a Figura 1.
 
 \begin{figure}[H]
 \centering
@@ -77,7 +63,7 @@ Devido a 3ª Lei de Newton (Lei de Ação e Reação), quando o pulso $"empurra"
 
 \section{Extremidade Livre}
 
-Considere agora uma onda transversal que também se propaga por uma corda de densidade linear constante, porém possui uma de suas extremidades livre (Figura 4).
+Considere agora uma onda transversal que também se propaga por uma corda de densidade linear constante, porém possui uma de suas extremidades livre (Figura 3).
 
 \begin{figure}[H]
 \centering
@@ -87,25 +73,15 @@ Considere agora uma onda transversal que também se propaga por uma corda de den
 
 A extremidade livre pode ser pensada como um anel leve que desliza sem atrito ao longo de uma haste.
 
-Neste caso, o pulso será refletido \textbf{sem inversão}. Por que isso acontece? Quando você brinca de \textit{pular corda}, para que a corda balance você faz um movimento vertical para cima e para baixo com o seu braço. Agora imagine que você faça esse mesmo movimento em uma corda onde a outra extremidade está livre, como na Figura 2. Quando o pulso de onda chegar no anel, ele vai fazer um movimento de sobe e desce, assim como seu braço na brincadeira. Ou seja, é como se o anel gerasse o mesmo pulso que seu braço gera porém agora para o outro lado.
+Neste caso, o pulso será refletido \textbf{sem inversão}. Por que isso acontece? Quando você brinca de \textit{pular corda}, para que a corda balance você faz um movimento vertical para cima e para baixo com o seu braço. Agora imagine que você faça esse mesmo movimento em uma corda onde a outra extremidade está livre, como na Figura 3. Quando o pulso de onda chegar no anel, ele vai fazer um movimento de sobe e desce, assim como seu braço na brincadeira. Ou seja, é como se o anel gerasse o mesmo pulso que seu braço gera porém agora para o outro lado.
 
 \vspace{1cm}
 
 Para uma visualização mais prática da reflexão de ondas em cordas, acesse e explore a seguinte simulação: \textbf{https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string\_pt\_BR.html}. Ver a física acontecendo na prática é a melhor forma de se aprender!
 
-%\begin{caixa}
-%\begin{center}
-%\large{\textbf{Curiosidade:} Reverberação}
-%\end{center}
-%\par Quando estamos em um quarto muito vazio (poucos objetos ou nenhum) e falamos nele, ouvimos o famoso \textit{eco}. O eco nesse caso ocorre quando, além do som que sai da nossa boca, ouvimos também o que falamos depois de refletido nas paredes do cômodo.
-%\par A reverberação é análoga ao eco, e é criada quando o som é refletido causando várias reflexões que se atenuam (perdem intensidade) a medida que as paredes e os objetos presentes no local vão absorvendo o som.
-%\par O efeito que temos então é de um eco contínuo que vai ficando cada vez menos intenso a cada reflexão.
-
-%\end{caixa}
-
 \section{Refração}
 
-O que acontece quando um pulso de onda se propaga em uma corda com densidade inomogênea, ou seja, não constante? Ou, sendo mais específico, o que acontece com um pulso de onda que se propaga de uma corda com densidade $\mu_1$ para uma corda com densidade $\mu_2$ (Figura 5)? 
+O que acontece quando um pulso de onda se propaga em uma corda com densidade inomogênea, ou seja, não constante? Ou, sendo mais específico, o que acontece com um pulso de onda que se propaga de uma corda com densidade $\mu_1$ para uma corda com densidade $\mu_2$ (Figura 4)?
 
 \begin{figure}[H]
 \centering
@@ -117,9 +93,7 @@ O que acontece quando um pulso de onda se propaga em uma corda com densidade ino
 
 Neste caso, parte do pulso é refletido de volta e a outra parte é \textit{refratada} para a outra corda. A \textbf{refração} é um fenômeno que ocorre quando uma onda passa de um meio de propagação para outro diferente. No nosso caso, os meios são as cordas, as quais possuem densidades lineares ($\mu$ = $\frac{M}{L}$ = $\frac{massa}{comprimento}$) diferentes. 
 
-%Como a energia do pulso se conserva\footnote{A lei de conservação de energia afirma que a energia não pode ser criada nem destruída em um sistema físico isolado, apenas convertida de uma forma para outra. Deste modo, a energia do pulso de onda incidente é \textbf{convertida} nas energias da onda refletida e da onda refratada.}, a amplitude das ondas refletida e refratada será menor do que a amplitude da onda original, já que a energia da onda está diretamente relacionada à amplitude dessa onda. 
-
-A onda refletida irá presenciar uma mudança de fase de 180° (inversão) pois a extremidade da corda $\mu_1$ está \textbf{fixa} no ponto de contato com a corda $\mu_2$. A onda refratada será transmitida sem mudança de fase: o pulso está se movendo normalmente porém agora com velocidade diferente apenas, já que a velocidade $v$ de uma corda de densidade $\mu$ sujeita a uma tensão\footnote{A tensão é a força que faz as cordas esticarem. Quanto mais esticada uma corda é, maior a força de tensão que age sobre ela.} $T$ é igual a $v$ = $\sqrt{T/\mu}$ (Fórmula de Taylor).
+A onda refletida irá presenciar uma mudança de fase de 180° (inversão) pois a extremidade da corda $\mu_1$ está \textbf{fixa} no ponto de contato com a corda $\mu_2$. A onda refratada será transmitida sem mudança de fase: o pulso está se movendo normalmente porém agora com velocidade diferente apenas, já que a velocidade $v$ de uma corda de densidade $\mu$ sujeita a uma tensão\footnote{A tensão é a força que faz as cordas esticarem. Quanto mais esticada uma corda é, maior a força de tensão que age sobre ela.} $T$ é igual a $v$ = $\sqrt{T/\mu}$ (Equação de Taylor).
 
 \section{Problemas Resolvidos}
 
@@ -169,33 +143,6 @@ e) os fenômenos da refração do pulso na corda $\mu_1$, com inversão de fase 
 
 \textbf{Solução:} Alternativa \textbf{(b)}. O pulso, quando chega na junção entre as cordas $\mu_1$ e $\mu_2$, é refletido de volta para a corda $\mu_1$ e refratado para a corda $\mu_2$. A reflexão ocorre \textbf{com} mudança de fase pois a conexão entre as cordas é uma extremidade fixa. E então a outra parte do pulso de onda é transmitida (refratada) para a corda $\mu_2$ sem mudança de fase com relação ao pulso inicial, porém com velocidade diferente de \textbf{v} já que a velocidade da onda em uma corda depende da densidade da corda.
 
-\vspace{1cm}
-
-\textbf{3} - (Fórmula de Taylor) Traciona-se uma corda homogênea de 4,0 m de comprimento com uma força de intensidade 50 N. Ondas produzidas nessa corda propagam-se com velocidade de 10 m/s. Qual é a massa dessa corda?
-
-\vspace{0.5cm}
-
-\textbf{Solução:} Pela fórmula de Taylor, a velocidade de propagação de uma onda em uma corda de densidade $\mu$ sujeita a uma tensão $T$ é igual a $v$ = $\sqrt{T/\mu}$. 
-
-A densidade $\mu$ é a densidade linear de massa da corda e pode ser escrita como $\mu$ = $M$/$L$ onde $M$ é a massa da corda e $L$ é o comprimento dela. Nesse caso $\mu$ é constante pois a corda é homogênea. Substituindo $\mu$ por $M/L$ na fórmula de Taylor obtemos o seguinte:
-
-\begin{equation*}
-    v = \sqrt{\frac{T \cdot L}{M}}
-\end{equation*}
-
-Elevando os dois lados dessa equação ao quadrado, ficamos com:
-
-\begin{equation*}
-    v^2 = \frac{T \cdot L}{M}
-\end{equation*}
-
-Podemos isolar a massa $M$ passando para o lado de $v^2$ da equação e passando $v^2$ para o lado de $M$. Isto é:
-
-\begin{equation*}
-    M = \frac{T \cdot L}{v^2} = \frac{50 \cdot 4}{100} = 2 kg
-\end{equation*}
-
-A massa da corda vale $M$ = 2 kg.
 
 \begin{thebibliography}{1}
 \bibitem{moyses}
